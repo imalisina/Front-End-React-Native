@@ -1,17 +1,14 @@
 import { Layout } from '@ui-kitten/components';
 
-// Axios
-import axios from 'axios';
-
 // Import Other Components
-import Title from './Title';
-import SelectLanguage from './SelectLanguage';
+import Title from '../components/Start/Title';
+import SelectCountry from '../components/Start/SelectCountry';
 
 const WelcomePageContainer = () => {
     return (
         <Layout>
             <Title />
-            <SelectLanguage />
+            <SelectCountry />
         </Layout>
     );
 }

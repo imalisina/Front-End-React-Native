@@ -4,7 +4,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { Layout, Input } from '@ui-kitten/components';
 
 // Main Select Language Component
-const SelectLanguage = () => {  
+const SelectCountry = () => {  
   return (
       <>
         <Layout onTouchStart={() => console.log('should replace redux')} style={tw.style('mt-36')}>
@@ -22,4 +22,4 @@ const SelectLanguage = () => {
     )
 };
 
-export default SelectLanguage;
+export default SelectCountry;
