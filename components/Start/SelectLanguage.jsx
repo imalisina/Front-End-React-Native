@@ -7,7 +7,7 @@ import { Layout, Input } from '@ui-kitten/components';
 const SelectLanguage = () => {  
   return (
       <>
-        <Layout onTouchStart={() => console.log('toggle triggered!')} style={tw.style('mt-36')}>
+        <Layout onTouchStart={() => console.log('should replace redux')} style={tw.style('mt-36')}>
           <Input
               style={tw.style('w-88 mx-auto border border-gray-300')}
               textStyle={tw.style('text-lg py-2')}

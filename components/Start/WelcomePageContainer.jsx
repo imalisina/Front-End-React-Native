@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { Layout } from '@ui-kitten/components';
 
 // Axios
