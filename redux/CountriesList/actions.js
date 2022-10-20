@@ -1,8 +1,13 @@
-export const SET_COUNTRY_DATA = "SET_COUNTRY_DATA";
+export const FETCH_COUNTRY_LISTS = "FETCH_COUNTRY_LISTS";
 
-export const setCountry = countryData => dispatch => {
+// Axios For API Call
+import axios from "axios";
+
+
+export const fetchCountryLists = () => async (dispatch) => {
+    const response = await axios.get("https://restcountries.com/v2/all");
     dispatch({
-        type: SET_COUNTRY_DATA,
-        payload: countryData,
-    })
+        type: FETCH_COUNTRY_LISTS,
+        payload: response.data
+    });
 };

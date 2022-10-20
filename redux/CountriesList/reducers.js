@@ -1,12 +1,13 @@
-import { SET_COUNTRY_DATA } from './actions';
+import { FETCH_COUNTRY_LISTS } from './actions';
 
 const initialState = {
-    countryData: {},
+    countryData: [],
 }
 
 const countryDataReducer = ( state = initialState, action ) => {
     switch ( action.type ) {
-        case SET_COUNTRY_DATA:
+        case FETCH_COUNTRY_LISTS:
+            state.countryData = action.payload;
             return state;
         default:
             return state;

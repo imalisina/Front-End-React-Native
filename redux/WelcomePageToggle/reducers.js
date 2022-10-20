@@ -1,15 +1,14 @@
 import { TOGGLE_BOTTOM_SHEET } from "./actions";
 
 const initialState = {
-    toggleStatus: true
+    toggleStatus: false
 }
 
 const toggleStatusReducer = ( state=initialState, action ) => {
     switch ( action.type ) {
         case TOGGLE_BOTTOM_SHEET:
             state.toggleStatus = !state.toggleStatus
-            console.log(state.toggleStatus)
-            return state;
+            return {...state};
         default:
             return state;
     }
