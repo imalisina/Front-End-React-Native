@@ -9,18 +9,18 @@ import tw from 'twrnc';
 import * as eva from '@eva-design/eva';
 import { ApplicationProvider, Layout } from '@ui-kitten/components';
 
-// Import Other Components
-import WelcomePageContainer from './components/Start/WelcomePageContainer';
+// Application Screens
+import WelcomePageContainer from './screens/WelcomeScreen';
 
 const App = () => {
   return (
     <Provider store={Store}>
-    <ApplicationProvider {...eva} theme={eva.light}>
-      <Layout style={tw.style('h-full')}>
-        <StatusBar />
-        <WelcomePageContainer />
-      </Layout>
-    </ApplicationProvider>
+        <ApplicationProvider {...eva} theme={eva.light}>
+          <Layout style={tw.style('h-full')}>
+            <StatusBar />
+            <WelcomePageContainer />
+          </Layout>
+        </ApplicationProvider>
     </Provider>
   );
 }

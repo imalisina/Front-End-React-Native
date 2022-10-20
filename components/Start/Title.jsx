@@ -32,6 +32,7 @@ const Title = () => {
             <Layout style={tw.style('mx-auto mt-50')}>
                 <Text style={styles.firstTitle}>Welcome To</Text>
                 <Text style={styles.secondTitle}>Aware</Text>
+                <Text category='s1' appearance='hint' style={tw.style('mt-39 absolute left-36')}>Your AI Stylist</Text>
             </Layout>
         )
     }
@@ -48,7 +49,6 @@ const styles = StyleSheet.create({
         fontSize: 90,
         position: 'absolute',
         color: '#be185d', // *Pink-700* On Tailwind Colors
-        top: 0,
         right: '-10%'
     }
 })

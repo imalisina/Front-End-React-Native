@@ -1,6 +1,6 @@
 import { combineReducers, createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
-import toggleStatusReducer from './WelcomePage/reducers';
+import toggleStatusReducer from './WelcomePageToggle/reducers';
 
 const rootReducer = combineReducers({
     toggleStatusReducer
