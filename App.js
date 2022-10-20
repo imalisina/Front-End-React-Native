@@ -9,10 +9,8 @@ import tw from 'twrnc';
 import * as eva from '@eva-design/eva';
 import { ApplicationProvider, Layout } from '@ui-kitten/components';
 
-// Import Other Components
+// Application Screens
 import WelcomePageContainer from './screens/WelcomeScreen';
-import CountriesBottomSheet from './components/Start/CountriesBottomSheet';
-
 
 const App = () => {
   return (
@@ -21,7 +19,6 @@ const App = () => {
           <Layout style={tw.style('h-full')}>
             <StatusBar />
             <WelcomePageContainer />
-            <CountriesBottomSheet />
           </Layout>
         </ApplicationProvider>
     </Provider>
