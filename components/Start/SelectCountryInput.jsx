@@ -1,14 +1,23 @@
-import { View } from 'react-native';
-
 // UI's
 import tw from 'twrnc';
 import { MaterialIcons } from '@expo/vector-icons'; 
 import { Input, Layout } from '@ui-kitten/components';
 
-// Main Select Language Component
+// Redux
+import { useDispatch } from 'react-redux';
+import { setToggle } from '../../redux/WelcomePageToggle/actions';
+
+
 const SelectCountry = () => {  
+  // Redux Operations
+  const dispatch = useDispatch();
+  // Changing the status of toggle by clicking on the input
+  const changeToggleStatus = () => {
+    dispatch(setToggle());
+  }
+
   return (
-      <Layout onTouchStart={() => console.log('should replace redux')} style={tw.style('mt-40')}>
+      <Layout onTouchStart={() => changeToggleStatus()} style={tw.style('mt-40')}>
         <Input
             style={tw.style('w-88 mx-auto border border-gray-300 bg-transparent')}
             textStyle={tw.style('text-lg py-2')}
