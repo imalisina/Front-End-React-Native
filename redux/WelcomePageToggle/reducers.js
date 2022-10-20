@@ -4,7 +4,7 @@ const initialState = {
     toggleStatus: true
 }
 
-function toggleStatusReducer ( state=initialState, action ){
+const toggleStatusReducer = ( state=initialState, action ) => {
     switch ( action.type ) {
         case TOGGLE_BOTTOM_SHEET:
             state.toggleStatus = !state.toggleStatus
