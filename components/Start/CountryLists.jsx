@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { ScrollView, View, Text } from "react-native";
+import { ScrollView, View } from "react-native";
 
 // Redux
 import { useSelector, useDispatch } from "react-redux";
@@ -28,7 +28,7 @@ const CountryLists = () => {
   return (
     <View>
       {toggleStatus ? (
-        <BottomSheet onClose={() => setToggleOnClose()} sliderMinHeight={0} sliderMaxHeight={600}>
+        <BottomSheet animationDuration={300} onClose={() => setToggleOnClose()} sliderMinHeight={0} sliderMaxHeight={600}>
         {(onScrollEndDrag) => (
           <ScrollView showsVerticalScrollIndicator={false} onScrollEndDrag={onScrollEndDrag}>
               <View>

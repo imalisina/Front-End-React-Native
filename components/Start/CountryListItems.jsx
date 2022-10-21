@@ -11,14 +11,29 @@ const CountryListItems = () => {
     
     return (
         <View>
-            {countryData.map((country, index) => (
+            <Text>Hello</Text>
+            <Text>Hello</Text>
+            <Text>Hello</Text>
+            <Text>Hello</Text>
+            <Text>Hello</Text>
+            <Text>Hello</Text>
+            <Text>Hello</Text>
+            <Text>Hello</Text>
+            <Text>Hello</Text>
+            <Text>Hello</Text>
+            <Text>Hello</Text>
+            <Text>Hello</Text>
+            <Text>Hello</Text>
+            <Text>Hello</Text>
+            <Text>Hello</Text>
+            {/* {countryData.map((country, index) => (
                 <View key={index + Math.random()}>
                     <TouchableOpacity activeOpacity={0.3} onPress={() => console.log('active a function to get selected country details')}>
                         <Text>{country.name}</Text>
                     </TouchableOpacity>
                     <Divider />
                 </View>
-                ))}
+                ))} */}
         </View>
     )
 }

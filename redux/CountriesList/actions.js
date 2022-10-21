@@ -1,4 +1,5 @@
 export const FETCH_COUNTRY_LISTS = "FETCH_COUNTRY_LISTS";
+export const GET_SELECTED_COUNTRY = "GET_SELECTED_COUNTRY"; 
 
 // Axios For API Call
 import axios from "axios";
@@ -11,3 +12,6 @@ export const fetchCountryLists = () => async (dispatch) => {
         payload: response.data
     });
 };
+
+export const getSelectedCountry = () => dispatch => {
+}
