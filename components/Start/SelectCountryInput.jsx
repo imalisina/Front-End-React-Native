@@ -1,7 +1,9 @@
+import { StyleSheet, Pressable } from 'react-native';
+
 // UI's
 import tw from 'twrnc';
 import { MaterialIcons } from '@expo/vector-icons'; 
-import { Input, Layout } from '@ui-kitten/components';
+import { Input } from '@ui-kitten/components';
 
 // Redux
 import { useDispatch } from 'react-redux';
@@ -17,9 +19,9 @@ const SelectCountry = () => {
   }
 
   return (
-      <Layout onTouchStart={() => changeToggleStatus()} style={tw.style('mt-40')}>
+      <Pressable onTouchStart={() => changeToggleStatus()} style={styles.SelectCountryinput}>
         <Input
-            style={tw.style('w-88 mx-auto border border-gray-300 bg-transparent')}
+            style={[tw.style('mx-auto border border-gray-300 bg-transparent'), styles.Input]}
             textStyle={tw.style('text-lg py-2')}
             placeholder='Select your country'
             placeholderTextColor='#9ca3af'
@@ -27,8 +29,17 @@ const SelectCountry = () => {
             disabled
             size='large'
             accessoryRight={<MaterialIcons name="keyboard-arrow-down" size={24} color='#9ca3af' />}/>
-      </Layout>
+      </Pressable>
     )
 };
+
+const styles = StyleSheet.create({
+  SelectCountryinput: {
+    marginTop: '37%'
+  },
+  Input: {
+    width: '87%'
+  }
+});
 
 export default SelectCountry;

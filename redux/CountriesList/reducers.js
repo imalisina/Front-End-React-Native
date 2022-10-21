@@ -1,13 +1,14 @@
-import { FETCH_COUNTRY_LISTS } from './actions';
+import { GET_ALL_COUNTRIES } from './actions';
+
+import Countries from '../../static/countries';
 
 const initialState = {
-    countryData: [],
+    countryData: Countries,
 }
 
 const countryDataReducer = ( state = initialState, action ) => {
     switch ( action.type ) {
-        case FETCH_COUNTRY_LISTS:
-            state.countryData = action.payload;
+        case GET_ALL_COUNTRIES:
             return state;
         default:
             return state;
