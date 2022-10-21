@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { ScrollView, View } from "react-native";
+import { ScrollView, View, Text } from "react-native";
 
 // Redux
 import { useSelector, useDispatch } from "react-redux";
@@ -15,10 +15,9 @@ import CountryListItems from "./CountryListItems";
 const CountryLists = () => {
   useEffect(() => {
     dispatch(fetchCountryLists());
-  }, [toggleStatus]);
+  }, []);
 
   // Redux Operations
-  const { countryData } = useSelector((state) => state.countryDataReducer);
   const { toggleStatus } = useSelector((state) => state.toggleStatusReducer);
   const dispatch = useDispatch();
   // Function to call the setToggle action for every onClose event on the bottom sheet
@@ -33,9 +32,7 @@ const CountryLists = () => {
         {(onScrollEndDrag) => (
           <ScrollView showsVerticalScrollIndicator={false} onScrollEndDrag={onScrollEndDrag}>
               <View>
-                {countryData.map((country) => (
-                  <CountryListItems />
-                ))}
+                <CountryListItems />
               </View>
           </ScrollView>
         )}
