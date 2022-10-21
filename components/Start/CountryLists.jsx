@@ -1,46 +1,33 @@
-import { useEffect } from "react";
-import { ScrollView, View } from "react-native";
+import { Modal } from "react-native";
+
+// UI's
+import { Layout } from "@ui-kitten/components";
 
 // Redux
-import { useSelector, useDispatch } from "react-redux";
-import { fetchCountryLists } from "../../redux/CountriesList/actions";
-import { setToggle } from '../../redux/WelcomePageToggle/actions';
-
-// Bottom Sheet
-import BottomSheet from "react-native-simple-bottom-sheet";
+import { useSelector } from "react-redux";
 
 // Other Components
 import CountryListItems from "./CountryListItems";
 
 const CountryLists = () => {
-  useEffect(() => {
-    dispatch(fetchCountryLists());
-  }, []);
-
   // Redux Operations
   const { toggleStatus } = useSelector((state) => state.toggleStatusReducer);
-  const dispatch = useDispatch();
-  // Function to call the setToggle action for every onClose event on the bottom sheet
-  const setToggleOnClose = () => {
-    dispatch(setToggle())
-  }
 
-  return (
-    <View>
-      {toggleStatus ? (
-        <BottomSheet animationDuration={300} onClose={() => setToggleOnClose()} sliderMinHeight={0} sliderMaxHeight={600}>
-        {(onScrollEndDrag) => (
-          <ScrollView showsVerticalScrollIndicator={false} onScrollEndDrag={onScrollEndDrag}>
-              <View>
-                <CountryListItems />
-              </View>
-          </ScrollView>
-        )}
-      </BottomSheet>
-      ) : null
-      }
-    </View>
-  );
+  /**
+   * Check the toggle status
+   * If it was true the modal will be open
+   * but, if the status was false it will be closed
+   * NOTE: it is faster than inline if statement 
+   * **The inline if statement has a little bit delay!**
+   */
+  if (toggleStatus) {
+    return (
+      <Layout>
+        <Modal animationType="slide" visible={toggleStatus}>
+          <CountryListItems />
+        </Modal>
+      </Layout>
+    )} else (<></>)
 };
 
 export default CountryLists;
