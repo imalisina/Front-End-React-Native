@@ -11,15 +11,16 @@ import { ApplicationProvider, Layout } from '@ui-kitten/components';
 
 // Application Screens
 import WelcomePageContainer from './screens/WelcomeScreen';
+import { View } from 'react-native';
 
 const App = () => {
   return (
     <Provider store={Store}>
         <ApplicationProvider {...eva} theme={eva.light}>
-          <Layout style={tw.style('h-full')}>
+          <View style={tw.style('h-full')}>
             <StatusBar />
             <WelcomePageContainer />
-          </Layout>
+          </View>
         </ApplicationProvider>
     </Provider>
   );
