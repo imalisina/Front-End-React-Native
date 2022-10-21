@@ -12,11 +12,13 @@ const CountryListItems = () => {
     const dispatch = useDispatch();
 
     const Item = ({ title, flag }) => (
-        <TouchableOpacity activeOpacity={0.3} onPress={() => dispatch(setToggle())}>
-            <Text>{title}</Text>
-            <Image source={{uri: flag}} style={{width: 50, height: 50}} />
-            <Divider />
-        </TouchableOpacity>
+        <View>
+            <Pressable onPress={() => dispatch(setToggle())} activeOpacity={0.3}>
+                <Text>{title}</Text>
+                <Image source={{uri: flag}} style={{width: 50, height: 50}} />
+                <Divider />
+            </Pressable>
+        </View>
       );
 
       const renderItem = ({ item }) => (
