@@ -1905,7 +1905,7 @@ const Countries = [
       "flags": "https://flagcdn.com/w320/ae.png",
     },
     {
-      "name": "United Kingdom of Great Britain and Northern Ireland",
+      "name": "United Kingdom and Northern Ireland",
       "alpha2Code": "GB",
       "callingCodes": [
         "44"
