@@ -17,7 +17,6 @@ const countryDataReducer = ( state = initialState, action ) => {
                     state.selectedCountryData = country
                 }
             })
-            console.log(state.selectedCountryData)
             return {...state};
         default:
             return state;
