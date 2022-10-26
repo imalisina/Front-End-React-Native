@@ -28,11 +28,11 @@ const CountryListItems = () => {
         <View>
             <Pressable onPress={() => selectedCountryEventHandler(title)}>
                 <View style={tw.style('w-full flex flex-row justify-between my-3')}>
-                    <Layout style={tw.style('ml-3')}>
+                    <Layout style={tw.style('ml-5')}>
                         <Text>{title}</Text>
                         <Text style={tw.style('text-zinc-400 text-xs')}>{alphaCode}</Text>
                     </Layout>
-                    <Image source={{ uri: flag }} style={tw.style('w-12 h-10 rounded-md border border-zinc-100 mr-3')}/>
+                    <Image source={{ uri: flag }} style={tw.style('w-12 h-10 rounded-md border border-zinc-100 mr-5')}/>
                 </View>
                 <Divider />
             </Pressable>

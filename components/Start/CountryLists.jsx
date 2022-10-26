@@ -9,7 +9,6 @@ import { useSelector } from "react-redux";
 
 // Other Components
 import CountryListItems from "./CountryListItems";
-import CountrySearchBar from "./CountrySearchBar";
 
 const CountryLists = () => {
   // Redux Operations
@@ -27,7 +26,6 @@ const CountryLists = () => {
       <Layout>
         <Modal animationType="slide" visible={toggleStatus}>
           <Text category="h2" style={tw.style('mt-9 mb-4 ml-2')}>Select Your Country</Text>
-          <CountrySearchBar />
           <CountryListItems />
         </Modal>
       </Layout>
