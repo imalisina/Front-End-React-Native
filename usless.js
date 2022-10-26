@@ -32,14 +32,6 @@ const Countries = [
       "flags": "https://flagcdn.com/w320/au.png",
     },
     {
-      "name": "Åland Islands",
-      "alpha2Code": "AX",
-      "callingCodes": [
-        "358"
-      ],
-      "flags": "https://flagcdn.com/w320/ax.png",
-    },
-    {
       "name": "Albania",
       "alpha2Code": "AL",
       "callingCodes": [
@@ -96,36 +88,12 @@ const Countries = [
       "flags": "https://flagcdn.com/w320/aq.png",
     },
     {
-      "name": "Antigua and Barbuda",
-      "alpha2Code": "AG",
-      "callingCodes": [
-        "1"
-      ],
-      "flags": "https://flagcdn.com/w320/ag.png",
-    },
-    {
       "name": "Argentina",
       "alpha2Code": "AR",
       "callingCodes": [
         "54"
       ],
       "flags": "https://flagcdn.com/w320/ar.png",
-    },
-    {
-      "name": "Armenia",
-      "alpha2Code": "AM",
-      "callingCodes": [
-        "374"
-      ],
-      "flags": "https://flagcdn.com/w320/am.png",
-    },
-    {
-      "name": "Aruba",
-      "alpha2Code": "AW",
-      "callingCodes": [
-        "297"
-      ],
-      "flags": "https://flagcdn.com/w320/aw.png",
     },
     {
       "name": "Austria",
@@ -144,28 +112,12 @@ const Countries = [
       "flags": "https://flagcdn.com/w320/az.png",
     },
     {
-      "name": "Bahamas",
-      "alpha2Code": "BS",
-      "callingCodes": [
-        "1"
-      ],
-      "flags": "https://flagcdn.com/w320/bs.png",
-    },
-    {
       "name": "Bahrain",
       "alpha2Code": "BH",
       "callingCodes": [
         "973"
       ],
       "flags": "https://flagcdn.com/w320/bh.png",
-    },
-    {
-      "name": "Bangladesh",
-      "alpha2Code": "BD",
-      "callingCodes": [
-        "880"
-      ],
-      "flags": "https://flagcdn.com/w320/bd.png",
     },
     {
       "name": "Barbados",
@@ -192,76 +144,12 @@ const Countries = [
       "flags": "https://flagcdn.com/w320/be.png",
     },
     {
-      "name": "Belize",
-      "alpha2Code": "BZ",
-      "callingCodes": [
-        "501"
-      ],
-      "flags": "https://flagcdn.com/w320/bz.png",
-    },
-    {
-      "name": "Benin",
-      "alpha2Code": "BJ",
-      "callingCodes": [
-        "229"
-      ],
-      "flags": "https://flagcdn.com/w320/bj.png",
-    },
-    {
-      "name": "Bermuda",
-      "alpha2Code": "BM",
-      "callingCodes": [
-        "1"
-      ],
-      "flags": "https://flagcdn.com/w320/bm.png",
-    },
-    {
-      "name": "Bhutan",
-      "alpha2Code": "BT",
-      "callingCodes": [
-        "975"
-      ],
-      "flags": "https://flagcdn.com/w320/bt.png",
-    },
-    {
-      "name": "Bolivia (Plurinational State of)",
-      "alpha2Code": "BO",
-      "callingCodes": [
-        "591"
-      ],
-      "flags": "https://flagcdn.com/w320/bo.png",
-    },
-    {
-      "name": "Bonaire, Sint Eustatius and Saba",
-      "alpha2Code": "BQ",
-      "callingCodes": [
-        "599"
-      ],
-      "flags": "https://flagcdn.com/w320/bq.png",
-    },
-    {
       "name": "Bosnia and Herzegovina",
       "alpha2Code": "BA",
       "callingCodes": [
         "387"
       ],
       "flags": "https://flagcdn.com/w320/ba.png",
-    },
-    {
-      "name": "Botswana",
-      "alpha2Code": "BW",
-      "callingCodes": [
-        "267"
-      ],
-      "flags": "https://flagcdn.com/w320/bw.png",
-    },
-    {
-      "name": "Bouvet Island",
-      "alpha2Code": "BV",
-      "callingCodes": [
-        "47"
-      ],
-      "flags": "https://flagcdn.com/w320/bv.png",
     },
     {
       "name": "Brazil",
@@ -280,22 +168,6 @@ const Countries = [
       "flags": "https://flagcdn.com/w320/io.png",
     },
     {
-      "name": "Virgin Islands (British)",
-      "alpha2Code": "VG",
-      "callingCodes": [
-        "1"
-      ],
-      "flags": "https://flagcdn.com/w320/vg.png",
-    },
-    {
-      "name": "Virgin Islands (U.S.)",
-      "alpha2Code": "VI",
-      "callingCodes": [
-        "1 340"
-      ],
-      "flags": "https://flagcdn.com/w320/vi.png",
-    },
-    {
       "name": "Brunei Darussalam",
       "alpha2Code": "BN",
       "callingCodes": [
@@ -310,22 +182,6 @@ const Countries = [
         "359"
       ],
       "flags": "https://flagcdn.com/w320/bg.png",
-    },
-    {
-      "name": "Burkina Faso",
-      "alpha2Code": "BF",
-      "callingCodes": [
-        "226"
-      ],
-      "flags": "https://flagcdn.com/w320/bf.png",
-    },
-    {
-      "name": "Burundi",
-      "alpha2Code": "BI",
-      "callingCodes": [
-        "257"
-      ],
-      "flags": "https://flagcdn.com/w320/bi.png",
     },
     {
       "name": "Cambodia",
@@ -352,38 +208,6 @@ const Countries = [
       "flags": "https://flagcdn.com/w320/ca.png",
     },
     {
-      "name": "Cabo Verde",
-      "alpha2Code": "CV",
-      "callingCodes": [
-        "238"
-      ],
-      "flags": "https://flagcdn.com/w320/cv.png",
-    },
-    {
-      "name": "Cayman Islands",
-      "alpha2Code": "KY",
-      "callingCodes": [
-        "1"
-      ],
-      "flags": "https://flagcdn.com/w320/ky.png",
-    },
-    {
-      "name": "Central African Republic",
-      "alpha2Code": "CF",
-      "callingCodes": [
-        "236"
-      ],
-      "flags": "https://flagcdn.com/w320/cf.png",
-    },
-    {
-      "name": "Chad",
-      "alpha2Code": "TD",
-      "callingCodes": [
-        "235"
-      ],
-      "flags": "https://flagcdn.com/w320/td.png",
-    },
-    {
       "name": "Chile",
       "alpha2Code": "CL",
       "callingCodes": [
@@ -400,22 +224,6 @@ const Countries = [
       "flags": "https://flagcdn.com/w320/cn.png",
     },
     {
-      "name": "Christmas Island",
-      "alpha2Code": "CX",
-      "callingCodes": [
-        "61"
-      ],
-      "flags": "https://flagcdn.com/w320/cx.png",
-    },
-    {
-      "name": "Cocos (Keeling) Islands",
-      "alpha2Code": "CC",
-      "callingCodes": [
-        "61"
-      ],
-      "flags": "https://flagcdn.com/w320/cc.png",
-    },
-    {
       "name": "Colombia",
       "alpha2Code": "CO",
       "callingCodes": [
@@ -424,36 +232,12 @@ const Countries = [
       "flags": "https://flagcdn.com/w320/co.png",
     },
     {
-      "name": "Comoros",
-      "alpha2Code": "KM",
-      "callingCodes": [
-        "269"
-      ],
-      "flags": "https://flagcdn.com/w320/km.png",
-    },
-    {
-      "name": "Congo",
-      "alpha2Code": "CG",
-      "callingCodes": [
-        "242"
-      ],
-      "flags": "https://flagcdn.com/w320/cg.png",
-    },
-    {
       "name": "Congo (Democratic Republic of the)",
       "alpha2Code": "CD",
       "callingCodes": [
         "243"
       ],
       "flags": "https://flagcdn.com/w320/cd.png",
-    },
-    {
-      "name": "Cook Islands",
-      "alpha2Code": "CK",
-      "callingCodes": [
-        "682"
-      ],
-      "flags": "https://flagcdn.com/w320/ck.png",
     },
     {
       "name": "Costa Rica",
@@ -470,22 +254,6 @@ const Countries = [
         "385"
       ],
       "flags": "https://flagcdn.com/w320/hr.png",
-    },
-    {
-      "name": "Cuba",
-      "alpha2Code": "CU",
-      "callingCodes": [
-        "53"
-      ],
-      "flags": "https://flagcdn.com/w320/cu.png",
-    },
-    {
-      "name": "Curaçao",
-      "alpha2Code": "CW",
-      "callingCodes": [
-        "599"
-      ],
-      "flags": "https://flagcdn.com/w320/cw.png",
     },
     {
       "name": "Cyprus",
@@ -512,36 +280,12 @@ const Countries = [
       "flags": "https://flagcdn.com/w320/dk.png",
     },
     {
-      "name": "Djibouti",
-      "alpha2Code": "DJ",
-      "callingCodes": [
-        "253"
-      ],
-      "flags": "https://flagcdn.com/w320/dj.png",
-    },
-    {
-      "name": "Dominica",
-      "alpha2Code": "DM",
-      "callingCodes": [
-        "1"
-      ],
-      "flags": "https://flagcdn.com/w320/dm.png",
-    },
-    {
       "name": "Dominican Republic",
       "alpha2Code": "DO",
       "callingCodes": [
         "1"
       ],
       "flags": "https://flagcdn.com/w320/do.png",
-    },
-    {
-      "name": "Ecuador",
-      "alpha2Code": "EC",
-      "callingCodes": [
-        "593"
-      ],
-      "flags": "https://flagcdn.com/w320/ec.png",
     },
     {
       "name": "Egypt",
@@ -552,68 +296,12 @@ const Countries = [
       "flags": "https://flagcdn.com/w320/eg.png",
     },
     {
-      "name": "El Salvador",
-      "alpha2Code": "SV",
-      "callingCodes": [
-        "503"
-      ],
-      "flags": "https://flagcdn.com/w320/sv.png",
-    },
-    {
-      "name": "Equatorial Guinea",
-      "alpha2Code": "GQ",
-      "callingCodes": [
-        "240"
-      ],
-      "flags": "https://flagcdn.com/w320/gq.png",
-    },
-    {
-      "name": "Eritrea",
-      "alpha2Code": "ER",
-      "callingCodes": [
-        "291"
-      ],
-      "flags": "https://flagcdn.com/w320/er.png",
-    },
-    {
       "name": "Estonia",
       "alpha2Code": "EE",
       "callingCodes": [
         "372"
       ],
       "flags": "https://flagcdn.com/w320/ee.png",
-    },
-    {
-      "name": "Ethiopia",
-      "alpha2Code": "ET",
-      "callingCodes": [
-        "251"
-      ],
-      "flags": "https://flagcdn.com/w320/et.png",
-    },
-    {
-      "name": "Falkland Islands (Malvinas)",
-      "alpha2Code": "FK",
-      "callingCodes": [
-        "500"
-      ],
-      "flags": "https://flagcdn.com/w320/fk.png",
-    },
-    {
-      "name": "Faroe Islands",
-      "alpha2Code": "FO",
-      "callingCodes": [
-        "298"
-      ],
-      "flags": "https://flagcdn.com/w320/fo.png",
-    },
-    {
-      "name": "Fiji",
-      "alpha2Code": "FJ",
-      "callingCodes": [
-        "679"
-      ],
-      "flags": "https://flagcdn.com/w320/fj.png",
     },
     {
       "name": "Finland",
@@ -630,46 +318,6 @@ const Countries = [
         "33"
       ],
       "flags": "https://flagcdn.com/w320/fr.png",
-    },
-    {
-      "name": "French Guiana",
-      "alpha2Code": "GF",
-      "callingCodes": [
-        "594"
-      ],
-      "flags": "https://flagcdn.com/w320/gf.png",
-    },
-    {
-      "name": "French Polynesia",
-      "alpha2Code": "PF",
-      "callingCodes": [
-        "689"
-      ],
-      "flags": "https://flagcdn.com/w320/pf.png",
-    },
-    {
-      "name": "French Southern Territories",
-      "alpha2Code": "TF",
-      "callingCodes": [
-        "262"
-      ],
-      "flags": "https://flagcdn.com/w320/tf.png",
-    },
-    {
-      "name": "Gabon",
-      "alpha2Code": "GA",
-      "callingCodes": [
-        "241"
-      ],
-      "flags": "https://flagcdn.com/w320/ga.png",
-    },
-    {
-      "name": "Gambia",
-      "alpha2Code": "GM",
-      "callingCodes": [
-        "220"
-      ],
-      "flags": "https://flagcdn.com/w320/gm.png",
     },
     {
       "name": "Georgia",
@@ -1897,6 +1545,14 @@ const Countries = [
       "flags": "https://flagcdn.com/w320/ug.png",
     },
     {
+      "name": "Åland Islands",
+      "alpha2Code": "AX",
+      "callingCodes": [
+        "358"
+      ],
+      "flags": "https://flagcdn.com/w320/ax.png",
+    },
+    {
       "name": "Ukraine",
       "alpha2Code": "UA",
       "callingCodes": [
@@ -1943,6 +1599,78 @@ const Countries = [
         "58"
       ],
       "flags": "https://flagcdn.com/w320/ve.png",
+    },
+    {
+      "name": "Bangladesh",
+      "alpha2Code": "BD",
+      "callingCodes": [
+        "880"
+      ],
+      "flags": "https://flagcdn.com/w320/bd.png",
+    },
+    {
+      "name": "Belize",
+      "alpha2Code": "BZ",
+      "callingCodes": [
+        "501"
+      ],
+      "flags": "https://flagcdn.com/w320/bz.png",
+    },
+    {
+      "name": "Benin",
+      "alpha2Code": "BJ",
+      "callingCodes": [
+        "229"
+      ],
+      "flags": "https://flagcdn.com/w320/bj.png",
+    },
+    {
+      "name": "Bermuda",
+      "alpha2Code": "BM",
+      "callingCodes": [
+        "1"
+      ],
+      "flags": "https://flagcdn.com/w320/bm.png",
+    },
+    {
+      "name": "Bhutan",
+      "alpha2Code": "BT",
+      "callingCodes": [
+        "975"
+      ],
+      "flags": "https://flagcdn.com/w320/bt.png",
+    },
+    {
+      "name": "Bolivia (Plurinational State of)",
+      "alpha2Code": "BO",
+      "callingCodes": [
+        "591"
+      ],
+      "flags": "https://flagcdn.com/w320/bo.png",
+    },
+    {
+      "name": "Bonaire, Sint Eustatius and Saba",
+      "alpha2Code": "BQ",
+      "callingCodes": [
+        "599"
+      ],
+      "flags": "https://flagcdn.com/w320/bq.png",
+    },
+    {
+      "name": "Botswana",
+      "alpha2Code": "BW",
+      "callingCodes": [
+        "267"
+      ],
+      "flags": "https://flagcdn.com/w320/bw.png",
+    },
+    {
+      "name": "Bouvet Island",
+      "alpha2Code": "BV",
+      "callingCodes": [
+        "47"
+      ],
+      "flags": "https://flagcdn.com/w320/bv.png",
     },
     {
       "name": "Vietnam",
@@ -1993,13 +1721,253 @@ const Countries = [
       "flags": "https://flagcdn.com/w320/zw.png",
     },
     {
+      "name": "Aruba",
+      "alpha2Code": "AW",
+      "callingCodes": [
+        "297"
+      ],
+      "flags": "https://flagcdn.com/w320/aw.png",
+    },
+    {
+      "name": "Antigua and Barbuda",
+      "alpha2Code": "AG",
+      "callingCodes": [
+        "1"
+      ],
+      "flags": "https://flagcdn.com/w320/ag.png",
+    },
+    {
+      "name": "Bahamas",
+      "alpha2Code": "BS",
+      "callingCodes": [
+        "1"
+      ],
+      "flags": "https://flagcdn.com/w320/bs.png",
+    },
+    {
       "name": "Afghanistan",
       "alpha2Code": "AF",
       "callingCodes": [
         "93"
       ],
       "flags": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_the_Taliban.svg/320px-Flag_of_the_Taliban.svg.png",
-    }
+    },
+    {
+      "name": "Burkina Faso",
+      "alpha2Code": "BF",
+      "callingCodes": [
+        "226"
+      ],
+      "flags": "https://flagcdn.com/w320/bf.png",
+    },
+    {
+      "name": "Burundi",
+      "alpha2Code": "BI",
+      "callingCodes": [
+        "257"
+      ],
+      "flags": "https://flagcdn.com/w320/bi.png",
+    },
+    {
+      "name": "Cabo Verde",
+      "alpha2Code": "CV",
+      "callingCodes": [
+        "238"
+      ],
+      "flags": "https://flagcdn.com/w320/cv.png",
+    },
+    {
+      "name": "Central African Republic",
+      "alpha2Code": "CF",
+      "callingCodes": [
+        "236"
+      ],
+      "flags": "https://flagcdn.com/w320/cf.png",
+    },
+    {
+      "name": "Chad",
+      "alpha2Code": "TD",
+      "callingCodes": [
+        "235"
+      ],
+      "flags": "https://flagcdn.com/w320/td.png",
+    },
+    {
+      "name": "Christmas Island",
+      "alpha2Code": "CX",
+      "callingCodes": [
+        "61"
+      ],
+      "flags": "https://flagcdn.com/w320/cx.png",
+    },
+    {
+      "name": "Cocos (Keeling) Islands",
+      "alpha2Code": "CC",
+      "callingCodes": [
+        "61"
+      ],
+      "flags": "https://flagcdn.com/w320/cc.png",
+    },
+    {
+      "name": "Cuba",
+      "alpha2Code": "CU",
+      "callingCodes": [
+        "53"
+      ],
+      "flags": "https://flagcdn.com/w320/cu.png",
+    },
+    {
+      "name": "Curaçao",
+      "alpha2Code": "CW",
+      "callingCodes": [
+        "599"
+      ],
+      "flags": "https://flagcdn.com/w320/cw.png",
+    },
+    {
+      "name": "Cook Islands",
+      "alpha2Code": "CK",
+      "callingCodes": [
+        "682"
+      ],
+      "flags": "https://flagcdn.com/w320/ck.png",
+    },
+    {
+      "name": "El Salvador",
+      "alpha2Code": "SV",
+      "callingCodes": [
+        "503"
+      ],
+      "flags": "https://flagcdn.com/w320/sv.png",
+    },
+    {
+      "name": "Equatorial Guinea",
+      "alpha2Code": "GQ",
+      "callingCodes": [
+        "240"
+      ],
+      "flags": "https://flagcdn.com/w320/gq.png",
+    },
+    {
+      "name": "French Guiana",
+      "alpha2Code": "GF",
+      "callingCodes": [
+        "594"
+      ],
+      "flags": "https://flagcdn.com/w320/gf.png",
+    },
+    {
+      "name": "French Polynesia",
+      "alpha2Code": "PF",
+      "callingCodes": [
+        "689"
+      ],
+      "flags": "https://flagcdn.com/w320/pf.png",
+    },
+    {
+      "name": "French Southern Territories",
+      "alpha2Code": "TF",
+      "callingCodes": [
+        "262"
+      ],
+      "flags": "https://flagcdn.com/w320/tf.png",
+    },
+    {
+      "name": "Falkland Islands (Malvinas)",
+      "alpha2Code": "FK",
+      "callingCodes": [
+        "500"
+      ],
+      "flags": "https://flagcdn.com/w320/fk.png",
+    },
+    {
+      "name": "Faroe Islands",
+      "alpha2Code": "FO",
+      "callingCodes": [
+        "298"
+      ],
+      "flags": "https://flagcdn.com/w320/fo.png",
+    },
+    {
+      "name": "Fiji",
+      "alpha2Code": "FJ",
+      "callingCodes": [
+        "679"
+      ],
+      "flags": "https://flagcdn.com/w320/fj.png",
+    },
+    {
+      "name": "Gabon",
+      "alpha2Code": "GA",
+      "callingCodes": [
+        "241"
+      ],
+      "flags": "https://flagcdn.com/w320/ga.png",
+    },
+    {
+      "name": "Gambia",
+      "alpha2Code": "GM",
+      "callingCodes": [
+        "220"
+      ],
+      "flags": "https://flagcdn.com/w320/gm.png",
+    },
+    {
+      "name": "Eritrea",
+      "alpha2Code": "ER",
+      "callingCodes": [
+        "291"
+      ],
+      "flags": "https://flagcdn.com/w320/er.png",
+    },
+    {
+      "name": "Comoros",
+      "alpha2Code": "KM",
+      "callingCodes": [
+        "269"
+      ],
+      "flags": "https://flagcdn.com/w320/km.png",
+    },
+    {
+      "name": "Congo",
+      "alpha2Code": "CG",
+      "callingCodes": [
+        "242"
+      ],
+      "flags": "https://flagcdn.com/w320/cg.png",
+    },
+    {
+      "name": "Ethiopia",
+      "alpha2Code": "ET",
+      "callingCodes": [
+        "251"
+      ],
+      "flags": "https://flagcdn.com/w320/et.png",
+    },
+    {
+      "name": "Ecuador",
+      "alpha2Code": "EC",
+      "callingCodes": [
+        "593"
+      ],
+      "flags": "https://flagcdn.com/w320/ec.png",
+    },
+    {
+      "name": "Djibouti",
+      "alpha2Code": "DJ",
+      "callingCodes": [
+        "253"
+      ],
+      "flags": "https://flagcdn.com/w320/dj.png",
+    },
+    {
+      "name": "Armenia",
+      "alpha2Code": "AM",
+      "callingCodes": [
+        "374"
+      ],
+      "flags": "https://flagcdn.com/w320/am.png",
+    },
 ];
 
 export default Countries;
