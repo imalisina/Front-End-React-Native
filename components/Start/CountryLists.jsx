@@ -1,13 +1,15 @@
 import { Modal } from "react-native";
 
 // UI's
-import { Layout } from "@ui-kitten/components";
+import tw from 'twrnc';
+import { Layout, Text } from "@ui-kitten/components";
 
 // Redux
 import { useSelector } from "react-redux";
 
 // Other Components
 import CountryListItems from "./CountryListItems";
+import CountrySearchBar from "./CountrySearchBar";
 
 const CountryLists = () => {
   // Redux Operations
@@ -24,6 +26,8 @@ const CountryLists = () => {
     return (
       <Layout>
         <Modal animationType="slide" visible={toggleStatus}>
+          <Text category="h2" style={tw.style('mt-9 mb-4 ml-2')}>Select Your Country</Text>
+          <CountrySearchBar />
           <CountryListItems />
         </Modal>
       </Layout>

@@ -31,7 +31,6 @@ const SelectCountry = () => {
       <Pressable onTouchStart={() => changeToggleStatus()} style={styles.SelectCountryinput}>
         <Input 
           placeholder={changeInputPlaceholder()}
-          // placeholder={selectedCountryData.name !== undefined ? selectedCountryData.name : 'Select your country'}
           style={[tw.style('mx-auto border border-gray-300 bg-transparent'), styles.Input]} 
           placeholderTextColor='#9ca3af'
           selectionColor='gray'

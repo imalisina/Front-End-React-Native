@@ -45,7 +45,6 @@ const CountryListItems = () => {
 
     return (
         <Layout>
-            <Text category="h2" style={tw.style('mt-9 mb-3 ml-2')}>Select Your Country</Text>
             <FlatList
             style={tw.style('mt-4 mb-22')}
             data={countryData}
