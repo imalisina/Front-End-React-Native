@@ -360,14 +360,6 @@ const Countries = [
       "flags": "https://flagcdn.com/w320/ir.png",
     },
     {
-      "name": "Ivory Coast",
-      "alpha2Code": "CI",
-      "callingCodes": [
-        "225"
-      ],
-      "flags": "https://flagcdn.com/w320/ci.png",
-    },
-    {
       "name": "Iraq",
       "alpha2Code": "IQ",
       "callingCodes": [
@@ -408,36 +400,12 @@ const Countries = [
       "flags": "https://flagcdn.com/w320/it.png",
     },
     {
-      "name": "Jamaica",
-      "alpha2Code": "JM",
-      "callingCodes": [
-        "1"
-      ],
-      "flags": "https://flagcdn.com/w320/jm.png",
-    },
-    {
       "name": "Japan",
       "alpha2Code": "JP",
       "callingCodes": [
         "81"
       ],
       "flags": "https://flagcdn.com/w320/jp.png",
-    },
-    {
-      "name": "Jersey",
-      "alpha2Code": "JE",
-      "callingCodes": [
-        "44"
-      ],
-      "flags": "https://flagcdn.com/w320/je.png",
-    },
-    {
-      "name": "Jordan",
-      "alpha2Code": "JO",
-      "callingCodes": [
-        "962"
-      ],
-      "flags": "https://flagcdn.com/w320/jo.png",
     },
     {
       "name": "Kazakhstan",
@@ -1145,6 +1113,22 @@ const Countries = [
       "flags": "https://flagcdn.com/w320/sk.png",
     },
     {
+      "name": "Ivory Coast",
+      "alpha2Code": "CI",
+      "callingCodes": [
+        "225"
+      ],
+      "flags": "https://flagcdn.com/w320/ci.png",
+    },
+    {
+      "name": "Jamaica",
+      "alpha2Code": "JM",
+      "callingCodes": [
+        "1"
+      ],
+      "flags": "https://flagcdn.com/w320/jm.png",
+    },
+    {
       "name": "Slovenia",
       "alpha2Code": "SI",
       "callingCodes": [
@@ -1177,12 +1161,28 @@ const Countries = [
       "flags": "https://flagcdn.com/w320/za.png",
     },
     {
+      "name": "Jersey",
+      "alpha2Code": "JE",
+      "callingCodes": [
+        "44"
+      ],
+      "flags": "https://flagcdn.com/w320/je.png",
+    },
+    {
       "name": "South Georgia and the South Sandwich Islands",
       "alpha2Code": "GS",
       "callingCodes": [
         "500"
       ],
       "flags": "https://flagcdn.com/w320/gs.png",
+    },
+    {
+      "name": "Jordan",
+      "alpha2Code": "JO",
+      "callingCodes": [
+        "962"
+      ],
+      "flags": "https://flagcdn.com/w320/jo.png",
     },
     {
       "name": "Korea (Republic of)",
