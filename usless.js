@@ -1,4 +1,36 @@
 const Countries = [
+  {
+      "name": "United States of America",
+      "alpha2Code": "US",
+      "callingCodes": [
+        "1"
+      ],
+      "flags": "https://flagcdn.com/w320/us.png",
+    },
+    {
+      "name": "United Kingdom",
+      "alpha2Code": "GB",
+      "callingCodes": [
+        "44"
+      ],
+      "flags": "https://flagcdn.com/w320/gb.png",
+    },
+    {
+      "name": "China",
+      "alpha2Code": "CN",
+      "callingCodes": [
+        "86"
+      ],
+      "flags": "https://flagcdn.com/w320/cn.png",
+    },
+    {
+      "name": "Australia",
+      "alpha2Code": "AU",
+      "callingCodes": [
+        "61"
+      ],
+      "flags": "https://flagcdn.com/w320/au.png",
+    },
     {
       "name": "Åland Islands",
       "alpha2Code": "AX",
@@ -94,14 +126,6 @@ const Countries = [
         "297"
       ],
       "flags": "https://flagcdn.com/w320/aw.png",
-    },
-    {
-      "name": "Australia",
-      "alpha2Code": "AU",
-      "callingCodes": [
-        "61"
-      ],
-      "flags": "https://flagcdn.com/w320/au.png",
     },
     {
       "name": "Austria",
@@ -254,14 +278,6 @@ const Countries = [
         "246"
       ],
       "flags": "https://flagcdn.com/w320/io.png",
-    },
-    {
-      "name": "United States Minor Outlying Islands",
-      "alpha2Code": "UM",
-      "callingCodes": [
-        "246"
-      ],
-      "flags": "https://flagcdn.com/w320/um.png",
     },
     {
       "name": "Virgin Islands (British)",
@@ -1895,22 +1911,6 @@ const Countries = [
         "971"
       ],
       "flags": "https://flagcdn.com/w320/ae.png",
-    },
-    {
-      "name": "United Kingdom and Northern Ireland",
-      "alpha2Code": "GB",
-      "callingCodes": [
-        "44"
-      ],
-      "flags": "https://flagcdn.com/w320/gb.png",
-    },
-    {
-      "name": "United States of America",
-      "alpha2Code": "US",
-      "callingCodes": [
-        "1"
-      ],
-      "flags": "https://flagcdn.com/w320/us.png",
     },
     {
       "name": "Uruguay",
