@@ -32,68 +32,12 @@ const Countries = [
       "flags": "https://flagcdn.com/w320/au.png",
     },
     {
-      "name": "Albania",
-      "alpha2Code": "AL",
-      "callingCodes": [
-        "355"
-      ],
-      "flags": "https://flagcdn.com/w320/al.png",
-    },
-    {
-      "name": "Algeria",
-      "alpha2Code": "DZ",
-      "callingCodes": [
-        "213"
-      ],
-      "flags": "https://flagcdn.com/w320/dz.png",
-    },
-    {
-      "name": "American Samoa",
-      "alpha2Code": "AS",
-      "callingCodes": [
-        "1"
-      ],
-      "flags": "https://flagcdn.com/w320/as.png",
-    },
-    {
-      "name": "Andorra",
-      "alpha2Code": "AD",
-      "callingCodes": [
-        "376"
-      ],
-      "flags": "https://flagcdn.com/w320/ad.png",
-    },
-    {
-      "name": "Angola",
-      "alpha2Code": "AO",
-      "callingCodes": [
-        "244"
-      ],
-      "flags": "https://flagcdn.com/w320/ao.png",
-    },
-    {
-      "name": "Anguilla",
-      "alpha2Code": "AI",
-      "callingCodes": [
-        "1"
-      ],
-      "flags": "https://flagcdn.com/w320/ai.png",
-    },
-    {
       "name": "Antarctica",
       "alpha2Code": "AQ",
       "callingCodes": [
         "672"
       ],
       "flags": "https://flagcdn.com/w320/aq.png",
-    },
-    {
-      "name": "Argentina",
-      "alpha2Code": "AR",
-      "callingCodes": [
-        "54"
-      ],
-      "flags": "https://flagcdn.com/w320/ar.png",
     },
     {
       "name": "Austria",
@@ -110,6 +54,22 @@ const Countries = [
         "994"
       ],
       "flags": "https://flagcdn.com/w320/az.png",
+    },
+    {
+      "name": "India",
+      "alpha2Code": "IN",
+      "callingCodes": [
+        "91"
+      ],
+      "flags": "https://flagcdn.com/w320/in.png",
+    },
+    {
+      "name": "Argentina",
+      "alpha2Code": "AR",
+      "callingCodes": [
+        "54"
+      ],
+      "flags": "https://flagcdn.com/w320/ar.png",
     },
     {
       "name": "Bahrain",
@@ -336,22 +296,6 @@ const Countries = [
       "flags": "https://flagcdn.com/w320/de.png",
     },
     {
-      "name": "Ghana",
-      "alpha2Code": "GH",
-      "callingCodes": [
-        "233"
-      ],
-      "flags": "https://flagcdn.com/w320/gh.png",
-    },
-    {
-      "name": "Gibraltar",
-      "alpha2Code": "GI",
-      "callingCodes": [
-        "350"
-      ],
-      "flags": "https://flagcdn.com/w320/gi.png",
-    },
-    {
       "name": "Greece",
       "alpha2Code": "GR",
       "callingCodes": [
@@ -368,100 +312,12 @@ const Countries = [
       "flags": "https://flagcdn.com/w320/gl.png",
     },
     {
-      "name": "Grenada",
-      "alpha2Code": "GD",
-      "callingCodes": [
-        "1"
-      ],
-      "flags": "https://flagcdn.com/w320/gd.png",
-    },
-    {
-      "name": "Guadeloupe",
-      "alpha2Code": "GP",
-      "callingCodes": [
-        "590"
-      ],
-      "flags": "https://flagcdn.com/w320/gp.png",
-    },
-    {
-      "name": "Guam",
-      "alpha2Code": "GU",
-      "callingCodes": [
-        "1"
-      ],
-      "flags": "https://flagcdn.com/w320/gu.png",
-    },
-    {
-      "name": "Guatemala",
-      "alpha2Code": "GT",
-      "callingCodes": [
-        "502"
-      ],
-      "flags": "https://flagcdn.com/w320/gt.png",
-    },
-    {
-      "name": "Guernsey",
-      "alpha2Code": "GG",
-      "callingCodes": [
-        "44"
-      ],
-      "flags": "https://flagcdn.com/w320/gg.png",
-    },
-    {
-      "name": "Guinea",
-      "alpha2Code": "GN",
-      "callingCodes": [
-        "224"
-      ],
-      "flags": "https://flagcdn.com/w320/gn.png",
-    },
-    {
-      "name": "Guinea-Bissau",
-      "alpha2Code": "GW",
-      "callingCodes": [
-        "245"
-      ],
-      "flags": "https://flagcdn.com/w320/gw.png",
-    },
-    {
-      "name": "Guyana",
-      "alpha2Code": "GY",
-      "callingCodes": [
-        "592"
-      ],
-      "flags": "https://flagcdn.com/w320/gy.png",
-    },
-    {
-      "name": "Haiti",
-      "alpha2Code": "HT",
-      "callingCodes": [
-        "509"
-      ],
-      "flags": "https://flagcdn.com/w320/ht.png",
-    },
-    {
-      "name": "Heard Island and McDonald Islands",
-      "alpha2Code": "HM",
-      "callingCodes": [
-        "672"
-      ],
-      "flags": "https://flagcdn.com/w320/hm.png",
-    },
-    {
       "name": "Vatican City",
       "alpha2Code": "VA",
       "callingCodes": [
         "379"
       ],
       "flags": "https://flagcdn.com/w320/va.png",
-    },
-    {
-      "name": "Honduras",
-      "alpha2Code": "HN",
-      "callingCodes": [
-        "504"
-      ],
-      "flags": "https://flagcdn.com/w320/hn.png",
     },
     {
       "name": "Hungary",
@@ -488,14 +344,6 @@ const Countries = [
       "flags": "https://flagcdn.com/w320/is.png",
     },
     {
-      "name": "India",
-      "alpha2Code": "IN",
-      "callingCodes": [
-        "91"
-      ],
-      "flags": "https://flagcdn.com/w320/in.png",
-    },
-    {
       "name": "Indonesia",
       "alpha2Code": "ID",
       "callingCodes": [
@@ -504,20 +352,20 @@ const Countries = [
       "flags": "https://flagcdn.com/w320/id.png",
     },
     {
+      "name": "Islamic Republic of Iran",
+      "alpha2Code": "IR",
+      "callingCodes": [
+        "98"
+      ],
+      "flags": "https://flagcdn.com/w320/ir.png",
+    },
+    {
       "name": "Ivory Coast",
       "alpha2Code": "CI",
       "callingCodes": [
         "225"
       ],
       "flags": "https://flagcdn.com/w320/ci.png",
-    },
-    {
-      "name": "Iran (Islamic Republic of)",
-      "alpha2Code": "IR",
-      "callingCodes": [
-        "98"
-      ],
-      "flags": "https://flagcdn.com/w320/ir.png",
     },
     {
       "name": "Iraq",
@@ -1873,6 +1721,54 @@ const Countries = [
       "flags": "https://flagcdn.com/w320/tf.png",
     },
     {
+      "name": "Albania",
+      "alpha2Code": "AL",
+      "callingCodes": [
+        "355"
+      ],
+      "flags": "https://flagcdn.com/w320/al.png",
+    },
+    {
+      "name": "Algeria",
+      "alpha2Code": "DZ",
+      "callingCodes": [
+        "213"
+      ],
+      "flags": "https://flagcdn.com/w320/dz.png",
+    },
+    {
+      "name": "American Samoa",
+      "alpha2Code": "AS",
+      "callingCodes": [
+        "1"
+      ],
+      "flags": "https://flagcdn.com/w320/as.png",
+    },
+    {
+      "name": "Andorra",
+      "alpha2Code": "AD",
+      "callingCodes": [
+        "376"
+      ],
+      "flags": "https://flagcdn.com/w320/ad.png",
+    },
+    {
+      "name": "Angola",
+      "alpha2Code": "AO",
+      "callingCodes": [
+        "244"
+      ],
+      "flags": "https://flagcdn.com/w320/ao.png",
+    },
+    {
+      "name": "Anguilla",
+      "alpha2Code": "AI",
+      "callingCodes": [
+        "1"
+      ],
+      "flags": "https://flagcdn.com/w320/ai.png",
+    },
+    {
       "name": "Falkland Islands (Malvinas)",
       "alpha2Code": "FK",
       "callingCodes": [
@@ -1959,6 +1855,103 @@ const Countries = [
         "253"
       ],
       "flags": "https://flagcdn.com/w320/dj.png",
+    },
+    {
+      "name": "Ghana",
+      "alpha2Code": "GH",
+      "callingCodes": [
+        "233"
+      ],
+      "flags": "https://flagcdn.com/w320/gh.png",
+    },
+    {
+      "name": "Gibraltar",
+      "alpha2Code": "GI",
+      "callingCodes": [
+        "350"
+      ],
+      "flags": "https://flagcdn.com/w320/gi.png",
+    },
+    
+    {
+      "name": "Guadeloupe",
+      "alpha2Code": "GP",
+      "callingCodes": [
+        "590"
+      ],
+      "flags": "https://flagcdn.com/w320/gp.png",
+    },
+    {
+      "name": "Guam",
+      "alpha2Code": "GU",
+      "callingCodes": [
+        "1"
+      ],
+      "flags": "https://flagcdn.com/w320/gu.png",
+    },
+    {
+      "name": "Guatemala",
+      "alpha2Code": "GT",
+      "callingCodes": [
+        "502"
+      ],
+      "flags": "https://flagcdn.com/w320/gt.png",
+    },
+    {
+      "name": "Guernsey",
+      "alpha2Code": "GG",
+      "callingCodes": [
+        "44"
+      ],
+      "flags": "https://flagcdn.com/w320/gg.png",
+    },
+    {
+      "name": "Guinea",
+      "alpha2Code": "GN",
+      "callingCodes": [
+        "224"
+      ],
+      "flags": "https://flagcdn.com/w320/gn.png",
+    },
+    {
+      "name": "Guinea-Bissau",
+      "alpha2Code": "GW",
+      "callingCodes": [
+        "245"
+      ],
+      "flags": "https://flagcdn.com/w320/gw.png",
+    },
+    {
+      "name": "Guyana",
+      "alpha2Code": "GY",
+      "callingCodes": [
+        "592"
+      ],
+      "flags": "https://flagcdn.com/w320/gy.png",
+    },
+    {
+      "name": "Haiti",
+      "alpha2Code": "HT",
+      "callingCodes": [
+        "509"
+      ],
+      "flags": "https://flagcdn.com/w320/ht.png",
+    },
+    {
+      "name": "Heard Island and McDonald Islands",
+      "alpha2Code": "HM",
+      "callingCodes": [
+        "672"
+      ],
+      "flags": "https://flagcdn.com/w320/hm.png",
+    },
+    {
+      "name": "Honduras",
+      "alpha2Code": "HN",
+      "callingCodes": [
+        "504"
+      ],
+      "flags": "https://flagcdn.com/w320/hn.png",
     },
     {
       "name": "Armenia",
