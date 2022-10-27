@@ -5,6 +5,10 @@ import { StatusBar } from 'expo-status-bar';
 import { Provider } from 'react-redux';
 import { Store } from './redux/store';
 
+// Navigation v6
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 // UI's
 import tw from 'twrnc';
 import * as eva from '@eva-design/eva';
@@ -14,14 +18,24 @@ import { ApplicationProvider } from '@ui-kitten/components';
 import WelcomePageContainer from './screens/WelcomeScreen';
 
 const App = () => {
+  // Stack Navigator Creator
+  const Stack = createNativeStackNavigator();
+
   return (
-      <Provider store={Store}>
+    <Provider store={Store}>
           <ApplicationProvider {...eva} theme={eva.light}>
           {/* <ApplicationProvider {...eva} theme={eva.dark}> */}
-            <View style={tw.style('h-full')}>
-              <StatusBar />
-              <WelcomePageContainer />
-            </View>
+          <View style={tw.style('h-full')}>
+          <StatusBar />
+          <NavigationContainer>
+            <Stack.Navigator>
+                <Stack.Screen 
+                  name="Welcome" 
+                  component={WelcomePageContainer} 
+                  options={{headerShown: false}} />
+            </Stack.Navigator>
+          </NavigationContainer>
+        </View>
           </ApplicationProvider>
       </Provider>
   );

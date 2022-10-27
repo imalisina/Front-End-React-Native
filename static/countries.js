@@ -689,22 +689,6 @@ const Countries = [
       "flags": "https://flagcdn.com/w320/rw.png",
     },
     {
-      "name": "Saint Barthélemy",
-      "alpha2Code": "BL",
-      "callingCodes": [
-        "590"
-      ],
-      "flags": "https://flagcdn.com/w320/bl.png",
-    },
-    {
-      "name": "Saint Helena, Ascension and Tristan da Cunha",
-      "alpha2Code": "SH",
-      "callingCodes": [
-        "290"
-      ],
-      "flags": "https://flagcdn.com/w320/sh.png",
-    },
-    {
       "name": "Samoa",
       "alpha2Code": "WS",
       "callingCodes": [
