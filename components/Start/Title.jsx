@@ -8,7 +8,6 @@ import { Pacifico_400Regular } from '@expo-google-fonts/pacifico'
 import LottieView from 'lottie-react-native'
 
 // Tailwind Classes
-import tw from 'twrnc';
 import { Layout, Text } from '@ui-kitten/components';
 
 const Title = () => {
@@ -23,22 +22,33 @@ const Title = () => {
         return (
             <View>
                 <LottieView 
-                    style={tw.style('mx-auto my-39 w-30')}
+                    style={styles.spinner}
                     source={require('../../assets/spinner.json')} autoPlay loop />
             </View>
         )
     } else {
         return (
-            <Layout style={tw.style('mx-auto mt-50')}>
+            <Layout style={styles.container}>
                 <Text style={styles.firstTitle}>Welcome To</Text>
                 <Text style={styles.secondTitle}>Aware</Text>
-                <Text category='s1' appearance='hint' style={tw.style('mt-39 absolute left-36')}>Your AI Stylist</Text>
+                <Text style={styles.subtitle} category='s1' appearance='hint'>Your AI Stylist</Text>
             </Layout>
         )
     }
 }
 
 const styles = StyleSheet.create({
+    spinner: {
+        width: '35%',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        marginTop: '30%',
+    },
+    container: {
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        marginTop: '40%',
+    },
     firstTitle: {
         fontFamily: 'NotoSans_400Regular',
         fontSize: 30,
@@ -49,7 +59,12 @@ const styles = StyleSheet.create({
         fontSize: 90,
         position: 'absolute',
         color: '#be185d', // *Pink-700* On Tailwind Colors
-        right: '-10%'
+        right: '-10%',
+    },
+    subtitle: {
+        position: "absolute",
+        marginTop: '38%',
+        left: '34%'
     }
 })
 
