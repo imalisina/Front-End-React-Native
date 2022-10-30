@@ -25,20 +25,20 @@ const App = () => {
   return (
     <Provider store={Store}>
           <ApplicationProvider {...eva} theme={eva.light}>
-          {/* <ApplicationProvider {...eva} theme={eva.dark}> */}
           <View style={tw.style('h-full')}>
           <StatusBar />
           <NavigationContainer>
             <Stack.Navigator>
-                <Stack.Screen 
-                  name="Welcome" 
-                  component={WelcomePageContainer} 
-                  options={{ headerShown: false }} />
-            <Stack.Screen 
-              name="Login"
-              component={LoginScreen}
-              options={{ headerShown: false }}
-            />
+              {/* Welcome Screen Route */}
+              <Stack.Screen 
+                name="Welcome" 
+                component={WelcomePageContainer}
+                options={{ headerShown: false }} />
+              {/* Login Screen Route */}
+              <Stack.Screen 
+                name="Login"
+                component={LoginScreen}
+                options={{ headerShown: true, headerShadowVisible: false }} />
             </Stack.Navigator>
           </NavigationContainer>
         </View>
