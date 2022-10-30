@@ -1,7 +1,10 @@
-import { ImageBackground, StyleSheet } from 'react-native';
+import { ImageBackground, StyleSheet, Dimensions } from 'react-native';
 
 // UI's
-import { Layout, Text } from '@ui-kitten/components';
+import { Layout } from '@ui-kitten/components';
+
+// Getting the window measurements
+const height = Dimensions.get('window').height;
 
 const LoginScreen = () => {
     return (
@@ -18,7 +21,7 @@ const LoginScreen = () => {
 const styles = StyleSheet.create({
     backgroundImageStyles: {
         width: '100%',
-        height: 800,
+        height: height,
         opacity: 0.9
     }
 });
