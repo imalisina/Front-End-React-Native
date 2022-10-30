@@ -25,6 +25,7 @@ const App = () => {
   return (
     <Provider store={Store}>
           <ApplicationProvider {...eva} theme={eva.light}>
+          {/* <ApplicationProvider {...eva} theme={eva.dark}> */}
           <View style={tw.style('h-full')}>
           <StatusBar />
           <NavigationContainer>
