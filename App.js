@@ -16,6 +16,7 @@ import { ApplicationProvider } from '@ui-kitten/components';
 
 // Application Screens
 import WelcomePageContainer from './screens/WelcomeScreen';
+import LoginScreen from './screens/LoginScreen';
 
 const App = () => {
   // Stack Navigator Creator
@@ -32,7 +33,12 @@ const App = () => {
                 <Stack.Screen 
                   name="Welcome" 
                   component={WelcomePageContainer} 
-                  options={{headerShown: false}} />
+                  options={{ headerShown: false }} />
+            <Stack.Screen 
+              name="Login"
+              component={LoginScreen}
+              options={{ headerShown: false }}
+            />
             </Stack.Navigator>
           </NavigationContainer>
         </View>
