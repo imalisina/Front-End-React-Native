@@ -3,13 +3,16 @@ import { View, ImageBackground, StyleSheet, Dimensions } from 'react-native';
 // Get device dimensions
 const { height } = Dimensions.get('window');
 
+// Other Components
+import LoginCard from '../components/Auth/Login/LoginCard';
+
 const LoginScreen = () => {
     return (
         <View>
             <ImageBackground 
                 source={require("../assets/LoginPage.jpg")} 
                 resizeMode="cover" imageStyle={styles.backgroundImageStyles}>
-                {/* LOGIN CARD COMPONENT GOES HERE . . . */}
+                <LoginCard />
             </ImageBackground>
         </View>
     )
