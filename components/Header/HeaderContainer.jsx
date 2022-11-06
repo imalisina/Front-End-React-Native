@@ -6,9 +6,8 @@ import { Pacifico_400Regular, useFonts } from '@expo-google-fonts/pacifico';
 // Get device dimensions
 const { height } = Dimensions.get("window");
 
-
 const HeaderContainer = () => {
-    // Define Font
+    // Define font
     useFonts({
         Pacifico_400Regular
     });
@@ -22,7 +21,7 @@ const HeaderContainer = () => {
 const styles = StyleSheet.create({
     headerStyleAndroid: {
         fontFamily: 'Pacifico_400Regular',
-        fontSize: height * 0.03
+        fontSize: height * 0.033,
     },
     headerStyleIOS: {
         fontFamily: 'Pacifico_400Regular',

@@ -1,20 +1,17 @@
-import { ImageBackground, StyleSheet, Dimensions } from 'react-native';
+import { View, ImageBackground, StyleSheet, Dimensions } from 'react-native';
 
-// UI's
-import { Layout } from '@ui-kitten/components';
-
-// Getting the window measurements
-const height = Dimensions.get('window').height;
+// Get device dimensions
+const { height } = Dimensions.get('window');
 
 const LoginScreen = () => {
     return (
-        <Layout>
+        <View>
             <ImageBackground 
                 source={require("../assets/LoginPage.jpg")} 
                 resizeMode="cover" imageStyle={styles.backgroundImageStyles}>
                 {/* LOGIN CARD COMPONENT GOES HERE . . . */}
             </ImageBackground>
-        </Layout>
+        </View>
     )
 }
 
