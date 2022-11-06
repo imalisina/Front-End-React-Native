@@ -9,6 +9,9 @@ import { Store } from './redux/store';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+// Navigation Header
+import HeaderContainer from './components/Header/HeaderContainer';
+
 // UI's
 import tw from 'twrnc';
 import * as eva from '@eva-design/eva';
@@ -17,6 +20,9 @@ import { ApplicationProvider } from '@ui-kitten/components';
 // Application Screens
 import WelcomePageContainer from './screens/WelcomeScreen';
 import LoginScreen from './screens/LoginScreen';
+
+// Initialize the header
+const ApplicationHeader = () => <HeaderContainer />;
 
 const App = () => {
   // Stack Navigator Creator
@@ -39,7 +45,11 @@ const App = () => {
               <Stack.Screen 
                 name="Login"
                 component={LoginScreen}
-                options={{ headerShown: true, headerShadowVisible: false }} />
+                options={{
+                  headerShown: true, 
+                  headerShadowVisible: false,
+                  headerTitle : ApplicationHeader 
+                }} />
             </Stack.Navigator>
           </NavigationContainer>
         </View>
