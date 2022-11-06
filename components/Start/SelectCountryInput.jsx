@@ -1,9 +1,12 @@
-import { Platform, StyleSheet, Pressable } from 'react-native';
+import { Platform, StyleSheet, Pressable, Dimensions } from 'react-native';
 
 // UI's
 import tw from 'twrnc';
 import { MaterialIcons } from '@expo/vector-icons'; 
 import { Input } from '@ui-kitten/components';
+
+// Get device deminsions
+const { height } = Dimensions.get("window");
 
 // Redux
 import { useSelector, useDispatch } from 'react-redux';
@@ -52,7 +55,7 @@ const styles = StyleSheet.create({
   textStylesIOS: {
     paddingTop: '2%',
     paddingBottom: '2%',
-    fontSize: '17%'
+    fontSize: '17%' // change it with height var on dimensions and test by IOS
   }
 });
 

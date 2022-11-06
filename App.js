@@ -18,7 +18,7 @@ import * as eva from '@eva-design/eva';
 import { ApplicationProvider } from '@ui-kitten/components';
 
 // Application Screens
-import WelcomePageContainer from './screens/WelcomeScreen';
+import WelcomeScreen from './screens/WelcomeScreen';
 import LoginScreen from './screens/LoginScreen';
 
 const App = () => {
@@ -36,7 +36,7 @@ const App = () => {
               {/* Welcome Screen Route */}
               <Stack.Screen 
                 name="Welcome" 
-                component={WelcomePageContainer}
+                component={WelcomeScreen}
                 options={{ headerShown: false }} />
               {/* Login Screen Route */}
               <Stack.Screen 

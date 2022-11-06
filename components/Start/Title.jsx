@@ -1,14 +1,17 @@
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Dimensions } from 'react-native';
 
 // Import Fonts
 import { useFonts, NotoSans_400Regular } from '@expo-google-fonts/noto-sans';
 import { Pacifico_400Regular } from '@expo-google-fonts/pacifico'
 
 // Import Spinner
-import LottieView from 'lottie-react-native'
+import LottieView from 'lottie-react-native';
 
 // Tailwind Classes
 import { Layout, Text } from '@ui-kitten/components';
+
+// Get device dimensions
+const { height } = Dimensions.get("window"); 
 
 const Title = () => {
     
@@ -51,12 +54,12 @@ const styles = StyleSheet.create({
     },
     firstTitle: {
         fontFamily: 'NotoSans_400Regular',
-        fontSize: 30,
+        fontSize: height * 0.036,
         textAlign: 'center',
     },
     secondTitle: {
         fontFamily: 'Pacifico_400Regular',
-        fontSize: 90,
+        fontSize: height * 0.108,
         position: 'absolute',
         color: '#be185d', // *Pink-700* On Tailwind Colors
         right: '-10%',

@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 
 // UI's
 import tw from 'twrnc'
+import { StyleSheet } from 'react-native';
 import { Layout } from '@ui-kitten/components';
 
 // Redux
@@ -21,7 +22,7 @@ const WelcomeScreen = ({navigation}) => {
 
     return (
         <>
-        <Layout style={tw.style('h-full')}>
+        <Layout style={[tw.style('h-full'), styles.TopSpace]}>
             <Title />
             <SelectCountry />
         </Layout>
@@ -29,5 +30,11 @@ const WelcomeScreen = ({navigation}) => {
         </>
     );
 }
+
+const styles = StyleSheet.create({
+    TopSpace: {
+        paddingTop: '15%',
+    }
+});
 
 export default WelcomeScreen;
