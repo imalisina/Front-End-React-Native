@@ -1,4 +1,3 @@
-import { View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 
 // Redux
@@ -13,7 +12,6 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HeaderOptions from './components/Header/HeaderOptions';
 
 // UI's
-import tw from 'twrnc';
 import * as eva from '@eva-design/eva';
 import { ApplicationProvider } from '@ui-kitten/components';
 
@@ -27,27 +25,24 @@ const App = () => {
 
   return (
     <Provider store={Store}>
-          <ApplicationProvider {...eva} theme={eva.light}>
-          {/* <ApplicationProvider {...eva} theme={eva.dark}> */}
-          <View style={tw.style('h-full')}>
-          <StatusBar />
-          <NavigationContainer>
-            <Stack.Navigator>
-              {/* Welcome Screen Route */}
-              {/* <Stack.Screen 
-                name="Welcome" 
-                component={WelcomeScreen}
-                options={{ headerShown: false }} /> */}
-              {/* Login Screen Route */}
-              <Stack.Screen 
-                name="Login"
-                component={LoginScreen}
-                options={HeaderOptions} />
-            </Stack.Navigator>
-          </NavigationContainer>
-        </View>
-          </ApplicationProvider>
-      </Provider>
+      <ApplicationProvider {...eva} theme={eva.light}>
+        <StatusBar />
+        <NavigationContainer>
+          <Stack.Navigator>
+            {/* Welcome Screen Route */}
+            <Stack.Screen 
+              name="Welcome" 
+              component={WelcomeScreen}
+              options={{ headerShown: false }} />
+            {/* Login Screen Route */}
+            <Stack.Screen 
+              name="Login"
+              component={LoginScreen}
+              options={HeaderOptions} />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </ApplicationProvider>
+    </Provider>
   );
 }
 

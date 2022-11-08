@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
   textStylesIOS: {
     paddingTop: '2%',
     paddingBottom: '2%',
-    fontSize: '17%' // change it with height var on dimensions and test by IOS
+    fontSize: height * 0.025
   }
 });
 
