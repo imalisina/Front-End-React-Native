@@ -50,16 +50,16 @@ const styles = StyleSheet.create({
     container: {
         marginLeft: 'auto',
         marginRight: 'auto',
-        marginTop: '40%',
+        marginTop: height * 0.15,
     },
     firstTitle: {
         fontFamily: 'NotoSans_400Regular',
-        fontSize: height * 0.036,
+        fontSize: 30,
         textAlign: 'center',
     },
     secondTitle: {
         fontFamily: 'Pacifico_400Regular',
-        fontSize: height * 0.108,
+        fontSize: 90,
         position: 'absolute',
         color: '#be185d', // *Pink-700* On Tailwind Colors
         right: '-10%',

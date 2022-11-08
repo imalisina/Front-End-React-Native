@@ -5,6 +5,7 @@ const HeaderOptions = {
     headerShown: true, 
     headerShadowVisible: false,
     headerBackVisible: false,
+    headerBackButtonMenuEnabled: false,
     headerTitle: () => <HeaderContainer />
 };
 

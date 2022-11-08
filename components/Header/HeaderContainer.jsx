@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
     },
     headerStyleIOS: {
         fontFamily: 'Pacifico_400Regular',
+        fontSize: height * 0.04,
     }
 })
 
