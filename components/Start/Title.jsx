@@ -1,8 +1,7 @@
 import { View, StyleSheet, Dimensions } from 'react-native';
 
 // Import Fonts
-import { useFonts, NotoSans_400Regular } from '@expo-google-fonts/noto-sans';
-import { Pacifico_400Regular } from '@expo-google-fonts/pacifico'
+import { useFonts, Pacifico_400Regular } from '@expo-google-fonts/pacifico'
 
 // Import Spinner
 import LottieView from 'lottie-react-native';
@@ -17,7 +16,6 @@ const Title = () => {
     
     // Define Fonts
     let [fontsLoaded] = useFonts({
-        NotoSans_400Regular,
         Pacifico_400Regular
     });
     
@@ -53,7 +51,6 @@ const styles = StyleSheet.create({
         marginTop: height * 0.15,
     },
     firstTitle: {
-        fontFamily: 'NotoSans_400Regular',
         fontSize: 30,
         textAlign: 'center',
     },
