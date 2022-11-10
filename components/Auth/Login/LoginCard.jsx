@@ -2,8 +2,13 @@ import { StyleSheet, Dimensions, Text } from 'react-native';
 
 // UI's
 import tw from 'twrnc';
-import { Layout, Input } from '@ui-kitten/components';
+import { Layout, Button } from '@ui-kitten/components';
 
+// Icon
+import { AntDesign } from '@expo/vector-icons';
+
+// Other Components
+import Inputs from './Inputs';
 
 const { height } = Dimensions.get("window");
 
@@ -12,21 +17,14 @@ const LoginCard = () => {
         <Layout style={[styles.cardContainer, tw.style('mx-auto bg-white shadow-md rounded-md')]}>
             <Text style={[tw.style('mx-auto'), styles.cardHeader]}>Login</Text>
             <Text style={[tw.style('mx-auto text-zinc-400'), styles.cardSubHeader]}>Log into existing account</Text>
-            <Input 
-                placeholder="Enter your email" 
-                placeholderTextColor='#9ca3af'
-                selectionColor='gray' 
-                style={[tw.style('mx-auto border border-gray-300 bg-transparent'), styles.inputStyles]}
-                label="Email"
-                size="large" />
-            <Input 
-                placeholder="Enter your password" 
-                placeholderTextColor='#9ca3af'
-                secureTextEntry={true}
-                selectionColor='gray' 
-                style={[tw.style('mx-auto border border-gray-300 bg-transparent'), styles.inputStyles]}
-                label="Password"
-                size="large" />
+            <Inputs />
+            <Text style={styles.linkStyles}>Forget your password ?</Text>
+            <Button 
+                size='large' 
+                status='danger'
+                accessoryRight={<AntDesign name="login" size={24} color="white" />}
+                style={[styles.buttonStyle, tw.style('mx-auto mt-4 rounded-xl')]}>
+            </Button>
         </Layout>
     );
 }
@@ -46,10 +44,13 @@ const styles = StyleSheet.create({
         fontSize: height * 0.018,
         marginBottom: "4%",
     },
-    inputStyles: {
-        width: '90%',
-        marginVertical: '2.5%'
-    }
+    buttonStyle: {
+        width: 120,
+        height: 55
+    },
+    linkStyles: {
+        textDecorationLine: 'underline',
+    },
 });
 
 export default LoginCard;

@@ -33,7 +33,7 @@ const Title = () => {
         return (
             <Layout style={styles.container}>
                 <Text style={styles.firstTitle}>Welcome To</Text>
-                <Text style={styles.secondTitle}>Aware</Text>
+                <Text status='danger' style={styles.secondTitle}>Aware</Text>
                 <Text style={styles.subtitle} category='s1' appearance='hint'>Your AI Stylist</Text>
             </Layout>
         )
@@ -61,7 +61,6 @@ const styles = StyleSheet.create({
         fontFamily: 'Pacifico_400Regular',
         fontSize: 90,
         position: 'absolute',
-        color: '#be185d', // *Pink-700* On Tailwind Colors
         right: '-10%',
     },
     subtitle: {
