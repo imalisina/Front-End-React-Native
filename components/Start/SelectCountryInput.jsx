@@ -47,7 +47,7 @@ const SelectCountry = () => {
 
 const styles = StyleSheet.create({
   SelectCountryinput: {
-    marginTop: '37%'
+    marginTop: '8%'
   },
   Input: {
     width: '87%'
