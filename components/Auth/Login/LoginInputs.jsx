@@ -5,7 +5,7 @@ import tw from 'twrnc';
 import { Input, Text } from '@ui-kitten/components';
 
 // Get device dimension
-const { height } = Dimensions.get('window');
+const { height, fontScale } = Dimensions.get('window');
 
 const Inputs = () => {
     return (
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     },
     linkNoteStyle:{
         textDecorationLine: 'underline',
-        fontSize: height * 0.0155,
+        fontSize: 11.3 * fontScale,
     }
 })
 

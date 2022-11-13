@@ -1,4 +1,4 @@
-import { StyleSheet, Dimensions, Text } from 'react-native';
+import { StyleSheet, Dimensions, Text, Platform } from 'react-native';
 
 // UI's
 import tw from 'twrnc';
@@ -7,9 +7,11 @@ import { Layout } from '@ui-kitten/components';
 // Other Components
 import LoginInputs from './LoginInputs';
 import LoginButtons from './LoginButtons';
+import AlternativeLoginIOS from './AlternativeLoginIOS';
+import AlternativeLoginAndroid from './AlternativeLoginAndroid';
 
 // Get device dimension
-const { height } = Dimensions.get("window");
+const { height, fontScale } = Dimensions.get("window");
 
 const LoginCard = () => {
     return (
@@ -18,6 +20,11 @@ const LoginCard = () => {
             <Text style={[tw.style('mx-auto text-zinc-400'), styles.cardSubHeader]}>Log into existing account</Text>
             <LoginInputs />
             <LoginButtons />
+            {
+                Platform.OS == "ios"
+                ? (<AlternativeLoginIOS />)
+                : (<AlternativeLoginAndroid />)
+            }
         </Layout>
     );
 }
@@ -25,17 +32,17 @@ const LoginCard = () => {
 const styles = StyleSheet.create({
     cardContainer: {
         width: '90%',
-        height: height * 0.74,
-        marginTop: '10%',
+        height: height * 0.78,
+        marginTop: '6%',
     },
     cardHeader: {
-        fontSize: height * 0.04,
+        fontSize: 30 / fontScale,
         marginBottom: "2%",
         marginTop: "4%",
     },
     cardSubHeader: {
-        fontSize: height * 0.018,
-        marginBottom: "4%",
+        fontSize: 14 / fontScale,
+        marginBottom: "6%",
     },
 });
 

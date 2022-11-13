@@ -9,9 +9,9 @@ import { Text as UIText } from '@ui-kitten/components';
 import { AntDesign } from '@expo/vector-icons';
 
 // Get device dimension
-const { height } = Dimensions.get("window");
+const { height, width, fontScale } = Dimensions.get("window");
 
-const LoginButton = () => {
+const LoginButtons = () => {
     return (
         <>
         <Button 
@@ -25,23 +25,18 @@ const LoginButton = () => {
                 Haven't an account ? <Text style={tw.style('underline font-bold')}>Register</Text>
             </UIText>
         </TouchableOpacity>
-        {/* PUT AUTH0 UI'S INSTEAD OF THESE BUTTONS */}
-        <Button appearance='outline' status='basic' style={tw.style('w-88 mx-auto my-0.5')}>SOCIAL MEDIA 1</Button>
-        <Button appearance='outline' status='basic' style={tw.style('w-88 mx-auto my-0.5')}>SOCIAL MEDIA 2</Button>
-        <Button appearance='outline' status='basic' style={tw.style('w-88 mx-auto my-0.5')}>SOCIAL MEDIA 3</Button>
-        {/* PUT AUTH0 UI'S INSTEAD OF THESE BUTTONS */}
         </>
     );
 }
 
 const styles = StyleSheet.create({
     buttonStyle: {
-        width: 120,
-        height: 55
+        width: width * 0.25,
+        height: height * 0.07
     },
     linkNoteStyle: {
-        fontSize: height * 0.015
+        fontSize: 11.3 * fontScale,
     }
 });
 
-export default LoginButton;
+export default LoginButtons;
