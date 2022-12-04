@@ -198,7 +198,7 @@ const Countries = [
       "flags": "https://flagcdn.com/w320/co.png",
     },
     {
-      "name": "Congo (Democratic Republic of the)",
+      "name": "Congo",
       "alpha2Code": "CD",
       "callingCodes": [
         "243"

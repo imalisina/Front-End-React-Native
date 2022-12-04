@@ -14,7 +14,7 @@ const RegisterButton = ({navigation}) => {
         <Button 
             size='large' 
             status='danger'
-            style={[styles.buttonStyle, tw.style('mx-auto mt-4 rounded-xl')]}>
+            style={[styles.buttonStyle, tw.style('mx-auto mt-4 rounded-lg')]}>
         Join
         </Button>
         <TouchableOpacity onPress={() => navigation.navigate('Login')} style={tw.style('mb-9')}>
@@ -28,7 +28,7 @@ const RegisterButton = ({navigation}) => {
 
 const styles = StyleSheet.create({
     buttonStyle: {
-        width: width * 0.25,
+        width: width * 0.35,
         height: height * 0.07
     },
     linkNoteStyle: {

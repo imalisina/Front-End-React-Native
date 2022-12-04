@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 
 // UI's
 import tw from 'twrnc';
-import { Input, Text } from '@ui-kitten/components';
+import { Input } from '@ui-kitten/components';
 
 // Get device dimension
 const { fontScale } = Dimensions.get('window');

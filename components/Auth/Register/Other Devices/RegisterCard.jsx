@@ -5,8 +5,8 @@ import tw from 'twrnc';
 import { Layout } from '@ui-kitten/components';
 
 // Other Components
-import RegisterInputs from './RegisterInputs';
-import RegisterButton from './RegisterButton';
+import RegisterInputs from '../RegisterInputs';
+import RegisterButton from '../RegisterButton';
 
 // Get device dimension
 const { fontScale } = Dimensions.get("window");
