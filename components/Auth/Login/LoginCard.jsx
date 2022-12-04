@@ -1,4 +1,4 @@
-import { StyleSheet, Dimensions, Text, Platform } from 'react-native';
+import { StyleSheet, Dimensions, Text } from 'react-native';
 
 // UI's
 import tw from 'twrnc';

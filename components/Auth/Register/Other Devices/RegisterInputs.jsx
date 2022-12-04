@@ -1,4 +1,7 @@
-import { StyleSheet, TouchableOpacity, Dimensions } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
+
+// Redux
+import { useSelector } from 'react-redux';
 
 // UI's
 import tw from 'twrnc';
@@ -8,14 +11,15 @@ import { Input, Text } from '@ui-kitten/components';
 const { fontScale } = Dimensions.get('window');
 
 const RegisterInputs = () => {
+    const { selectedCountryData } = useSelector((state) => state.countryDataReducer);
     return (
         <>
         <Input
-            placeholder="Enter your email" 
+            placeholder="Enter your full name" 
             placeholderTextColor='#9ca3af'
             selectionColor='gray' 
             style={[tw.style('mx-auto border border-gray-300 bg-transparent'), styles.inputStyles]}
-            label="Email"
+            label="Name"
             size="large" />
         <Input
             placeholder="Enter your email" 
@@ -24,20 +28,21 @@ const RegisterInputs = () => {
             style={[tw.style('mx-auto border border-gray-300 bg-transparent'), styles.inputStyles]}
             label="Email"
             size="large" />
-        <Input
-            placeholder="Enter your email" 
+        <Input 
+            placeholder={"(+" + selectedCountryData.callingCodes + ") XXX-XXX-XXX"} 
             placeholderTextColor='#9ca3af'
             selectionColor='gray' 
             style={[tw.style('mx-auto border border-gray-300 bg-transparent'), styles.inputStyles]}
-            label="Email"
+            label="Phone number"
             size="large" />
         <Input
-            placeholder="Enter your email" 
+            placeholder="Enter a secure password" 
             placeholderTextColor='#9ca3af'
             selectionColor='gray' 
             style={[tw.style('mx-auto border border-gray-300 bg-transparent'), styles.inputStyles]}
-            label="Email"
-            size="large" />
+            label="Password"
+            secureTextEntry
+            size='large'/>
         </>
     );
 }
@@ -45,7 +50,7 @@ const RegisterInputs = () => {
 const styles = StyleSheet.create({
     inputStyles: {
         width: '90%',
-        marginVertical: '2.5%'
+        marginVertical: '2.5%',
     },
     linkNoteStyle:{
         textDecorationLine: 'underline',
