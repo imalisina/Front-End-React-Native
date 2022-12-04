@@ -1,4 +1,4 @@
-import { View, Text, ImageBackground, StyleSheet, Dimensions } from 'react-native';
+import { View, ImageBackground, StyleSheet, Dimensions } from 'react-native';
 
 // Get device dimensions
 const { height } = Dimensions.get('window');
@@ -13,6 +13,8 @@ const RegisterScreen = ({navigation}) => {
             <ImageBackground 
                 source={require("../assets/RegisterPage.jpg")} 
                 resizeMode="cover" imageStyle={styles.backgroundImageStyles}>
+                {/* Show different register pages based on height 
+                    Checks whether its height less than 660 or not */}
                 {
                     height >= 660
                     ? (<RegisterCardOthers navigation={navigation} />)

@@ -1,10 +1,10 @@
 import { StyleSheet, Dimensions, Text } from 'react-native';
 
-// UI's
+// UI
 import tw from 'twrnc';
 import { Layout } from '@ui-kitten/components';
 
-// Other Components
+// Other components
 import RegisterInputs from '../RegisterInputs';
 import RegisterButton from '../RegisterButton';
 

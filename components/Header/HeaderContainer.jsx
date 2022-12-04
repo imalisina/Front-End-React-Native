@@ -12,6 +12,9 @@ const HeaderContainer = () => {
         Pacifico_400Regular
     });
     return (
+        /*
+        * Displaying "Aware" logo in header with specific size based on platform
+        */
         <View>
             <Text style={Platform.OS === "android" ? styles.headerStyleAndroid : styles.headerStyleIOS}>Aware</Text>
         </View>

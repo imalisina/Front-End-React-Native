@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { setToggle } from '../../redux/WelcomePageToggle/actions';
 import { getSelectedCountry } from '../../redux/CountriesList/actions'; 
 
-// UI's
+// UI
 import tw from 'twrnc';
 import { Text, Divider, Layout } from '@ui-kitten/components';
 import { View, Image, FlatList, Pressable } from 'react-native';
@@ -14,10 +14,9 @@ const CountryListItems = () => {
     const { navigationProperty } = useSelector((state) => state.navigatorReducer)
     const dispatch = useDispatch();
 
-    // onPress Event Handler Method
-    /**
-    * When user selects a country, application will get the selected country
-    * and set toggleStatus on false to close the modal
+    /*
+    * Setting the selected country and sending status to welcome page
+    * to close the country list modal and redirect user to login page
     */
     const selectedCountryEventHandler = ( selectedCountry ) => {
         dispatch(setToggle());
@@ -25,7 +24,9 @@ const CountryListItems = () => {
         navigationProperty.navigate('Login');
     } 
 
-
+    /*
+    * Loops through country list and display each country with details
+    */
     const Item = ({ title, flag, alphaCode }) => (
         <View>
             <Pressable onPress={() => selectedCountryEventHandler(title)}>
@@ -41,6 +42,7 @@ const CountryListItems = () => {
         </View>
       );
 
+      // render each country as an item and pass them to main flat list
       const renderItem = ({ item }) => (
         <Item title={item.name} flag={item.flags} alphaCode={item.alpha2Code} />
       );

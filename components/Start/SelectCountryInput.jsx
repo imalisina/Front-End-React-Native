@@ -1,8 +1,10 @@
 import { Platform, StyleSheet, Pressable, Dimensions } from 'react-native';
 
-// UI's
-import tw from 'twrnc';
+// Icon
 import { MaterialIcons } from '@expo/vector-icons'; 
+
+// UI
+import tw from 'twrnc';
 import { Input } from '@ui-kitten/components';
 
 // Get device deminsions
@@ -14,7 +16,7 @@ import { setToggle } from '../../redux/WelcomePageToggle/actions';
 
 
 const SelectCountry = () => {  
-  // Redux Operations
+  // Redux operations
   const { selectedCountryData } = useSelector((state) => state.countryDataReducer)
   const dispatch = useDispatch();
   // Changing the status of toggle by clicking on the input
