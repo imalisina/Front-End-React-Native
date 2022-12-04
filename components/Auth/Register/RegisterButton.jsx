@@ -1,6 +1,6 @@
 import { StyleSheet, Dimensions, Text, TouchableOpacity } from 'react-native';
 
-// UI's
+// UI
 import tw from 'twrnc';
 import { Button } from '@ui-kitten/components';
 import { Text as UIText } from '@ui-kitten/components';
@@ -14,9 +14,7 @@ const RegisterButton = ({navigation}) => {
         <Button 
             size='large' 
             status='danger'
-            style={[styles.buttonStyle, tw.style('mx-auto mt-4 rounded-lg')]}>
-        Join
-        </Button>
+            style={[styles.buttonStyle, tw.style('mx-auto mt-4 rounded-lg')]}>Join</Button>
         <TouchableOpacity onPress={() => navigation.navigate('Login')} style={tw.style('mb-9')}>
             <UIText status='danger' style={[styles.linkNoteStyle, tw.style('mx-auto mt-2')]}>
                 Have an account ? <Text style={tw.style('underline font-bold')}>Login</Text>

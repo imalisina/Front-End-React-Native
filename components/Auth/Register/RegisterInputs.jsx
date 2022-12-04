@@ -3,13 +3,13 @@ import { StyleSheet, Dimensions, TouchableWithoutFeedback } from 'react-native';
 // Redux
 import { useSelector } from 'react-redux';
 
-// Hooks
+// Hook
 import { useState } from 'react';
 
-// Icons
+// Icon
 import { Entypo } from '@expo/vector-icons';
 
-// UI's
+// UI
 import tw from 'twrnc';
 import { Input } from '@ui-kitten/components';
 
@@ -17,10 +17,13 @@ import { Input } from '@ui-kitten/components';
 const { fontScale } = Dimensions.get('window');
 
 const RegisterInputs = () => {
+    // Secure text entry state and its toggle method
     const [ secureTextEntry, setSecureTextEntry ] = useState(true);
     const toggleSecureEntry = () => {
         setSecureTextEntry(!secureTextEntry);
     }
+
+    // Component for show/hide toggle in password input field
     const renderIcons = () => {
         return(
             <TouchableWithoutFeedback onPress={toggleSecureEntry}>
@@ -28,7 +31,9 @@ const RegisterInputs = () => {
             </TouchableWithoutFeedback>
         );
     }
+    // Getting details of selected country
     const { selectedCountryData } = useSelector((state) => state.countryDataReducer);
+
     return (
         <>
         <Input

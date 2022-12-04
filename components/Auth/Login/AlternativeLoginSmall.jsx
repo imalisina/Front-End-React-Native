@@ -1,6 +1,6 @@
 import { StyleSheet, Dimensions, View } from 'react-native';
 
-// UI's
+// UI
 import tw from 'twrnc';
 import { Button } from '@ui-kitten/components';
 
@@ -13,18 +13,21 @@ const { height, width } = Dimensions.get("window");
 const AlternativeLoginSmall = () => {
     return (
         <View style={styles.cardContainer}>
+            {/* Twitter login */}
             <Button
                 appearance='ghost'
                 status='basic'
                 style={[styles.loginMethodCard, styles.twitter, tw.style('rounded-md')]}
                 accessoryLeft={<AntDesign name="twitter" size={20} color="#1da1f2" />}>
             </Button>
+            {/* Apple login */}
             <Button
                 appearance='ghost'
                 status='basic'
                 style={[styles.loginMethodCard, styles.apple, tw.style('rounded-md')]}
                 accessoryLeft={<AntDesign name="apple1" size={20} color="#00000" />}>
             </Button>
+            {/* Google login */}
             <Button
                 appearance='ghost'
                 status='basic'

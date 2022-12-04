@@ -1,10 +1,10 @@
 import { StyleSheet, Dimensions, Text } from 'react-native';
 
-// UI's
+// UI
 import tw from 'twrnc';
 import { Layout } from '@ui-kitten/components';
 
-// Other Components
+// Other components
 import LoginInputs from './LoginInputs';
 import LoginButtons from './LoginButtons';
 import AlternativeLoginOthers from './AlternativeLoginOthers';

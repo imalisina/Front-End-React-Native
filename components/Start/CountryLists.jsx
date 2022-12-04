@@ -1,25 +1,21 @@
 import { Modal } from "react-native";
 
-// UI's
+// UI
 import { Layout } from "@ui-kitten/components";
 
 // Redux
 import { useSelector } from "react-redux";
 
-// Other Components
+// Other components
 import CountryListItems from "./CountryListItems";
 
 const CountryLists = () => {
-  // Redux Operations
+  // Redux operations
   const { toggleStatus } = useSelector((state) => state.toggleStatusReducer);
 
-  /**
-   * Check the toggle status
-   * If it was true the modal will be open
-   * but, if the status was false it will be closed
-   * NOTE: it is faster than inline if statement 
-   * **The inline if statement has a little bit delay!**
-   */
+  /*
+  * Check the toggle status
+  */
   if (toggleStatus) {
     return (
       <Layout>

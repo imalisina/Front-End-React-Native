@@ -6,6 +6,7 @@ import toggleStatusReducer from './WelcomePageToggle/reducers';
 import countryDataReducer from "./CountriesList/reducers";
 import navigatorReducer from "./Navigator/reducers";
 
+// Root reducer
 const rootReducer = combineReducers({
     toggleStatusReducer,
     countryDataReducer,

@@ -1,3 +1,4 @@
+// Hooks
 import { useEffect } from 'react';
 
 // UI's
@@ -15,6 +16,10 @@ import SelectCountry from '../components/Start/SelectCountryInput';
 import CountryLists from '../components/Start/CountryLists';
 
 const WelcomeScreen = ({navigation}) => {
+    /*
+    * set the country selected status
+    * set navigation props to redirect automatically
+    */ 
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(storeNavigationProp(navigation));

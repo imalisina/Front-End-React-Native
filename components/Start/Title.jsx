@@ -1,34 +1,22 @@
 import { View, StyleSheet, Dimensions, Platform } from 'react-native';
 
-// Import Fonts
+// Font
 import { useFonts, Pacifico_400Regular } from '@expo-google-fonts/pacifico'
 
-// Import Spinner
-import LottieView from 'lottie-react-native';
-
-// UI's
+// UI
 import { Text } from '@ui-kitten/components';
 
 // Get device dimensions
 const { height, fontScale } = Dimensions.get("window"); 
 
 const Title = () => {
-    
-    // Define Fonts
+    // Define Font
     let [fontsLoaded] = useFonts({
         Pacifico_400Regular
     });
-    
-    if (!fontsLoaded) {
-        return (
-            <View>
-                <LottieView 
-                    style={styles.spinner}
-                    source={require('../../assets/spinner.json')} autoPlay loop />
-            </View>
-        )
-    } else {
-        return (
+    // Check whether the font is loaded or not
+    if (fontsLoaded) {    
+    return (
             <View style={styles.container}>
                 <Text style={[Platform.OS == "ios" ? styles.firstTitleIos : styles.firstTitleAndroid]}>Welcome To</Text>
                 <Text status='danger' style={[Platform.OS == "ios" ? styles.secondTitleIos : styles.secondTitleAndroid]}>

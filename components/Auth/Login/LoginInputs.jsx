@@ -1,12 +1,12 @@
 import { StyleSheet, TouchableOpacity, Dimensions, TouchableWithoutFeedback } from 'react-native';
 
-// Hooks
+// Hook
 import { useState } from 'react';
 
-// Icons
+// Icon
 import { Entypo } from '@expo/vector-icons';
 
-// UI's
+// UI
 import tw from 'twrnc';
 import { Input, Text, Icon } from '@ui-kitten/components';
 
@@ -14,10 +14,12 @@ import { Input, Text, Icon } from '@ui-kitten/components';
 const { fontScale } = Dimensions.get('window');
 
 const LoginInputs = () => {
+    // Secure text entry state and its toggle method
     const [ secureTextEntry, setSecureTextEntry ] = useState(true);
     const toggleSecureEntry = () => {
         setSecureTextEntry(!secureTextEntry);
     }
+    // Component for show/hide toggle in password input field
     const renderIcons = () => {
         return(
             <TouchableWithoutFeedback onPress={toggleSecureEntry}>
