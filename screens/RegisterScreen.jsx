@@ -4,15 +4,17 @@ import { View, ImageBackground, StyleSheet, Dimensions } from 'react-native';
 const { height } = Dimensions.get('window');
 
 // Other Components
-import LoginCard from '../components/Auth/Login/LoginCard';
+import RegisterCard from '../components/Auth/Register/Other Devices/RegisterCard';
 
-const LoginScreen = ({ navigation }) => {
+const RegisterScreen = () => {
     return (
         <View>
             <ImageBackground 
-                source={require("../assets/LoginPage.jpg")} 
+                source={require("../assets/RegisterPage.jpg")} 
                 resizeMode="cover" imageStyle={styles.backgroundImageStyles}>
-                <LoginCard navigation={navigation} />
+                {
+                    
+                }
             </ImageBackground>
         </View>
     )
@@ -26,4 +28,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default LoginScreen;
+export default RegisterScreen;

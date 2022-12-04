@@ -33,7 +33,7 @@ const WelcomeScreen = ({navigation}) => {
 
 const styles = StyleSheet.create({
     TopSpace: {
-        paddingTop: '15%',
+        paddingTop: '25%',
     }
 });
 

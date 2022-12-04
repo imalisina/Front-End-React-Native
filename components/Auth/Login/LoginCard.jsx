@@ -7,23 +7,23 @@ import { Layout } from '@ui-kitten/components';
 // Other Components
 import LoginInputs from './LoginInputs';
 import LoginButtons from './LoginButtons';
-import AlternativeLoginIOS from './AlternativeLoginIOS';
-import AlternativeLoginAndroid from './AlternativeLoginAndroid';
+import AlternativeLoginOthers from './AlternativeLoginOthers';
+import AlternativeLoginSmall from './AlternativeLoginSmall';
 
 // Get device dimension
 const { height, fontScale } = Dimensions.get("window");
 
-const LoginCard = () => {
+const LoginCard = ({navigation}) => {
     return (
         <Layout style={[styles.cardContainer, tw.style('mx-auto bg-white shadow-md rounded-md')]}>
             <Text style={[tw.style('mx-auto'), styles.cardHeader]}>Login</Text>
             <Text style={[tw.style('mx-auto text-zinc-400'), styles.cardSubHeader]}>Log into existing account</Text>
             <LoginInputs />
-            <LoginButtons />
+            <LoginButtons navigation={navigation}/>
             {
-                Platform.OS == "ios"
-                ? (<AlternativeLoginIOS />)
-                : (<AlternativeLoginAndroid />)
+                height >= 700
+                ? (<AlternativeLoginOthers />)
+                : (<AlternativeLoginSmall />)
             }
         </Layout>
     );
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     },
     cardSubHeader: {
         fontSize: 14 / fontScale,
-        marginBottom: "6%",
+        marginBottom: "3%",
     },
 });
 

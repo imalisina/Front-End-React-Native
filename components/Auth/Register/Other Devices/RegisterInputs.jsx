@@ -7,7 +7,7 @@ import { Input, Text } from '@ui-kitten/components';
 // Get device dimension
 const { fontScale } = Dimensions.get('window');
 
-const LoginInputs = () => {
+const RegisterInputs = () => {
     return (
         <>
         <Input
@@ -17,14 +17,26 @@ const LoginInputs = () => {
             style={[tw.style('mx-auto border border-gray-300 bg-transparent'), styles.inputStyles]}
             label="Email"
             size="large" />
-        <Input 
-            placeholder="Enter your password" 
+        <Input
+            placeholder="Enter your email" 
             placeholderTextColor='#9ca3af'
-            secureTextEntry={true}
             selectionColor='gray' 
             style={[tw.style('mx-auto border border-gray-300 bg-transparent'), styles.inputStyles]}
-            label="Password"
-            caption={<TouchableOpacity activeOpacity={0.4}><Text style={[styles.linkNoteStyle, tw.style('text-zinc-400')]}>Forget your password ?</Text></TouchableOpacity>}
+            label="Email"
+            size="large" />
+        <Input
+            placeholder="Enter your email" 
+            placeholderTextColor='#9ca3af'
+            selectionColor='gray' 
+            style={[tw.style('mx-auto border border-gray-300 bg-transparent'), styles.inputStyles]}
+            label="Email"
+            size="large" />
+        <Input
+            placeholder="Enter your email" 
+            placeholderTextColor='#9ca3af'
+            selectionColor='gray' 
+            style={[tw.style('mx-auto border border-gray-300 bg-transparent'), styles.inputStyles]}
+            label="Email"
             size="large" />
         </>
     );
@@ -41,4 +53,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default LoginInputs;
+export default RegisterInputs;
