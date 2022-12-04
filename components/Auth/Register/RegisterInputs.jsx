@@ -1,7 +1,13 @@
-import { StyleSheet, Dimensions } from 'react-native';
+import { StyleSheet, Dimensions, TouchableWithoutFeedback } from 'react-native';
 
 // Redux
 import { useSelector } from 'react-redux';
+
+// Hooks
+import { useState } from 'react';
+
+// Icons
+import { Entypo } from '@expo/vector-icons';
 
 // UI's
 import tw from 'twrnc';
@@ -11,6 +17,17 @@ import { Input } from '@ui-kitten/components';
 const { fontScale } = Dimensions.get('window');
 
 const RegisterInputs = () => {
+    const [ secureTextEntry, setSecureTextEntry ] = useState(true);
+    const toggleSecureEntry = () => {
+        setSecureTextEntry(!secureTextEntry);
+    }
+    const renderIcons = () => {
+        return(
+            <TouchableWithoutFeedback onPress={toggleSecureEntry}>
+                <Entypo name={secureTextEntry ? "eye" : "eye-with-line"} size={22} color="black" />
+            </TouchableWithoutFeedback>
+        );
+    }
     const { selectedCountryData } = useSelector((state) => state.countryDataReducer);
     return (
         <>
@@ -41,7 +58,8 @@ const RegisterInputs = () => {
             selectionColor='gray' 
             style={[tw.style('mx-auto border border-gray-300 bg-transparent'), styles.inputStyles]}
             label="Password"
-            secureTextEntry
+            secureTextEntry={secureTextEntry}
+            accessoryRight={renderIcons}
             size='large'/>
         </>
     );

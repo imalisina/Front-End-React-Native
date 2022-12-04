@@ -1,13 +1,30 @@
-import { StyleSheet, TouchableOpacity, Dimensions } from 'react-native';
+import { StyleSheet, TouchableOpacity, Dimensions, TouchableWithoutFeedback } from 'react-native';
+
+// Hooks
+import { useState } from 'react';
+
+// Icons
+import { Entypo } from '@expo/vector-icons';
 
 // UI's
 import tw from 'twrnc';
-import { Input, Text } from '@ui-kitten/components';
+import { Input, Text, Icon } from '@ui-kitten/components';
 
 // Get device dimension
 const { fontScale } = Dimensions.get('window');
 
 const LoginInputs = () => {
+    const [ secureTextEntry, setSecureTextEntry ] = useState(true);
+    const toggleSecureEntry = () => {
+        setSecureTextEntry(!secureTextEntry);
+    }
+    const renderIcons = () => {
+        return(
+            <TouchableWithoutFeedback onPress={toggleSecureEntry}>
+                <Entypo name={secureTextEntry ? "eye" : "eye-with-line"} size={22} color="black" />
+            </TouchableWithoutFeedback>
+        );
+    }
     return (
         <>
         <Input
@@ -20,7 +37,8 @@ const LoginInputs = () => {
         <Input 
             placeholder="Enter your password" 
             placeholderTextColor='#9ca3af'
-            secureTextEntry={true}
+            accessoryRight={renderIcons}
+            secureTextEntry={secureTextEntry}
             selectionColor='gray' 
             style={[tw.style('mx-auto border border-gray-300 bg-transparent'), styles.inputStyles]}
             label="Password"
