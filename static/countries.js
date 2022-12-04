@@ -2,9 +2,7 @@ const Countries = [
   {
       "name": "United States of America",
       "alpha2Code": "US",
-      "callingCodes": [
-        "1"
-      ],
+      "callingCodes": "1",
       "flags": "https://flagcdn.com/w320/us.png",
     },
     {
@@ -200,7 +198,7 @@ const Countries = [
       "flags": "https://flagcdn.com/w320/co.png",
     },
     {
-      "name": "Congo (Democratic Republic of the)",
+      "name": "Congo",
       "alpha2Code": "CD",
       "callingCodes": [
         "243"

@@ -11,6 +11,7 @@ import { View, Image, FlatList, Pressable } from 'react-native';
 const CountryListItems = () => {
     // Redux Operations
     const { countryData } = useSelector((state) => state.countryDataReducer);
+    const { navigationProperty } = useSelector((state) => state.navigatorReducer)
     const dispatch = useDispatch();
 
     // onPress Event Handler Method
@@ -20,7 +21,8 @@ const CountryListItems = () => {
     */
     const selectedCountryEventHandler = ( selectedCountry ) => {
         dispatch(setToggle());
-        dispatch(getSelectedCountry(selectedCountry))
+        dispatch(getSelectedCountry(selectedCountry));
+        navigationProperty.navigate('Login');
     } 
 
 

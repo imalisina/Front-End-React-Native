@@ -1,20 +1,21 @@
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Dimensions, Platform } from 'react-native';
 
 // Import Fonts
-import { useFonts, NotoSans_400Regular } from '@expo-google-fonts/noto-sans';
-import { Pacifico_400Regular } from '@expo-google-fonts/pacifico'
+import { useFonts, Pacifico_400Regular } from '@expo-google-fonts/pacifico'
 
 // Import Spinner
-import LottieView from 'lottie-react-native'
+import LottieView from 'lottie-react-native';
 
-// Tailwind Classes
-import { Layout, Text } from '@ui-kitten/components';
+// UI's
+import { Text } from '@ui-kitten/components';
+
+// Get device dimensions
+const { height, fontScale } = Dimensions.get("window"); 
 
 const Title = () => {
     
     // Define Fonts
     let [fontsLoaded] = useFonts({
-        NotoSans_400Regular,
         Pacifico_400Regular
     });
     
@@ -28,11 +29,13 @@ const Title = () => {
         )
     } else {
         return (
-            <Layout style={styles.container}>
-                <Text style={styles.firstTitle}>Welcome To</Text>
-                <Text style={styles.secondTitle}>Aware</Text>
-                <Text style={styles.subtitle} category='s1' appearance='hint'>Your AI Stylist</Text>
-            </Layout>
+            <View style={styles.container}>
+                <Text style={[Platform.OS == "ios" ? styles.firstTitleIos : styles.firstTitleAndroid]}>Welcome To</Text>
+                <Text status='danger' style={[Platform.OS == "ios" ? styles.secondTitleIos : styles.secondTitleAndroid]}>
+                    Aware
+                </Text>
+                <Text style={[Platform.OS == "ios" ? styles.subtitleIos : styles.subtitleAndroid]} category='s1' appearance='hint'>Your AI Stylist</Text>
+            </View>
         )
     }
 }
@@ -47,25 +50,40 @@ const styles = StyleSheet.create({
     container: {
         marginLeft: 'auto',
         marginRight: 'auto',
-        marginTop: '40%',
+        marginTop: height * 0.07,
     },
-    firstTitle: {
-        fontFamily: 'NotoSans_400Regular',
-        fontSize: 30,
-        textAlign: 'center',
-    },
-    secondTitle: {
-        fontFamily: 'Pacifico_400Regular',
-        fontSize: 90,
+    firstTitleIos: {
+        fontSize: 30 / fontScale,
         position: 'absolute',
-        color: '#be185d', // *Pink-700* On Tailwind Colors
-        right: '-10%',
+        top: height * -0.012
+    }, 
+    firstTitleAndroid: {
+        fontSize: 30 / fontScale,
+        position: 'absolute',
+        top: height * 0.01
+    }, 
+    secondTitleIos: {
+        marginRight: 'auto',
+        marginLeft: 'auto',
+        fontFamily: 'Pacifico_400Regular',
+        fontSize: 90 / fontScale,
+        height: fontScale * 135
     },
-    subtitle: {
-        position: "absolute",
-        marginTop: '38%',
-        left: '34%'
-    }
+    secondTitleAndroid: {
+        marginRight: 'auto',
+        marginLeft: 'auto',
+        fontFamily: 'Pacifico_400Regular',
+        fontSize: 100 / fontScale,
+        height: fontScale * 135
+    },
+    subtitleIos: {
+        textAlign: 'right'
+    },
+    subtitleAndroid: {
+        textAlign: 'right',
+        marginTop: '4%',
+        marginRight: '-6%'
+    },
 })
 
 export default Title;
