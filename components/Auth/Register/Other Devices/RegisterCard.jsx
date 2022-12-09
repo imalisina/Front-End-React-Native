@@ -5,20 +5,23 @@ import tw from 'twrnc';
 import { Layout } from '@ui-kitten/components';
 
 // Other components
-import RegisterInputs from '../RegisterInputs';
-import RegisterButton from '../RegisterButton';
+import RegisterContents from '../RegisterContents';
 
 // Get device dimension
 const { fontScale } = Dimensions.get("window");
 
+// Keyboard Auto Scroll
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
+
 const RegisterCard = ({navigation}) => {
     return (
+        <KeyboardAwareScrollView showsVerticalScrollIndicator={false}>
         <Layout style={[styles.cardContainer, tw.style('mx-auto bg-white shadow-md rounded-md')]}>
             <Text style={[tw.style('mx-auto'), styles.cardHeader]}>Register</Text>
             <Text style={[tw.style('mx-auto text-zinc-400'), styles.cardSubHeader]}>Join to Aware family</Text>
-            <RegisterInputs />
-            <RegisterButton navigation={navigation}/>
+            <RegisterContents navigation={navigation}/>
         </Layout>
+        </KeyboardAwareScrollView>
     );
 }
 

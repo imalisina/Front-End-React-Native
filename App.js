@@ -32,15 +32,15 @@ const App = () => {
         <NavigationContainer>
           <Stack.Navigator>
             {/* Welcome screen route */}
-            <Stack.Screen 
+            {/* <Stack.Screen 
               name="Welcome" 
               component={WelcomeScreen}
-              options={{ headerShown: false }} />
+              options={{ headerShown: false }} /> */}
             {/* Login screen route */}
-            <Stack.Screen 
+            {/* <Stack.Screen 
               name="Login"
               component={LoginScreen}
-              options={HeaderOptions} />
+              options={HeaderOptions} /> */}
             {/* Register screen route */}
             <Stack.Screen 
               name="Register"
