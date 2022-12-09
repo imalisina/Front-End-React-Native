@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TouchableOpacity, Dimensions, TouchableWithoutFeedback } from 'react-native';
+import { View, StyleSheet, Text, TouchableOpacity, Dimensions, TouchableWithoutFeedback, ActivityIndicator } from 'react-native';
 
 // Hook
 import { useState, useRef } from 'react';
@@ -16,6 +16,10 @@ const { fontScale, height, width } = Dimensions.get('window');
 const LoginContents = ({navigation}) => {
     // Reference to move to the next input
     const passwordRef = useRef();
+    // Button activation state and its toggle method
+    const [ isActive, setIsActive ] = useState(false);
+    // METHOD FOR FETCHING DATA GOES HERE......
+
     // Secure text entry state and its toggle method
     const [ secureTextEntry, setSecureTextEntry ] = useState(true);
     const toggleSecureEntry = () => {
@@ -54,13 +58,22 @@ const LoginContents = ({navigation}) => {
             style={[tw.style('mx-auto border border-gray-300 bg-transparent'), styles.inputStyles]}
             label="Password"
             ref={passwordRef}
+            onSubmitEditing={() => setIsActive(true)}
             caption={<TouchableOpacity activeOpacity={0.4}><Text style={[styles.linkNoteStyle, tw.style('text-zinc-400')]}>Forget your password ?</Text></TouchableOpacity>}
             size="large" />
         {/* Button section */}
-        <Button 
-            size='large' 
-            status='danger'
-            style={[styles.buttonStyle, tw.style('mx-auto mt-4 rounded-lg')]}>Login</Button>
+        {
+            !isActive
+            ? (
+                <Button 
+                    size='large' 
+                    status='danger'
+                    style={[styles.buttonStyle, tw.style('mx-auto mt-4 rounded-lg')]}>Login</Button>
+            ) : (
+                <Button size='large' status='basic' style={[styles.buttonStyle, tw.style('mx-auto mt-4 rounded-lg')]} 
+                        accessoryLeft={<ActivityIndicator size="small" color="#DB2C66" />} />
+            )
+        }
         <TouchableOpacity onPress={() => navigation.navigate('Register')} style={tw.style('mb-9')}>
             <UIText status='danger' style={[styles.linkNoteStyle, tw.style('mx-auto mt-2')]}>
                 Haven't an account ? <Text style={tw.style('underline font-bold')}>Register</Text>
@@ -85,7 +98,7 @@ const styles = StyleSheet.create({
     },
     linkNoteStyle: {
         fontSize: 11.3 * fontScale,
-    }
+    },
 })
 
 export default LoginContents;

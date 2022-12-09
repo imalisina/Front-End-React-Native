@@ -1,4 +1,4 @@
-import { StyleSheet, Dimensions, TouchableWithoutFeedback, TouchableOpacity, Text } from 'react-native';
+import { StyleSheet, Dimensions, TouchableWithoutFeedback, TouchableOpacity, Text, ActivityIndicator } from 'react-native';
 
 // Redux
 import { useSelector } from 'react-redux';
@@ -21,6 +21,9 @@ const RegisterContents = ({navigation}) => {
     const emailRef = useRef();
     const phoneNumberRef = useRef();
     const passwordRef = useRef();
+    // Button activation state and its toggle method
+    const [ isActive, setIsActive ] = useState(false);
+    // METHOD FOR FETCHING DATA GOES HERE......
 
     // Secure text entry state and its toggle method
     const [ secureTextEntry, setSecureTextEntry ] = useState(true);
@@ -89,12 +92,21 @@ const RegisterContents = ({navigation}) => {
             ref={passwordRef}
             secureTextEntry={secureTextEntry}
             accessoryRight={renderIcons}
+            onSubmitEditing={() => setIsActive(true)}
             size='large'/>
         {/* Button section */}
-        <Button 
-            size='large' 
-            status='danger'
-            style={[styles.buttonStyle, tw.style('mx-auto mt-4 rounded-lg')]}>Join</Button>
+        {
+            !isActive
+            ? (
+                <Button 
+                    size='large' 
+                    status='danger'
+                    style={[styles.buttonStyle, tw.style('mx-auto mt-4 rounded-lg')]}>Join</Button>
+            ) : (
+                <Button size='large' status='basic' style={[styles.buttonStyle, tw.style('mx-auto mt-4 rounded-lg')]} 
+                        accessoryLeft={<ActivityIndicator size="small" color="#DB2C66" />} />
+            )
+        }
         <TouchableOpacity onPress={() => navigation.navigate('Login')} style={tw.style('mb-9')}>
             <UIText status='danger' style={[styles.linkNoteStyle, tw.style('mx-auto mt-2')]}>
                 Have an account ? <Text style={tw.style('underline font-bold')}>Login</Text>
