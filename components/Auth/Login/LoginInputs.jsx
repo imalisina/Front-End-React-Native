@@ -35,6 +35,7 @@ const LoginInputs = () => {
             selectionColor='gray' 
             style={[tw.style('mx-auto border border-gray-300 bg-transparent'), styles.inputStyles]}
             label="Email"
+            keyboardType='email-address'
             size="large" />
         <Input 
             placeholder="Enter your password" 

@@ -49,6 +49,7 @@ const RegisterInputs = () => {
             selectionColor='gray' 
             style={[tw.style('mx-auto border border-gray-300 bg-transparent'), styles.inputStyles]}
             label="Email"
+            keyboardType='email-address'
             size="large" />
         <Input 
             placeholder={"(+" + selectedCountryData.callingCodes + ") XXX-XXX-XXX"} 
