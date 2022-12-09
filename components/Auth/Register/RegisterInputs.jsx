@@ -4,7 +4,7 @@ import { StyleSheet, Dimensions, TouchableWithoutFeedback } from 'react-native';
 import { useSelector } from 'react-redux';
 
 // Hook
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 // Icon
 import { Entypo } from '@expo/vector-icons';
@@ -17,12 +17,16 @@ import { Input } from '@ui-kitten/components';
 const { fontScale } = Dimensions.get('window');
 
 const RegisterInputs = () => {
+    // Reference to move to the next input
+    const emailRef = useRef();
+    const phoneNumberRef = useRef();
+    const passwordRef = useRef();
+
     // Secure text entry state and its toggle method
     const [ secureTextEntry, setSecureTextEntry ] = useState(true);
     const toggleSecureEntry = () => {
         setSecureTextEntry(!secureTextEntry);
     }
-
     // Component for show/hide toggle in password input field
     const renderIcons = () => {
         return(
@@ -42,6 +46,11 @@ const RegisterInputs = () => {
             selectionColor='gray' 
             style={[tw.style('mx-auto border border-gray-300 bg-transparent'), styles.inputStyles]}
             label="Name"
+            returnKeyType='next'
+            onSubmitEditing={() => {
+                emailRef.current.focus();
+            }}
+            blurOnSubmit={false}
             size="large" />
         <Input
             placeholder="Enter your email" 
@@ -50,6 +59,12 @@ const RegisterInputs = () => {
             style={[tw.style('mx-auto border border-gray-300 bg-transparent'), styles.inputStyles]}
             label="Email"
             keyboardType='email-address'
+            returnKeyType='next'
+            ref={emailRef}
+            onSubmitEditing={() => {
+                phoneNumberRef.current.focus();
+            }}
+            blurOnSubmit={false}
             size="large" />
         <Input 
             placeholder={"(+" + selectedCountryData.callingCodes + ") XXX-XXX-XXX"} 
@@ -57,6 +72,12 @@ const RegisterInputs = () => {
             selectionColor='gray' 
             style={[tw.style('mx-auto border border-gray-300 bg-transparent'), styles.inputStyles]}
             label="Phone number"
+            returnKeyType='next'
+            ref={phoneNumberRef}
+            onSubmitEditing={() => {
+                passwordRef.current.focus();
+            }}
+            blurOnSubmit={false}
             size="large" />
         <Input
             placeholder="Enter a secure password" 
@@ -64,6 +85,7 @@ const RegisterInputs = () => {
             selectionColor='gray' 
             style={[tw.style('mx-auto border border-gray-300 bg-transparent'), styles.inputStyles]}
             label="Password"
+            ref={passwordRef}
             secureTextEntry={secureTextEntry}
             accessoryRight={renderIcons}
             size='large'/>

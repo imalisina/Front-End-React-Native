@@ -8,7 +8,7 @@ import { Entypo } from '@expo/vector-icons';
 
 // UI
 import tw from 'twrnc';
-import { Input, Text, Icon } from '@ui-kitten/components';
+import { Input, Text } from '@ui-kitten/components';
 
 // Get device dimension
 const { fontScale } = Dimensions.get('window');
