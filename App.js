@@ -42,10 +42,10 @@ const App = () => {
               component={LoginScreen}
               options={HeaderOptions} />
             {/* Register screen route */}
-            <Stack.Screen 
+            {/* <Stack.Screen 
               name="Register"
               component={RegisterScreen} 
-              options={HeaderOptions} />
+              options={HeaderOptions} /> */}
           </Stack.Navigator>
         </NavigationContainer>
       </ApplicationProvider>

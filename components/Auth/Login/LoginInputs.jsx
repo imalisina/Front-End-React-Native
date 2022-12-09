@@ -1,7 +1,7 @@
 import { StyleSheet, TouchableOpacity, Dimensions, TouchableWithoutFeedback } from 'react-native';
 
 // Hook
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 // Icon
 import { Entypo } from '@expo/vector-icons';
@@ -14,6 +14,8 @@ import { Input, Text, Icon } from '@ui-kitten/components';
 const { fontScale } = Dimensions.get('window');
 
 const LoginInputs = () => {
+    // Reference to move to the next input
+    const passwordRef = useRef();
     // Secure text entry state and its toggle method
     const [ secureTextEntry, setSecureTextEntry ] = useState(true);
     const toggleSecureEntry = () => {
@@ -36,6 +38,11 @@ const LoginInputs = () => {
             style={[tw.style('mx-auto border border-gray-300 bg-transparent'), styles.inputStyles]}
             label="Email"
             keyboardType='email-address'
+            returnKeyType='next'
+            onSubmitEditing={() => {
+                passwordRef.current.focus();
+            }}
+            blurOnSubmit={false}
             size="large" />
         <Input 
             placeholder="Enter your password" 
@@ -45,6 +52,7 @@ const LoginInputs = () => {
             selectionColor='gray' 
             style={[tw.style('mx-auto border border-gray-300 bg-transparent'), styles.inputStyles]}
             label="Password"
+            ref={passwordRef}
             caption={<TouchableOpacity activeOpacity={0.4}><Text style={[styles.linkNoteStyle, tw.style('text-zinc-400')]}>Forget your password ?</Text></TouchableOpacity>}
             size="large" />
         </>
