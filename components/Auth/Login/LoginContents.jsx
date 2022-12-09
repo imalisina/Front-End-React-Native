@@ -1,4 +1,4 @@
-import { StyleSheet, TouchableOpacity, Dimensions, TouchableWithoutFeedback } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, Dimensions, TouchableWithoutFeedback } from 'react-native';
 
 // Hook
 import { useState, useRef } from 'react';
@@ -8,12 +8,12 @@ import { Entypo } from '@expo/vector-icons';
 
 // UI
 import tw from 'twrnc';
-import { Input, Text } from '@ui-kitten/components';
+import { Input, Text as UIText, Button } from '@ui-kitten/components';
 
 // Get device dimension
-const { fontScale } = Dimensions.get('window');
+const { fontScale, height, width } = Dimensions.get('window');
 
-const LoginInputs = () => {
+const LoginContents = ({navigation}) => {
     // Reference to move to the next input
     const passwordRef = useRef();
     // Secure text entry state and its toggle method
@@ -31,6 +31,7 @@ const LoginInputs = () => {
     }
     return (
         <>
+        {/* Inputs section */}
         <Input
             placeholder="Enter your email" 
             placeholderTextColor='#9ca3af'
@@ -55,6 +56,16 @@ const LoginInputs = () => {
             ref={passwordRef}
             caption={<TouchableOpacity activeOpacity={0.4}><Text style={[styles.linkNoteStyle, tw.style('text-zinc-400')]}>Forget your password ?</Text></TouchableOpacity>}
             size="large" />
+        {/* Button section */}
+        <Button 
+            size='large' 
+            status='danger'
+            style={[styles.buttonStyle, tw.style('mx-auto mt-4 rounded-lg')]}>Login</Button>
+        <TouchableOpacity onPress={() => navigation.navigate('Register')} style={tw.style('mb-9')}>
+            <UIText status='danger' style={[styles.linkNoteStyle, tw.style('mx-auto mt-2')]}>
+                Haven't an account ? <Text style={tw.style('underline font-bold')}>Register</Text>
+            </UIText>
+        </TouchableOpacity>
         </>
     );
 }
@@ -67,7 +78,14 @@ const styles = StyleSheet.create({
     linkNoteStyle:{
         textDecorationLine: 'underline',
         fontSize: 11.3 * fontScale,
+    },
+    buttonStyle: {
+        width: width * 0.35,
+        height: height * 0.07
+    },
+    linkNoteStyle: {
+        fontSize: 11.3 * fontScale,
     }
 })
 
-export default LoginInputs;
+export default LoginContents;

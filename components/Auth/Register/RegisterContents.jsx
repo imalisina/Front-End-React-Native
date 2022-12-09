@@ -1,4 +1,4 @@
-import { StyleSheet, Dimensions, TouchableWithoutFeedback } from 'react-native';
+import { StyleSheet, Dimensions, TouchableWithoutFeedback, TouchableOpacity, Text } from 'react-native';
 
 // Redux
 import { useSelector } from 'react-redux';
@@ -11,12 +11,12 @@ import { Entypo } from '@expo/vector-icons';
 
 // UI
 import tw from 'twrnc';
-import { Input } from '@ui-kitten/components';
+import { Input, Button, Text as UIText } from '@ui-kitten/components';
 
 // Get device dimension
-const { fontScale } = Dimensions.get('window');
+const { fontScale, height, width } = Dimensions.get('window');
 
-const RegisterInputs = () => {
+const RegisterContents = ({navigation}) => {
     // Reference to move to the next input
     const emailRef = useRef();
     const phoneNumberRef = useRef();
@@ -40,6 +40,7 @@ const RegisterInputs = () => {
 
     return (
         <>
+        {/* Inputs section */}
         <Input
             placeholder="Enter your full name" 
             placeholderTextColor='#9ca3af'
@@ -89,6 +90,16 @@ const RegisterInputs = () => {
             secureTextEntry={secureTextEntry}
             accessoryRight={renderIcons}
             size='large'/>
+        {/* Button section */}
+        <Button 
+            size='large' 
+            status='danger'
+            style={[styles.buttonStyle, tw.style('mx-auto mt-4 rounded-lg')]}>Join</Button>
+        <TouchableOpacity onPress={() => navigation.navigate('Login')} style={tw.style('mb-9')}>
+            <UIText status='danger' style={[styles.linkNoteStyle, tw.style('mx-auto mt-2')]}>
+                Have an account ? <Text style={tw.style('underline font-bold')}>Login</Text>
+            </UIText>
+        </TouchableOpacity>
         </>
     );
 }
@@ -101,7 +112,14 @@ const styles = StyleSheet.create({
     linkNoteStyle:{
         textDecorationLine: 'underline',
         fontSize: 11.3 * fontScale,
+    },
+    buttonStyle: {
+        width: width * 0.35,
+        height: height * 0.07
+    },
+    linkNoteStyle: {
+        fontSize: 11.3 * fontScale,
     }
 })
 
-export default RegisterInputs;
+export default RegisterContents;
