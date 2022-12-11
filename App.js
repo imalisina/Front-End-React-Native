@@ -20,6 +20,7 @@ import { ApplicationProvider } from '@ui-kitten/components';
 import WelcomeScreen from './screens/WelcomeScreen';
 import LoginScreen from './screens/LoginScreen';
 import RegisterScreen from './screens/RegisterScreen.jsx';
+import ForgetPasswordScreen from './screens/ForgetPasswordScreen';
 
 const App = () => {
   // Stack navigator creator
@@ -42,10 +43,16 @@ const App = () => {
               component={LoginScreen}
               options={HeaderOptions} /> */}
             {/* Register screen route */}
-            <Stack.Screen 
+            {/* <Stack.Screen 
               name="Register"
               component={RegisterScreen} 
-              options={HeaderOptions} />
+              options={HeaderOptions} /> */}
+            {/* Forget passowrd route */}
+            <Stack.Screen 
+              name="ForgetPassword"
+              component={ForgetPasswordScreen}
+              options={HeaderOptions}
+            />
           </Stack.Navigator>
         </NavigationContainer>
       </ApplicationProvider>
