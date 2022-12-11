@@ -1,10 +1,10 @@
-import { View, StyleSheet, Text, TouchableOpacity, Dimensions, TouchableWithoutFeedback, ActivityIndicator } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, Dimensions, ActivityIndicator } from 'react-native';
 
 // Hook
 import { useState, useRef } from 'react';
 
 // Icon
-import { Entypo } from '@expo/vector-icons';
+import { FontAwesome5 } from '@expo/vector-icons';
 
 // UI
 import tw from 'twrnc';
@@ -28,9 +28,9 @@ const LoginContents = ({navigation}) => {
     // Component for show/hide toggle in password input field
     const renderIcons = () => {
         return(
-            <TouchableWithoutFeedback onPress={toggleSecureEntry}>
-                <Entypo name={secureTextEntry ? "eye" : "eye-with-line"} size={22} color="black" />
-            </TouchableWithoutFeedback>
+            <TouchableOpacity onPress={toggleSecureEntry}>
+                <FontAwesome5 name={secureTextEntry ? "eye" : "eye-slash"} size={20} />
+            </TouchableOpacity>
         );
     }
     return (
@@ -68,6 +68,7 @@ const LoginContents = ({navigation}) => {
                 <Button 
                     size='large' 
                     status='danger'
+                    onPress={() => setIsActive(true)}
                     style={[styles.buttonStyle, tw.style('mx-auto mt-4 rounded-lg')]}>Login</Button>
             ) : (
                 <Button size='large' status='basic' style={[styles.buttonStyle, tw.style('mx-auto mt-4 rounded-lg')]} 

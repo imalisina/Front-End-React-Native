@@ -1,7 +1,7 @@
 import { Platform, StyleSheet, Pressable, Dimensions } from 'react-native';
 
 // Icon
-import { MaterialIcons } from '@expo/vector-icons'; 
+import { FontAwesome } from '@expo/vector-icons'; 
 
 // UI
 import tw from 'twrnc';
@@ -42,7 +42,7 @@ const SelectCountry = () => {
           disabled 
           size="large"
           textStyle={Platform.OS === 'ios' ? styles.textStylesIOS : tw.style('text-lg py-2')}
-          accessoryRight={<MaterialIcons name="keyboard-arrow-down" size={24} color='#9ca3af' />}/>
+          accessoryRight={<FontAwesome name="angle-down" size={24} color='#9ca3af' />}/>
       </Pressable>
     )
 };
