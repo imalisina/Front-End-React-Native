@@ -1,4 +1,4 @@
-import { StyleSheet, Dimensions, TouchableWithoutFeedback, TouchableOpacity, Text, ActivityIndicator } from 'react-native';
+import { StyleSheet, Dimensions, TouchableOpacity, Text, ActivityIndicator } from 'react-native';
 
 // Redux
 import { useSelector } from 'react-redux';
@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux';
 import { useState, useRef } from 'react';
 
 // Icon
-import { Entypo } from '@expo/vector-icons';
+import { FontAwesome5 } from '@expo/vector-icons';
 
 // UI
 import tw from 'twrnc';
@@ -33,9 +33,9 @@ const RegisterContents = ({navigation}) => {
     // Component for show/hide toggle in password input field
     const renderIcons = () => {
         return(
-            <TouchableWithoutFeedback onPress={toggleSecureEntry}>
-                <Entypo name={secureTextEntry ? "eye" : "eye-with-line"} size={22} color="black" />
-            </TouchableWithoutFeedback>
+            <TouchableOpacity onPress={toggleSecureEntry}>
+                <FontAwesome5 name={secureTextEntry ? "eye" : "eye-slash"} size={20} />
+            </TouchableOpacity>
         );
     }
     // Getting details of selected country
@@ -101,6 +101,7 @@ const RegisterContents = ({navigation}) => {
                 <Button 
                     size='large' 
                     status='danger'
+                    onPress={() => setIsActive(true)}
                     style={[styles.buttonStyle, tw.style('mx-auto mt-4 rounded-lg')]}>Join</Button>
             ) : (
                 <Button size='large' status='basic' style={[styles.buttonStyle, tw.style('mx-auto mt-4 rounded-lg')]} 
