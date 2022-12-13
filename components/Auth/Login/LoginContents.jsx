@@ -101,9 +101,6 @@ const styles = StyleSheet.create({
         width: width * 0.35,
         height: height * 0.07
     },
-    linkNoteStyle: {
-        fontSize: 11.3 * fontScale,
-    },
 })
 
 export default LoginContents;

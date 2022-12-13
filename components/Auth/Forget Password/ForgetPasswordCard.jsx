@@ -1,4 +1,4 @@
-import { StyleSheet, Dimensions, Text } from 'react-native';
+import { StyleSheet, Dimensions, Text, TouchableOpacity } from 'react-native';
 
 // UI
 import tw from 'twrnc';
@@ -10,7 +10,10 @@ import ForgetPasswordContents from './ForgetPasswordContents';
 // Get device dimension
 const { height, fontScale } = Dimensions.get("window");
 
-const ForgetPasswordCard = () => {
+// Set flexible margin numbers for bottom menu
+const bottomMargin = height >= 660 ? height * 0.45 : height * 0.37;
+
+const ForgetPasswordCard = ({ navigation }) => {
     return (
         <Layout style={[styles.cardContainer, tw.style('mx-auto')]}>
             <Text style={[tw.style('mx-auto'), styles.cardHeader]}>Password Recovery</Text>
@@ -18,6 +21,18 @@ const ForgetPasswordCard = () => {
                 Select one method of the methods
             </Text>
             <ForgetPasswordContents />
+            {/* Menus in the bottom */}
+            <Layout style={styles.bottomMenuContainer}>
+                <TouchableOpacity onPress={() => navigation.navigate("Login")}>
+                    <Text style={styles.bottomMenuItem}>Login</Text>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate("Register")}>
+                    <Text style={styles.bottomMenuItem}>Create account</Text>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <Text style={styles.bottomMenuItem}>Need help ?</Text>
+                </TouchableOpacity>
+            </Layout>
         </Layout>
     )
 }
@@ -25,7 +40,7 @@ const ForgetPasswordCard = () => {
 const styles = StyleSheet.create({
     cardContainer: {
         width: '90%',
-        height: height * 0.78,
+        height: height,
         marginTop: '6%',
     },
     cardHeader: {
@@ -36,6 +51,14 @@ const styles = StyleSheet.create({
     cardSubHeader: {
         fontSize: 14 / fontScale,
         marginBottom: "2%",
+    },
+    bottomMenuContainer: {
+        justifyContent: 'space-evenly',
+        flexDirection: 'row',
+        marginTop: bottomMargin
+    },
+    bottomMenuItem : {
+       color: '#9ca3af'
     },
 });
 

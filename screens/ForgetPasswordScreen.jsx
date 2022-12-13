@@ -6,10 +6,10 @@ const { height } = Dimensions.get('window');
 // Other Components
 import ForgetPasswordCard from '../components/Auth/Forget Password/ForgetPasswordCard';
 
-const ForgetPasswordScreen = () => {
+const ForgetPasswordScreen = ({ navigation }) => {
     return (
         <View style={styles.backgroundStyle}>
-            <ForgetPasswordCard />
+            <ForgetPasswordCard navigation={navigation}/>
         </View>
     )
 }

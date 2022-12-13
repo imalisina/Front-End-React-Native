@@ -1,4 +1,4 @@
-import { StyleSheet, TouchableOpacity, Dimensions, Platform } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 
 // UI
 import tw from 'twrnc';
@@ -16,14 +16,14 @@ const cardWidth = height >= 700 ? 0.40 * width : 0.43 * width;
 const ForgetPasswordContents = () => {
     return (
         <>
-            <Layout style={[styles.container, tw.style('mt-10')]}>
+            <Layout style={[styles.container, tw.style('mt-8')]}>
                 <Card style={[styles.subContainer, tw.style('rounded-lg')]}>
-                    <FontAwesome style={tw.style('mx-auto')} name='user-secret' size={height * 0.12} />
+                    <FontAwesome style={tw.style('mx-auto my-3')} name='user-secret' size={height * 0.12} />
                     <Text style={[tw.style('mx-auto'), styles.cardTitle]}>Secure Code</Text>
                 </Card>
                 <Card style={[styles.subContainer, tw.style('rounded-lg')]}>
-                    <FontAwesome style={tw.style('mx-auto')} name='user-secret' size={height * 0.12} />
-                    <Text style={[tw.style('mx-auto'), styles.cardTitle]}>Secure Code</Text>
+                    <FontAwesome5 style={tw.style('mx-auto my-3')} name='mail-bulk' size={height * 0.12} />
+                    <Text style={[tw.style('mx-auto'), styles.cardTitle]}>Email or SMS</Text>
                 </Card>
             </Layout>
         </>
@@ -33,13 +33,12 @@ const ForgetPasswordContents = () => {
 const styles = StyleSheet.create({
     container: {
         width: '100%',
-        height: 0.2 * height,
         flexDirection: 'row',
         justifyContent: 'space-evenly',
     },
     subContainer: {
         width: cardWidth,
-        height: 0.2 * height,
+        height: 0.25 * height,
         justifyContent: 'center'
     },
     cardTitle: {
