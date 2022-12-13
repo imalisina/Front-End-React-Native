@@ -1,4 +1,4 @@
-import { View, ImageBackground, StyleSheet, Dimensions } from 'react-native';
+import { View, StyleSheet, Dimensions } from 'react-native';
 
 // Get device dimensions
 const { height } = Dimensions.get('window');
@@ -8,21 +8,17 @@ import ForgetPasswordCard from '../components/Auth/Forget Password/ForgetPasswor
 
 const ForgetPasswordScreen = () => {
     return (
-        <View>
-            <ImageBackground 
-                source={require("../assets/ForgetPasswordPage.jpg")} 
-                resizeMode="cover" imageStyle={styles.backgroundImageStyles}>
-                <ForgetPasswordCard />
-            </ImageBackground>
+        <View style={styles.backgroundStyle}>
+            <ForgetPasswordCard />
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-    backgroundImageStyles: {
+    backgroundStyle: {
         width: '100%',
         height: height,
-        opacity: 0.9
+        backgroundColor: 'white',
     }
 });
 

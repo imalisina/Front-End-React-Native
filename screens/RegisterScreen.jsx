@@ -1,4 +1,4 @@
-import { View, ImageBackground, StyleSheet, Dimensions } from 'react-native';
+import { View, StyleSheet, Dimensions } from 'react-native';
 
 // Get device dimensions
 const { height } = Dimensions.get('window');
@@ -9,27 +9,23 @@ import RegisterCardSmall from '../components/Auth/Register/Small devices/Registe
 
 const RegisterScreen = ({navigation}) => {
     return (
-        <View>
-            <ImageBackground 
-                source={require("../assets/RegisterPage.jpg")} 
-                resizeMode="cover" imageStyle={styles.backgroundImageStyles}>
-                {/* Show different register pages based on height 
-                    Checks whether its height less than 660 or not */}
-                {
-                    height >= 660
-                    ? (<RegisterCardOthers navigation={navigation} />)
-                    : (<RegisterCardSmall navigation={navigation} />)
-                }
-            </ImageBackground>
+        <View style={styles.backgroundStyle}>
+            {/* Show different register pages based on height 
+                Checks whether its height less than 660 or not */}
+            {
+                height >= 660
+                ? (<RegisterCardOthers navigation={navigation} />)
+                : (<RegisterCardSmall navigation={navigation} />)
+            }
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-    backgroundImageStyles: {
+    backgroundStyle: {
         width: '100%',
         height: height,
-        opacity: 0.9
+        backgroundColor: 'white',
     }
 });
 

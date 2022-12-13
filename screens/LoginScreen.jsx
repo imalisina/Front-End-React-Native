@@ -1,4 +1,4 @@
-import { View, ImageBackground, StyleSheet, Dimensions } from 'react-native';
+import { View, StyleSheet, Dimensions } from 'react-native';
 
 // Get device dimensions
 const { height } = Dimensions.get('window');
@@ -8,21 +8,17 @@ import LoginCard from '../components/Auth/Login/LoginCard';
 
 const LoginScreen = ({ navigation }) => {
     return (
-        <View>
-            <ImageBackground 
-                source={require("../assets/LoginPage.jpg")} 
-                resizeMode="cover" imageStyle={styles.backgroundImageStyles}>
-                <LoginCard navigation={navigation} />
-            </ImageBackground>
+        <View style={styles.backgroundStyle}>
+            <LoginCard navigation={navigation} />
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-    backgroundImageStyles: {
+    backgroundStyle: {
         width: '100%',
         height: height,
-        opacity: 0.9
+        backgroundColor: 'white'
     }
 });
 

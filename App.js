@@ -51,8 +51,7 @@ const App = () => {
             <Stack.Screen 
               name="ForgetPassword"
               component={ForgetPasswordScreen}
-              options={HeaderOptions}
-            />
+              options={HeaderOptions} />
           </Stack.Navigator>
         </NavigationContainer>
       </ApplicationProvider>
