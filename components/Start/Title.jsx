@@ -22,7 +22,9 @@ const Title = () => {
                 <Text status='danger' style={[Platform.OS == "ios" ? styles.secondTitleIos : styles.secondTitleAndroid]}>
                     Aware
                 </Text>
-                <Text style={[Platform.OS == "ios" ? styles.subtitleIos : styles.subtitleAndroid]} category='s1' appearance='hint'>Your AI Stylist</Text>
+                <Text style={[Platform.OS == "ios" ? styles.subtitleIos : styles.subtitleAndroid]} category='s1' appearance='hint'>
+                    Your AI Stylist
+                </Text>
             </View>
         )
     }

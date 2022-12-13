@@ -14,7 +14,7 @@ const { height, fontScale } = Dimensions.get("window");
 
 const LoginCard = ({navigation}) => {
     return (
-        <Layout style={[styles.cardContainer, tw.style('mx-auto bg-white shadow-md rounded-md')]}>
+        <Layout style={[styles.cardContainer, tw.style('mx-auto')]}>
             <Text style={[tw.style('mx-auto'), styles.cardHeader]}>Login</Text>
             <Text style={[tw.style('mx-auto text-zinc-400'), styles.cardSubHeader]}>Log into existing account</Text>
             <LoginContents navigation={navigation}/>

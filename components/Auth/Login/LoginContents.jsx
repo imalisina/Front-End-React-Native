@@ -59,7 +59,11 @@ const LoginContents = ({navigation}) => {
             label="Password"
             ref={passwordRef}
             onSubmitEditing={() => setIsActive(true)}
-            caption={<TouchableOpacity activeOpacity={0.4}><Text style={[styles.linkNoteStyle, tw.style('text-zinc-400')]}>Forget your password ?</Text></TouchableOpacity>}
+            caption={
+                <TouchableOpacity activeOpacity={0.4} onPress={() => navigation.navigate('ForgetPassword')}>
+                    <Text style={[styles.linkNoteStyle, tw.style('text-zinc-400')]}>Forget your password ?</Text>
+                </TouchableOpacity>
+            }
             size="large" />
         {/* Button section */}
         {
@@ -96,9 +100,6 @@ const styles = StyleSheet.create({
     buttonStyle: {
         width: width * 0.35,
         height: height * 0.07
-    },
-    linkNoteStyle: {
-        fontSize: 11.3 * fontScale,
     },
 })
 

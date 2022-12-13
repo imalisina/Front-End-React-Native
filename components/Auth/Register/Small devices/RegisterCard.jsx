@@ -16,7 +16,7 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 const RegisterCard = ({navigation}) => {
     return (
         <KeyboardAwareScrollView showsVerticalScrollIndicator={false}>
-        <Layout style={[styles.cardContainer, tw.style('mx-auto bg-white shadow-md rounded-md')]}>
+        <Layout style={[styles.cardContainer, tw.style('mx-auto')]}>
             <Text style={[tw.style('mx-auto'), styles.cardHeader]}>Register</Text>
             <Text style={[tw.style('mx-auto text-zinc-400'), styles.cardSubHeader]}>Join to Aware family</Text>
             <RegisterContents navigation={navigation} />

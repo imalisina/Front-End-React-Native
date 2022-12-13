@@ -4,12 +4,12 @@ import { View, StyleSheet, Dimensions } from 'react-native';
 const { height } = Dimensions.get('window');
 
 // Other Components
-import LoginCard from '../components/Auth/Login/LoginCard';
+import ForgetPasswordCard from '../components/Auth/Forget Password/ForgetPasswordCard';
 
-const LoginScreen = ({ navigation }) => {
+const ForgetPasswordScreen = ({ navigation }) => {
     return (
         <View style={styles.backgroundStyle}>
-            <LoginCard navigation={navigation} />
+            <ForgetPasswordCard navigation={navigation}/>
         </View>
     )
 }
@@ -18,8 +18,8 @@ const styles = StyleSheet.create({
     backgroundStyle: {
         width: '100%',
         height: height,
-        backgroundColor: 'white'
+        backgroundColor: 'white',
     }
 });
 
-export default LoginScreen;
+export default ForgetPasswordScreen;
