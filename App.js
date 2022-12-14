@@ -16,6 +16,9 @@ import HeaderOptions from './components/Header/HeaderOptions';
 import * as eva from '@eva-design/eva';
 import { ApplicationProvider } from '@ui-kitten/components';
 
+// Theme
+// import {default as theme} from './assets/custom-theme.json'
+
 // Application screens
 import WelcomeScreen from './screens/WelcomeScreen';
 import LoginScreen from './screens/LoginScreen';
