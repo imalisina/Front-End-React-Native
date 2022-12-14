@@ -29,7 +29,7 @@ const ForgetPasswordCard = ({ navigation }) => {
                 <TouchableOpacity onPress={() => navigation.navigate("Register")}>
                     <Text style={styles.bottomMenuItem}>Create account</Text>
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate("NeedHelp")}>
                     <Text style={styles.bottomMenuItem}>Need help ?</Text>
                 </TouchableOpacity>
             </Layout>
