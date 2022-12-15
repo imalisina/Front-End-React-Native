@@ -37,12 +37,12 @@ const SelectCountry = () => {
         <Input 
           placeholder={changeInputPlaceholder()}
           style={[tw.style('mx-auto border border-gray-300 bg-transparent'), styles.Input]} 
-          placeholderTextColor='#9ca3af'
+          placeholderTextColor='#adadad'
           selectionColor='gray'
           disabled 
           size="large"
           textStyle={Platform.OS === 'ios' ? styles.textStylesIOS : tw.style('text-lg py-2')}
-          accessoryRight={<FontAwesome name="angle-down" size={24} color='#9ca3af' />}/>
+          accessoryRight={<FontAwesome name="angle-down" size={24} color='#adadad' />}/>
       </Pressable>
     )
 };

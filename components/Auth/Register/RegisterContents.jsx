@@ -34,7 +34,7 @@ const RegisterContents = ({navigation}) => {
     const renderIcons = () => {
         return(
             <TouchableOpacity onPress={toggleSecureEntry}>
-                <FontAwesome5 name={secureTextEntry ? "eye" : "eye-slash"} size={20} />
+                <FontAwesome5 name={secureTextEntry ? "eye" : "eye-slash"} size={20} color="#171818" />
             </TouchableOpacity>
         );
     }
@@ -46,9 +46,10 @@ const RegisterContents = ({navigation}) => {
         {/* Inputs section */}
         <Input
             placeholder="Enter your full name" 
-            placeholderTextColor='#9ca3af'
+            placeholderTextColor='#adadad'
             selectionColor='gray' 
-            style={[tw.style('mx-auto border border-gray-300 bg-transparent'), styles.inputStyles]}
+            status='warning'
+            style={[tw.style('mx-auto bg-transparent'), styles.inputStyles]}
             label="Name"
             returnKeyType='next'
             onSubmitEditing={() => {
@@ -58,9 +59,10 @@ const RegisterContents = ({navigation}) => {
             size="large" />
         <Input
             placeholder="Enter your email" 
-            placeholderTextColor='#9ca3af'
+            placeholderTextColor='#adadad'
             selectionColor='gray' 
-            style={[tw.style('mx-auto border border-gray-300 bg-transparent'), styles.inputStyles]}
+            status='warning'
+            style={[tw.style('mx-auto bg-transparent'), styles.inputStyles]}
             label="Email"
             keyboardType='email-address'
             returnKeyType='next'
@@ -72,9 +74,10 @@ const RegisterContents = ({navigation}) => {
             size="large" />
         <Input 
             placeholder={"(+" + selectedCountryData.callingCodes + ") XXX-XXX-XXX"} 
-            placeholderTextColor='#9ca3af'
+            placeholderTextColor='#adadad'
             selectionColor='gray' 
-            style={[tw.style('mx-auto border border-gray-300 bg-transparent'), styles.inputStyles]}
+            status='warning'
+            style={[tw.style('mx-auto bg-transparent'), styles.inputStyles]}
             label="Phone number"
             returnKeyType='next'
             ref={phoneNumberRef}
@@ -85,9 +88,10 @@ const RegisterContents = ({navigation}) => {
             size="large" />
         <Input
             placeholder="Enter a secure password" 
-            placeholderTextColor='#9ca3af'
+            placeholderTextColor='#adadad'
             selectionColor='gray' 
-            style={[tw.style('mx-auto border border-gray-300 bg-transparent'), styles.inputStyles]}
+            status='warning'
+            style={[tw.style('mx-auto bg-transparent'), styles.inputStyles]}
             label="Password"
             ref={passwordRef}
             secureTextEntry={secureTextEntry}
@@ -100,7 +104,7 @@ const RegisterContents = ({navigation}) => {
             ? (
                 <Button 
                     size='large' 
-                    status='danger'
+                    status='primary'
                     onPress={() => setIsActive(true)}
                     style={[styles.buttonStyle, tw.style('mx-auto mt-4 rounded-lg')]}>Join</Button>
             ) : (
@@ -109,7 +113,7 @@ const RegisterContents = ({navigation}) => {
             )
         }
         <TouchableOpacity onPress={() => navigation.navigate('Login')} style={tw.style('mb-9')}>
-            <UIText status='danger' style={[styles.linkNoteStyle, tw.style('mx-auto mt-2')]}>
+            <UIText status='primary' style={[styles.linkNoteStyle, tw.style('mx-auto mt-2')]}>
                 Have an account ? <Text style={tw.style('underline font-bold')}>Login</Text>
             </UIText>
         </TouchableOpacity>

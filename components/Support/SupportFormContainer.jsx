@@ -1,8 +1,8 @@
-import { StyleSheet, Dimensions, Text } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 
 // UI
 import tw from 'twrnc';
-import { Layout } from '@ui-kitten/components';
+import { Layout, Text } from '@ui-kitten/components';
 
 // Get device dimension
 const { height, fontScale } = Dimensions.get("window");
@@ -14,7 +14,7 @@ const SupportFormContainer = () => {
     return (
         <Layout style={[tw.style('mx-auto'), styles.cardContainer]}>
             <Text style={[tw.style('mx-auto'), styles.cardHeader]}>Need Help ?</Text>
-            <Text style={[tw.style('mx-auto text-zinc-400'), styles.cardSubHeader]}>
+            <Text status='warning' style={[tw.style('mx-auto'), styles.cardSubHeader]}>
                 Tell us what your problem is
             </Text>
             <SupportFormContents />

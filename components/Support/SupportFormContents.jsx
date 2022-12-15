@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TouchableOpacity, Dimensions, ActivityIndicator } from 'react-native';
+import { StyleSheet, TouchableOpacity, Dimensions, ActivityIndicator } from 'react-native';
 
 // Hook
 import { useState, useRef } from 'react';
@@ -8,13 +8,7 @@ import { FontAwesome5 } from '@expo/vector-icons';
 
 // UI
 import tw from 'twrnc';
-import { 
-    Input, 
-    Text as UIText, 
-    Button, 
-    IndexPath, 
-    Select, 
-    SelectItem } from '@ui-kitten/components';
+import { Input, Text, Button, Select, SelectItem } from '@ui-kitten/components';
 
 // Get device dimension
 const { fontScale, height, width } = Dimensions.get('window');
@@ -36,20 +30,31 @@ const SupportFormContents = () => {
         <>
         {/* Input section */}
         <Select 
-            // label="Subject / Reason"
+            label="Subject / Reason"
             placeholder="- Select -"
             selectedIndex={selectedIndex}
             onSelect={(index) => setSelectedIndex(index)}
             style={[tw.style('mx-auto bg-transparent'), styles.inputStyles]}
             size="large"
             value={selectedIndex ? staticValues[selectedIndex.row] : ''}
-            placeholderTextColor='#9ca3af'>
+            placeholderTextColor='#adadad'
+            status='warning'>
             <SelectItem title="Question" />
             <SelectItem title="Account and passwords" />
             <SelectItem title="Technical issue" />
             <SelectItem title="Suggestion" />
             <SelectItem title="Others" />
         </Select>
+        <Input 
+            label="Description"
+            placeholder='Write your description . . .'
+            multiline
+            numberOfLines={15}
+            scrollEnabled={true}
+            placeholderTextColor='#adadad'
+            status='warning'
+            style={[tw.style('mx-auto bg-transparent'), styles.inputStyles]}
+        />
         {/* Button section */}
         </>
     );

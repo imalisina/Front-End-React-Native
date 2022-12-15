@@ -1,8 +1,8 @@
-import { StyleSheet, Dimensions, Text, TouchableOpacity } from 'react-native';
+import { StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
 
 // UI
 import tw from 'twrnc';
-import { Layout } from '@ui-kitten/components';
+import { Layout, Text } from '@ui-kitten/components';
 
 // Other components
 import ForgetPasswordContents from './ForgetPasswordContents';
@@ -17,20 +17,20 @@ const ForgetPasswordCard = ({ navigation }) => {
     return (
         <Layout style={[styles.cardContainer, tw.style('mx-auto')]}>
             <Text style={[tw.style('mx-auto'), styles.cardHeader]}>Password Recovery</Text>
-            <Text style={[tw.style('mx-auto text-zinc-400'), styles.cardSubHeader]}>
+            <Text status="warning" style={[tw.style('mx-auto'), styles.cardSubHeader]}>
                 Select one method of the methods
             </Text>
             <ForgetPasswordContents />
             {/* Menus in the bottom */}
             <Layout style={styles.bottomMenuContainer}>
                 <TouchableOpacity onPress={() => navigation.navigate("Login")}>
-                    <Text style={styles.bottomMenuItem}>Login</Text>
+                    <Text status='success'>Login</Text>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => navigation.navigate("Register")}>
-                    <Text style={styles.bottomMenuItem}>Create account</Text>
+                    <Text status='success'>Create account</Text>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => navigation.navigate("NeedHelp")}>
-                    <Text style={styles.bottomMenuItem}>Need help ?</Text>
+                    <Text status='success'>Need help ?</Text>
                 </TouchableOpacity>
             </Layout>
         </Layout>
@@ -56,9 +56,6 @@ const styles = StyleSheet.create({
         justifyContent: 'space-evenly',
         flexDirection: 'row',
         marginTop: bottomMargin
-    },
-    bottomMenuItem : {
-       color: '#9ca3af'
     },
 });
 

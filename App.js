@@ -17,7 +17,7 @@ import * as eva from '@eva-design/eva';
 import { ApplicationProvider } from '@ui-kitten/components';
 
 // Theme
-// import {default as theme} from './assets/custom-theme.json'
+import {default as theme} from './assets/custom-theme.json'
 
 // Application screens
 import WelcomeScreen from './screens/WelcomeScreen';
@@ -32,7 +32,7 @@ const App = () => {
 
   return (
     <Provider store={Store}>
-      <ApplicationProvider {...eva} theme={eva.light}>
+      <ApplicationProvider {...eva} theme={{...eva.light, ...theme}}>
         <StatusBar />
         <NavigationContainer>
           <Stack.Navigator>
@@ -56,11 +56,11 @@ const App = () => {
               name="ForgetPassword"
               component={ForgetPasswordScreen}
               options={HeaderOptions} /> */}
+            {/* Support route */}
             <Stack.Screen 
               name="NeedHelp"
               component={NeedHelpScreen}
-              options={HeaderOptions}
-            />
+              options={HeaderOptions} />
           </Stack.Navigator>
         </NavigationContainer>
       </ApplicationProvider>

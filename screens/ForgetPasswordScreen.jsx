@@ -17,7 +17,6 @@ const ForgetPasswordScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
     backgroundStyle: {
         width: '100%',
-        height: height,
         backgroundColor: 'white',
     }
 });
