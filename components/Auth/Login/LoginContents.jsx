@@ -18,8 +18,6 @@ const LoginContents = ({navigation}) => {
     const passwordRef = useRef();
     // Button activation state and its toggle method
     const [ isActive, setIsActive ] = useState(false);
-    // METHOD FOR FETCHING DATA GOES HERE......
-
     // Secure text entry state and its toggle method
     const [ secureTextEntry, setSecureTextEntry ] = useState(true);
     const toggleSecureEntry = () => {
@@ -57,6 +55,7 @@ const LoginContents = ({navigation}) => {
             secureTextEntry={secureTextEntry}
             selectionColor='gray' 
             status='warning'
+            returnKeyType='done'
             style={[tw.style('mx-auto bg-transparent'), styles.inputStyles]}
             label="Password"
             ref={passwordRef}

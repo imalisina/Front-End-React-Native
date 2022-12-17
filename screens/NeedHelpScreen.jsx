@@ -6,10 +6,10 @@ const { height } = Dimensions.get('window');
 // Other components
 import SupportFormContainer from '../components/Support/SupportFormContainer';
 
-const NeedHelpScreen = () => {
+const NeedHelpScreen = ({ navigation }) => {
     return (
         <View style={styles.backgroundStyle}>
-            <SupportFormContainer />
+            <SupportFormContainer navigation={navigation}/>
         </View>
     );
 }

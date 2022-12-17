@@ -25,6 +25,8 @@ import LoginScreen from './screens/LoginScreen';
 import RegisterScreen from './screens/RegisterScreen.jsx';
 import ForgetPasswordScreen from './screens/ForgetPasswordScreen';
 import NeedHelpScreen from './screens/NeedHelpScreen';
+import EmailMethodScreen from './screens/EmailMethodScreen';
+
 
 const App = () => {
   // Stack navigator creator
@@ -52,15 +54,20 @@ const App = () => {
               component={RegisterScreen} 
               options={HeaderOptions} /> */}
             {/* Forget passowrd route */}
-            {/* <Stack.Screen 
+            <Stack.Screen 
               name="ForgetPassword"
               component={ForgetPasswordScreen}
-              options={HeaderOptions} /> */}
-            {/* Support route */}
+              options={HeaderOptions} />
+            {/* Email route */}
             <Stack.Screen 
+              name="EmailMethod"
+              component={EmailMethodScreen}
+              options={HeaderOptions} />
+            {/* Support route */}
+            {/* <Stack.Screen 
               name="NeedHelp"
               component={NeedHelpScreen}
-              options={HeaderOptions} />
+              options={HeaderOptions} /> */}
           </Stack.Navigator>
         </NavigationContainer>
       </ApplicationProvider>

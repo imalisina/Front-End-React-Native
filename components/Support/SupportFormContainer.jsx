@@ -7,25 +7,33 @@ import { Layout, Text } from '@ui-kitten/components';
 // Get device dimension
 const { height, fontScale } = Dimensions.get("window");
 
+// Keyboard Auto Scroll
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+
 // Other components
 import SupportFormContents from './SupportFormContents';
 
-const SupportFormContainer = () => {
+const SupportFormContainer = ({ navigation }) => {
     return (
+        <KeyboardAwareScrollView 
+            enableOnAndroid={true}
+            showsVerticalScrollIndicator={false}
+            extraHeight={100}>
         <Layout style={[tw.style('mx-auto'), styles.cardContainer]}>
             <Text style={[tw.style('mx-auto'), styles.cardHeader]}>Need Help ?</Text>
             <Text status='warning' style={[tw.style('mx-auto'), styles.cardSubHeader]}>
                 Tell us what your problem is
             </Text>
-            <SupportFormContents />
+            <SupportFormContents navigation={navigation}/>
         </Layout>
+        </KeyboardAwareScrollView>
     );
 }
 
 const styles = StyleSheet.create({
     cardContainer: {
         width: '90%',
-        height: height * 0.78,
+        height: height * 0.8,
         marginTop: '6%',
     },
     cardHeader: {
