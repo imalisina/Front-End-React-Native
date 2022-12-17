@@ -1,8 +1,8 @@
-import { StyleSheet, Dimensions, Text } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 
 // UI
 import tw from 'twrnc';
-import { Layout } from '@ui-kitten/components';
+import { Layout, Text } from '@ui-kitten/components';
 
 // Other components
 import LoginContents from './LoginContents';
@@ -16,7 +16,7 @@ const LoginCard = ({navigation}) => {
     return (
         <Layout style={[styles.cardContainer, tw.style('mx-auto')]}>
             <Text style={[tw.style('mx-auto'), styles.cardHeader]}>Login</Text>
-            <Text style={[tw.style('mx-auto text-zinc-400'), styles.cardSubHeader]}>Log into existing account</Text>
+            <Text status='warning' style={[tw.style('mx-auto'), styles.cardSubHeader]}>Log into existing account</Text>
             <LoginContents navigation={navigation}/>
             {
                 height >= 700

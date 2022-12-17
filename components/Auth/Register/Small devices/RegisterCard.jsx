@@ -1,8 +1,8 @@
-import { StyleSheet, Dimensions, Text } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 
 // UI
 import tw from 'twrnc';
-import { Layout } from '@ui-kitten/components';
+import { Layout, Text } from '@ui-kitten/components';
 
 // Other components
 import RegisterContents from '../RegisterContents';
@@ -15,10 +15,13 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 
 const RegisterCard = ({navigation}) => {
     return (
-        <KeyboardAwareScrollView showsVerticalScrollIndicator={false}>
+        <KeyboardAwareScrollView 
+            showsVerticalScrollIndicator={false}
+            enableOnAndroid={true}
+            extraHeight={140}>
         <Layout style={[styles.cardContainer, tw.style('mx-auto')]}>
             <Text style={[tw.style('mx-auto'), styles.cardHeader]}>Register</Text>
-            <Text style={[tw.style('mx-auto text-zinc-400'), styles.cardSubHeader]}>Join to Aware family</Text>
+            <Text status='warning' style={[tw.style('mx-auto'), styles.cardSubHeader]}>Join to Aware family</Text>
             <RegisterContents navigation={navigation} />
         </Layout>
         </KeyboardAwareScrollView>

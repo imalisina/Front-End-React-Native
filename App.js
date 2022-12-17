@@ -16,11 +16,17 @@ import HeaderOptions from './components/Header/HeaderOptions';
 import * as eva from '@eva-design/eva';
 import { ApplicationProvider } from '@ui-kitten/components';
 
+// Theme
+import {default as theme} from './assets/custom-theme.json'
+
 // Application screens
 import WelcomeScreen from './screens/WelcomeScreen';
 import LoginScreen from './screens/LoginScreen';
 import RegisterScreen from './screens/RegisterScreen.jsx';
 import ForgetPasswordScreen from './screens/ForgetPasswordScreen';
+import NeedHelpScreen from './screens/NeedHelpScreen';
+import EmailMethodScreen from './screens/EmailMethodScreen';
+
 
 const App = () => {
   // Stack navigator creator
@@ -28,7 +34,7 @@ const App = () => {
 
   return (
     <Provider store={Store}>
-      <ApplicationProvider {...eva} theme={eva.light}>
+      <ApplicationProvider {...eva} theme={{...eva.light, ...theme}}>
         <StatusBar />
         <NavigationContainer>
           <Stack.Navigator>
@@ -52,6 +58,16 @@ const App = () => {
               name="ForgetPassword"
               component={ForgetPasswordScreen}
               options={HeaderOptions} />
+            {/* Email route */}
+            <Stack.Screen 
+              name="EmailMethod"
+              component={EmailMethodScreen}
+              options={HeaderOptions} />
+            {/* Support route */}
+            {/* <Stack.Screen 
+              name="NeedHelp"
+              component={NeedHelpScreen}
+              options={HeaderOptions} /> */}
           </Stack.Navigator>
         </NavigationContainer>
       </ApplicationProvider>

@@ -7,6 +7,7 @@ const HeaderOptions = {
     headerShadowVisible: false,
     headerBackVisible: false,
     headerBackButtonMenuEnabled: false,
+    animation: 'simple_push',
     headerTitle: () => <HeaderContainer />
 };
 

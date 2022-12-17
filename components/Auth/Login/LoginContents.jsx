@@ -18,8 +18,6 @@ const LoginContents = ({navigation}) => {
     const passwordRef = useRef();
     // Button activation state and its toggle method
     const [ isActive, setIsActive ] = useState(false);
-    // METHOD FOR FETCHING DATA GOES HERE......
-
     // Secure text entry state and its toggle method
     const [ secureTextEntry, setSecureTextEntry ] = useState(true);
     const toggleSecureEntry = () => {
@@ -29,7 +27,7 @@ const LoginContents = ({navigation}) => {
     const renderIcons = () => {
         return(
             <TouchableOpacity onPress={toggleSecureEntry}>
-                <FontAwesome5 name={secureTextEntry ? "eye" : "eye-slash"} size={20} />
+                <FontAwesome5 name={secureTextEntry ? "eye" : "eye-slash"} size={20} color="#171818" />
             </TouchableOpacity>
         );
     }
@@ -38,9 +36,10 @@ const LoginContents = ({navigation}) => {
         {/* Inputs section */}
         <Input
             placeholder="Enter your email" 
-            placeholderTextColor='#9ca3af'
-            selectionColor='gray' 
-            style={[tw.style('mx-auto border border-gray-300 bg-transparent'), styles.inputStyles]}
+            placeholderTextColor='#adadad'
+            selectionColor='gray'
+            status='warning'
+            style={[tw.style('mx-auto bg-transparent'), styles.inputStyles]}
             label="Email"
             keyboardType='email-address'
             returnKeyType='next'
@@ -51,17 +50,19 @@ const LoginContents = ({navigation}) => {
             size="large" />
         <Input 
             placeholder="Enter your password" 
-            placeholderTextColor='#9ca3af'
+            placeholderTextColor='#adadad'
             accessoryRight={renderIcons}
             secureTextEntry={secureTextEntry}
             selectionColor='gray' 
-            style={[tw.style('mx-auto border border-gray-300 bg-transparent'), styles.inputStyles]}
+            status='warning'
+            returnKeyType='done'
+            style={[tw.style('mx-auto bg-transparent'), styles.inputStyles]}
             label="Password"
             ref={passwordRef}
             onSubmitEditing={() => setIsActive(true)}
             caption={
                 <TouchableOpacity activeOpacity={0.4} onPress={() => navigation.navigate('ForgetPassword')}>
-                    <Text style={[styles.linkNoteStyle, tw.style('text-zinc-400')]}>Forget your password ?</Text>
+                    <UIText status='warning' style={styles.linkNoteStyle}>Forget your password ?</UIText>
                 </TouchableOpacity>
             }
             size="large" />
@@ -71,7 +72,7 @@ const LoginContents = ({navigation}) => {
             ? (
                 <Button 
                     size='large' 
-                    status='danger'
+                    status='primary'
                     onPress={() => setIsActive(true)}
                     style={[styles.buttonStyle, tw.style('mx-auto mt-4 rounded-lg')]}>Login</Button>
             ) : (
@@ -80,7 +81,7 @@ const LoginContents = ({navigation}) => {
             )
         }
         <TouchableOpacity onPress={() => navigation.navigate('Register')} style={tw.style('mb-9')}>
-            <UIText status='danger' style={[styles.linkNoteStyle, tw.style('mx-auto mt-2')]}>
+            <UIText status='primary' style={[styles.linkNoteStyle, tw.style('mx-auto mt-2')]}>
                 Haven't an account ? <Text style={tw.style('underline font-bold')}>Register</Text>
             </UIText>
         </TouchableOpacity>
