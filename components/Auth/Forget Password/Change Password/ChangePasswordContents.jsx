@@ -45,7 +45,7 @@ const ChangePasswordContents = ({ navigation }) => {
     // Method to change the button activation status andd input operation/redirection
     const formHandler = () => {
         setIsActive(true);
-        navigation.navigate("");
+        navigation.navigate("Success");
         // FORM HANDLING SECTION GOES HERE ...
     }
     return (
@@ -58,9 +58,9 @@ const ChangePasswordContents = ({ navigation }) => {
             status='warning'
             style={[tw.style('mx-auto bg-transparent'), styles.inputStyles]}
             label="New password"
-            keyboardType='default'
             secureTextEntry={secureTextEntryOne}
             accessoryRight={renderIconsOne}
+            onFocus={() => toggleSecureEntryOne()}
             onSubmitEditing={() => {
                 toggleSecureEntryOne();
                 passwordConfirmation.current.focus();
@@ -75,11 +75,11 @@ const ChangePasswordContents = ({ navigation }) => {
             status='warning'
             style={[tw.style('mx-auto bg-transparent'), styles.inputStyles]}
             label="Password confirmation"
-            keyboardType='default'
             ref={passwordConfirmation}
             secureTextEntry={secureTextEntryTwo}
             accessoryRight={renderIconsTwo}
             returnKeyType='done'
+            onFocus={() => toggleSecureEntryTwo()}
             onBlur={() => {
                 toggleSecureEntryTwo();
                 formHandler();
@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
         marginVertical: '2.5%'
     },
     buttonStyle: {
-        width: width * 0.45,
+        width: height >= 660 ? width * 0.45 : width * 0.6,
         height: height * 0.07
     },
 })

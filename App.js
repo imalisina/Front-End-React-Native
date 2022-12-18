@@ -29,6 +29,7 @@ import EmailMethodScreen from './screens/EmailMethodScreen';
 import VerificationScreen from './screens/VerificationScreen';
 import ChangePasswordScreen from './screens/ChangePasswordScreen';
 import SecureCodeMethodScreen from './screens/SecureCodeMethodScreen';
+import SuccessScreen from './screens/SuccessScreen';
 
 
 const App = () => {
@@ -67,10 +68,10 @@ const App = () => {
               component={EmailMethodScreen}
               options={HeaderOptions} /> */}
             {/* SecureCode method route */}
-            <Stack.Screen 
+            {/* <Stack.Screen 
               name="SecureCodeMethod"
               component={SecureCodeMethodScreen}
-              options={HeaderOptions} />
+              options={HeaderOptions} /> */}
             {/* Verification route */}
             {/* <Stack.Screen 
               name="Verification"
@@ -81,6 +82,11 @@ const App = () => {
               name="ChangePassword"
               component={ChangePasswordScreen}
               options={HeaderOptions} /> */}
+            {/* Success route */}
+            <Stack.Screen 
+              name="Success"
+              component={SuccessScreen}
+              options={HeaderOptions} />
             {/* Support route */}
             {/* <Stack.Screen 
               name="NeedHelp"

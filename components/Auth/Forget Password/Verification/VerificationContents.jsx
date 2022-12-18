@@ -29,7 +29,6 @@ const VerificationContents = ({ navigation }) => {
             status='warning'
             style={[tw.style('mx-auto bg-transparent'), styles.inputStyles]}
             label="Verification code"
-            keyboardType='default'
             returnKeyType='done'
             onBlur={() => formHandler()}
             size="large" />

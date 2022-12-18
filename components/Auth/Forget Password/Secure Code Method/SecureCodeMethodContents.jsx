@@ -45,7 +45,6 @@ const SecureCodeMethodContents = ({ navigation }) => {
             status='warning'
             style={[tw.style('mx-auto bg-transparent'), styles.inputStyles]}
             label="Secure Code"
-            keyboardType='default'
             ref={secureCodeRef}
             returnKeyType='done'
             onBlur={() => formHandler()}
