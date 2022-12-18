@@ -1,7 +1,4 @@
-import { View, StyleSheet, Dimensions } from 'react-native';
-
-// Get device dimensions
-const { height } = Dimensions.get('window');
+import { View, StyleSheet } from 'react-native';
 
 // Other Components
 import ForgetPasswordCard from '../components/Auth/Forget Password/ForgetPasswordCard';

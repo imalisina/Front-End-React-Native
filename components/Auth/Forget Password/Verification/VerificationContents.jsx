@@ -10,26 +10,25 @@ import { Input, Button } from '@ui-kitten/components';
 // Get device dimension
 const { height, width } = Dimensions.get('window');
 
-const EmailMethodContents = ({ navigation }) => {
+const VerificationContents = ({ navigation }) => {
     // Button activation state and its toggle method
     const [ isActive, setIsActive ] = useState(false);
     // Method to change the button activation status andd input operation/redirection
     const formHandler = () => {
         setIsActive(true);
-        navigation.navigate("Verification");
+        navigation.navigate("ChangePassword");
         // FORM HANDLING SECTION GOES HERE ...
     }
     return (
         <>
         {/* Inputs section */}
         <Input
-            placeholder="Enter your email" 
+            placeholder="Enter the code" 
             placeholderTextColor='#adadad'
             selectionColor='gray'
             status='warning'
             style={[tw.style('mx-auto bg-transparent'), styles.inputStyles]}
-            label="Email"
-            keyboardType='email-address'
+            label="Verification code"
             returnKeyType='done'
             onBlur={() => formHandler()}
             size="large" />
@@ -62,4 +61,4 @@ const styles = StyleSheet.create({
     },
 })
 
-export default EmailMethodContents;
+export default VerificationContents;

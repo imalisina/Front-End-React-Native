@@ -1,4 +1,4 @@
-import { StyleSheet, Dimensions, TouchableOpacity, Text, ActivityIndicator } from 'react-native';
+import { StyleSheet, Dimensions, TouchableOpacity, Text, ActivityIndicator, Platform } from 'react-native';
 
 // Redux
 import { useSelector } from 'react-redux';
@@ -23,8 +23,12 @@ const RegisterContents = ({navigation}) => {
     const passwordRef = useRef();
     // Button activation state and its toggle method
     const [ isActive, setIsActive ] = useState(false);
-    // METHOD FOR FETCHING DATA GOES HERE......
-
+    // Method to change the button activation status andd input operation/redirection
+    const formHandler = () => {
+        setIsActive(true);
+        // navigation.navigate("");
+        // FORM HANDLING SECTION GOES HERE ...
+    }
     // Secure text entry state and its toggle method
     const [ secureTextEntry, setSecureTextEntry ] = useState(true);
     const toggleSecureEntry = () => {
@@ -33,7 +37,7 @@ const RegisterContents = ({navigation}) => {
     // Component for show/hide toggle in password input field
     const renderIcons = () => {
         return(
-            <TouchableOpacity onPress={toggleSecureEntry}>
+            <TouchableOpacity>
                 <FontAwesome5 name={secureTextEntry ? "eye" : "eye-slash"} size={20} color="#171818" />
             </TouchableOpacity>
         );
@@ -79,6 +83,7 @@ const RegisterContents = ({navigation}) => {
             status='warning'
             style={[tw.style('mx-auto bg-transparent'), styles.inputStyles]}
             label="Phone number"
+            keyboardType={Platform.OS == "android" ? "phone-pad" : "numbers-and-punctuation"}
             returnKeyType='next'
             ref={phoneNumberRef}
             onSubmitEditing={() => {
@@ -96,7 +101,11 @@ const RegisterContents = ({navigation}) => {
             ref={passwordRef}
             secureTextEntry={secureTextEntry}
             accessoryRight={renderIcons}
-            onSubmitEditing={() => setIsActive(true)}
+            onFocus={() => toggleSecureEntry()}
+            onBlur={() => {
+                toggleSecureEntry();
+                formHandler();
+            }}
             size='large'/>
         {/* Button section */}
         {
@@ -105,7 +114,7 @@ const RegisterContents = ({navigation}) => {
                 <Button 
                     size='large' 
                     status='primary'
-                    onPress={() => setIsActive(true)}
+                    onPress={() => formHandler()}
                     style={[styles.buttonStyle, tw.style('mx-auto mt-4 rounded-lg')]}>Join</Button>
             ) : (
                 <Button size='large' status='basic' style={[styles.buttonStyle, tw.style('mx-auto mt-4 rounded-lg')]} 

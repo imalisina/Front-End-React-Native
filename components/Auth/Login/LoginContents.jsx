@@ -18,6 +18,12 @@ const LoginContents = ({navigation}) => {
     const passwordRef = useRef();
     // Button activation state and its toggle method
     const [ isActive, setIsActive ] = useState(false);
+    // Method to change the button activation status andd input operation/redirection
+    const formHandler = () => {
+        setIsActive(true);
+        navigation.navigate("");
+        // FORM HANDLING SECTION GOES HERE ...
+    }
     // Secure text entry state and its toggle method
     const [ secureTextEntry, setSecureTextEntry ] = useState(true);
     const toggleSecureEntry = () => {
@@ -26,7 +32,7 @@ const LoginContents = ({navigation}) => {
     // Component for show/hide toggle in password input field
     const renderIcons = () => {
         return(
-            <TouchableOpacity onPress={toggleSecureEntry}>
+            <TouchableOpacity>
                 <FontAwesome5 name={secureTextEntry ? "eye" : "eye-slash"} size={20} color="#171818" />
             </TouchableOpacity>
         );
@@ -59,7 +65,11 @@ const LoginContents = ({navigation}) => {
             style={[tw.style('mx-auto bg-transparent'), styles.inputStyles]}
             label="Password"
             ref={passwordRef}
-            onSubmitEditing={() => setIsActive(true)}
+            onFocus={() => toggleSecureEntry()}
+            onBlur={() => {
+                toggleSecureEntry();
+                formHandler();
+            }}
             caption={
                 <TouchableOpacity activeOpacity={0.4} onPress={() => navigation.navigate('ForgetPassword')}>
                     <UIText status='warning' style={styles.linkNoteStyle}>Forget your password ?</UIText>
@@ -73,7 +83,7 @@ const LoginContents = ({navigation}) => {
                 <Button 
                     size='large' 
                     status='primary'
-                    onPress={() => setIsActive(true)}
+                    onPress={() => formHandler()}
                     style={[styles.buttonStyle, tw.style('mx-auto mt-4 rounded-lg')]}>Login</Button>
             ) : (
                 <Button size='large' status='basic' style={[styles.buttonStyle, tw.style('mx-auto mt-4 rounded-lg')]} 
