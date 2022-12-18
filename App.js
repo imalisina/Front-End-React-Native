@@ -26,6 +26,9 @@ import RegisterScreen from './screens/RegisterScreen.jsx';
 import ForgetPasswordScreen from './screens/ForgetPasswordScreen';
 import NeedHelpScreen from './screens/NeedHelpScreen';
 import EmailMethodScreen from './screens/EmailMethodScreen';
+import VerificationScreen from './screens/VerificationScreen';
+import ChangePasswordScreen from './screens/ChangePasswordScreen';
+import SecureCodeMethodScreen from './screens/SecureCodeMethodScreen';
 
 
 const App = () => {
@@ -54,15 +57,30 @@ const App = () => {
               component={RegisterScreen} 
               options={HeaderOptions} /> */}
             {/* Forget passowrd route */}
-            <Stack.Screen 
+            {/* <Stack.Screen 
               name="ForgetPassword"
               component={ForgetPasswordScreen}
-              options={HeaderOptions} />
-            {/* Email route */}
-            <Stack.Screen 
+              options={HeaderOptions} /> */}
+            {/* Email method route */}
+            {/* <Stack.Screen 
               name="EmailMethod"
               component={EmailMethodScreen}
+              options={HeaderOptions} /> */}
+            {/* SecureCode method route */}
+            <Stack.Screen 
+              name="SecureCodeMethod"
+              component={SecureCodeMethodScreen}
               options={HeaderOptions} />
+            {/* Verification route */}
+            {/* <Stack.Screen 
+              name="Verification"
+              component={VerificationScreen}
+              options={HeaderOptions} /> */}
+            {/* Change password route */}
+            {/* <Stack.Screen 
+              name="ChangePassword"
+              component={ChangePasswordScreen}
+              options={HeaderOptions} /> */}
             {/* Support route */}
             {/* <Stack.Screen 
               name="NeedHelp"

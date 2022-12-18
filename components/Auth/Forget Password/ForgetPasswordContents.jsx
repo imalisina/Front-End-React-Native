@@ -17,7 +17,7 @@ const ForgetPasswordContents = ({ navigation }) => {
     return (
         <>
             <Layout style={[styles.container, tw.style('mt-8')]}>
-                <Card onPress={() => navigation.navigate("SecureCode")} style={[styles.subContainer, tw.style('rounded-lg')]}>
+                <Card onPress={() => navigation.navigate("SecureCodeMethod")} style={[styles.subContainer, tw.style('rounded-lg')]}>
                     <FontAwesome style={tw.style('mx-auto my-3')} name='user-secret' size={height * 0.12} />
                     <Text style={[tw.style('mx-auto'), styles.cardTitle]}>Secure Code</Text>
                 </Card>
