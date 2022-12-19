@@ -30,6 +30,7 @@ import VerificationScreen from './screens/VerificationScreen';
 import ChangePasswordScreen from './screens/ChangePasswordScreen';
 import SecureCodeMethodScreen from './screens/SecureCodeMethodScreen';
 import SuccessScreen from './screens/SuccessScreen';
+import CompleteProfileScreen from './screens/CompleteProfileScreen';
 
 
 const App = () => {
@@ -43,55 +44,60 @@ const App = () => {
         <NavigationContainer>
           <Stack.Navigator>
             {/* Welcome screen route */}
-            <Stack.Screen 
+            {/* <Stack.Screen 
               name="Welcome" 
               component={WelcomeScreen}
-              options={{ headerShown: false }} />
+              options={{ headerShown: false }} /> */}
             {/* Login screen route */}
-            <Stack.Screen 
+            {/* <Stack.Screen 
               name="Login"
               component={LoginScreen}
-              options={HeaderOptions} />
+              options={HeaderOptions} /> */}
             {/* Register screen route */}
-            <Stack.Screen 
+            {/* <Stack.Screen 
               name="Register"
               component={RegisterScreen} 
+              options={HeaderOptions} /> */}
+            {/* Complete profile route */}
+            <Stack.Screen 
+              name="CompleteProfile" 
+              component={CompleteProfileScreen}
               options={HeaderOptions} />
             {/* Forget passowrd route */}
-            <Stack.Screen 
+            {/* <Stack.Screen 
               name="ForgetPassword"
               component={ForgetPasswordScreen}
-              options={HeaderOptions} />
+              options={HeaderOptions} /> */}
             {/* Email method route */}
-            <Stack.Screen 
+            {/* <Stack.Screen 
               name="EmailMethod"
               component={EmailMethodScreen}
-              options={HeaderOptions} />
+              options={HeaderOptions} /> */}
             {/* SecureCode method route */}
-            <Stack.Screen 
+            {/* <Stack.Screen 
               name="SecureCodeMethod"
               component={SecureCodeMethodScreen}
-              options={HeaderOptions} />
+              options={HeaderOptions} /> */}
             {/* Verification route */}
-            <Stack.Screen 
+            {/* <Stack.Screen 
               name="Verification"
               component={VerificationScreen}
-              options={HeaderOptions} />
+              options={HeaderOptions} /> */}
             {/* Change password route */}
-            <Stack.Screen 
+            {/* <Stack.Screen 
               name="ChangePassword"
               component={ChangePasswordScreen}
-              options={HeaderOptions} />
+              options={HeaderOptions} /> */}
             {/* Success route */}
-            <Stack.Screen 
+            {/* <Stack.Screen 
               name="Success"
               component={SuccessScreen}
-              options={HeaderOptions} />
+              options={HeaderOptions} /> */}
             {/* Support route */}
-            <Stack.Screen 
+            {/* <Stack.Screen 
               name="NeedHelp"
               component={NeedHelpScreen}
-              options={HeaderOptions} />
+              options={HeaderOptions} /> */}
           </Stack.Navigator>
         </NavigationContainer>
       </ApplicationProvider>
