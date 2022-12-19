@@ -26,7 +26,7 @@ const RegisterContents = ({navigation}) => {
     // Method to change the button activation status andd input operation/redirection
     const formHandler = () => {
         setIsActive(true);
-        // navigation.navigate("");
+        navigation.navigate("CompleteProfile");
         // FORM HANDLING SECTION GOES HERE ...
     }
     // Secure text entry state and its toggle method

@@ -1,4 +1,3 @@
-
 import { StyleSheet, Dimensions, ActivityIndicator, Platform } from 'react-native';
 
 // Hook
@@ -41,6 +40,14 @@ const genderData = [
 
 
 const ProfileStepOneContents = ({ navigation }) => {
+    // Button activation state and its toggle method
+    const [ isActive, setIsActive ] = useState(false);
+    // Method to change the button activation status andd input operation/redirection
+    const formHandler = () => {
+        setIsActive(true);
+        navigation.navigate("");
+        // FORM HANDLING SECTION GOES HERE ...
+    }
     // State for select menu
     const [ ethnicityIndex, setEthnicityIndex ] = useState([]);
     const [ favStyleIndex, setFavStyleIndex ] = useState([]);
@@ -66,6 +73,18 @@ const ProfileStepOneContents = ({ navigation }) => {
         <>
         {/* Double inputs section */}
         <Layout style={[styles.doubleInputContainer, tw.style('mx-auto')]}>
+            <Input 
+                label="Birthday"
+                placeholder="mm/dd/yyyy"
+                style={[tw.style('mx-auto'), styles.doubeInputStyles]}
+                size="large"
+                onSubmitEditing={() => {
+                    genderRef.current.focus();
+                }}
+                placeholderTextColor="#adadad"
+                returnKeyType='next'
+                keyboardType="numbers-and-punctuation"
+                status='warning' />
             <Select 
                 label="Gender"
                 placeholder="- Select -"
@@ -76,7 +95,7 @@ const ProfileStepOneContents = ({ navigation }) => {
                 onBlur={() => {
                     ethnicityRef.current.focus();
                 }}
-                style={[tw.style('mx-auto bg-transparent'), styles.inputStyles]}
+                style={[tw.style('mx-auto'), styles.doubeInputStyles]}
                 size='large'
                 status="warning">
                 {/* Printing SelectItem options */}
@@ -96,7 +115,7 @@ const ProfileStepOneContents = ({ navigation }) => {
             onSelect={setEthnicityIndex}
             value={getSelectedValue(ethnicityIndex, ethnicityData)}
             ref={ethnicityRef}
-            style={[tw.style('mx-auto bg-transparent'), styles.inputStyles]}
+            style={[tw.style('mx-auto'), styles.inputStyles]}
             size="large"
             placeholderTextColor='#adadad'
             onBlur={() => {
@@ -121,7 +140,7 @@ const ProfileStepOneContents = ({ navigation }) => {
             onBlur={() => {
                 weightRef.current.focus();
             }}
-            style={[tw.style('mx-auto bg-transparent'), styles.inputStyles]}
+            style={[tw.style('mx-auto'), styles.inputStyles]}
             size="large"
             placeholderTextColor="#adadad"
             status='warning'>
@@ -138,7 +157,7 @@ const ProfileStepOneContents = ({ navigation }) => {
             <Input 
                 label="Weight (kg)"
                 placeholder="Example: 80"
-                style={[tw.style('mx-auto bg-transparent'), styles.doubeInputStyles]}
+                style={[tw.style('mx-auto'), styles.doubeInputStyles]}
                 size="large"
                 placeholderTextColor="#adadad"
                 returnKeyType='next'
@@ -152,14 +171,28 @@ const ProfileStepOneContents = ({ navigation }) => {
             <Input 
                 label="Height (cm)"
                 placeholder="Example: 180"
-                style={[tw.style('mx-auto bg-transparent'), styles.doubeInputStyles]}
+                style={[tw.style('mx-auto'), styles.doubeInputStyles]}
                 size="large"
                 ref={heightRef}
                 placeholderTextColor="#adadad"
                 returnKeyType='done'
+                cursorColor="#adadad"
+                onBlur={() => formHandler()}
                 keyboardType={Platform.OS == "android" ? "phone-pad" : "numbers-and-punctuation"}
                 status='warning' />
         </Layout>
+        {/* Button section */}
+        {
+            !isActive
+            ? (
+                <>
+                {/* ADD BUTTONS HERE */}
+                </>
+            ) : (
+                <Button size='large' status='basic' style={[styles.buttonStyle, tw.style('mx-auto mt-4 rounded-lg')]} 
+                        accessoryLeft={<ActivityIndicator size="small" color="#DB2C66" />} />
+            )
+        }
         </>
     );
 }
@@ -171,7 +204,6 @@ const styles = StyleSheet.create({
     },
     doubleInputContainer: {
         width: '90%',
-        flex: 1,
         flexDirection: 'row'
     },
     doubeInputStyles: {
