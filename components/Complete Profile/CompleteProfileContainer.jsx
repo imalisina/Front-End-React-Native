@@ -5,24 +5,24 @@ import tw from 'twrnc';
 import { Layout, Text } from '@ui-kitten/components';
 
 // Other components
-import RegisterContents from '../RegisterContents';
+import ProfileStepOneContents from './Step Contents/ProfileStepOneContents';
 
 // Get device dimension
-const { fontScale } = Dimensions.get("window");
+const { height, fontScale } = Dimensions.get("window");
 
 // Keyboard Auto Scroll
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
-const RegisterCard = ({ navigation }) => {
+const CompletetProfileContainer = ({ navigation }) => {
     return (
         <KeyboardAwareScrollView 
             enableOnAndroid={true}
             showsVerticalScrollIndicator={false} 
             extraHeight={140}>
         <Layout style={[styles.cardContainer, tw.style('mx-auto')]}>
-            <Text style={[tw.style('mx-auto'), styles.cardHeader]}>Register</Text>
-            <Text status='warning' style={[tw.style('mx-auto'), styles.cardSubHeader]}>Join to Aware family</Text>
-            <RegisterContents navigation={navigation}/>
+            <Text style={[tw.style('mx-auto'), styles.cardHeader]}>Personal Details</Text>
+            <Text status='warning' style={[tw.style('mx-auto'), styles.cardSubHeader]}>Please complete your profile</Text>
+            <ProfileStepOneContents navigation={navigation}/>
         </Layout>
         </KeyboardAwareScrollView>
     );
@@ -31,10 +31,11 @@ const RegisterCard = ({ navigation }) => {
 const styles = StyleSheet.create({
     cardContainer: {
         width: '90%',
-        marginTop: '7%',
+        height: height * 0.78,
+        marginTop: '6%',
     },
     cardHeader: {
-        fontSize: 30 / fontScale,
+        fontSize: height * 0.04 / fontScale,
         marginBottom: "2%",
         marginTop: "4%",
     },
@@ -44,4 +45,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default RegisterCard;
+export default CompletetProfileContainer;

@@ -30,6 +30,7 @@ import VerificationScreen from './screens/VerificationScreen';
 import ChangePasswordScreen from './screens/ChangePasswordScreen';
 import SecureCodeMethodScreen from './screens/SecureCodeMethodScreen';
 import SuccessScreen from './screens/SuccessScreen';
+import CompleteProfileScreen from './screens/CompleteProfileScreen';
 
 
 const App = () => {
@@ -48,15 +49,20 @@ const App = () => {
               component={WelcomeScreen}
               options={{ headerShown: false }} /> */}
             {/* Login screen route */}
-            <Stack.Screen 
+            {/* <Stack.Screen 
               name="Login"
               component={LoginScreen}
-              options={HeaderOptions} />
+              options={HeaderOptions} /> */}
             {/* Register screen route */}
             {/* <Stack.Screen 
               name="Register"
               component={RegisterScreen} 
               options={HeaderOptions} /> */}
+            {/* Complete profile route */}
+            <Stack.Screen 
+              name="CompleteProfile" 
+              component={CompleteProfileScreen}
+              options={HeaderOptions} />
             {/* Forget passowrd route */}
             {/* <Stack.Screen 
               name="ForgetPassword"
