@@ -1,4 +1,4 @@
-import { StyleSheet, Dimensions, View, AppRegistry } from 'react-native';
+import { StyleSheet, Dimensions, View } from 'react-native';
 
 // Hook
 import { useEffect } from 'react';
@@ -10,19 +10,13 @@ import LottieView from 'lottie-react-native';
 import tw from 'twrnc';
 import { Layout, Text } from '@ui-kitten/components';
 
-// Confetti
-import Confetti from 'react-native-confetti';
-
 // Get device dimension
 const { fontScale, height } = Dimensions.get('window');
 
 const SuccessScreen = ({ navigation }) => {
     useEffect(() => {
-        if(_confettiView) {
-            _confettiView.startConfetti();
-         }
-         setTimeout(function(){
-            // method to redirect user
+        // FETCHING DATA AND REDIRECTION METHOD GOES HERE ...
+        setTimeout(function(){
             navigation.navigate("Login");
         }, 3000);
     });
@@ -31,8 +25,7 @@ const SuccessScreen = ({ navigation }) => {
             <Layout style={[styles.cardContainer, tw.style('mx-auto')]}>
                 <Text category='h1' style={[tw.style('mx-auto'), styles.cardHeader]}>Success</Text>
                 <Text status='warning' style={[tw.style('mx-auto'), styles.cardSubHeader]}>Operation completed successfully</Text>
-                {/* Confetti View */}
-                <Confetti untilStopped={true} duration={4000} size={2} timeout={1} ref={(node) => _confettiView=node} />
+                {/* Success icon */}
                 <LottieView autoPlay style={[styles.successAnimation, tw.style('mx-auto')]} source={require('../assets/animation.json')} />
             </Layout>
         </View>

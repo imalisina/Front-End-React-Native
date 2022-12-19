@@ -82,7 +82,7 @@ const RegisterContents = ({navigation}) => {
             selectionColor='gray' 
             status='warning'
             style={[tw.style('mx-auto bg-transparent'), styles.inputStyles]}
-            label="Phone number"
+            label={`Phone number - ${selectedCountryData.alpha2Code}`}
             keyboardType={Platform.OS == "android" ? "phone-pad" : "numbers-and-punctuation"}
             returnKeyType='next'
             ref={phoneNumberRef}
