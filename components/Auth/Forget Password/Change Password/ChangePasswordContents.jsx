@@ -56,7 +56,7 @@ const ChangePasswordContents = ({ navigation }) => {
             placeholderTextColor='#adadad'
             selectionColor='gray'
             status='warning'
-            style={[tw.style('mx-auto bg-transparent'), styles.inputStyles]}
+            style={[tw.style('mx-auto'), styles.inputStyles]}
             label="New password"
             secureTextEntry={secureTextEntryOne}
             accessoryRight={renderIconsOne}
@@ -73,7 +73,7 @@ const ChangePasswordContents = ({ navigation }) => {
             placeholderTextColor='#adadad'
             selectionColor='gray'
             status='warning'
-            style={[tw.style('mx-auto bg-transparent'), styles.inputStyles]}
+            style={[tw.style('mx-auto'), styles.inputStyles]}
             label="Password confirmation"
             ref={passwordConfirmation}
             secureTextEntry={secureTextEntryTwo}

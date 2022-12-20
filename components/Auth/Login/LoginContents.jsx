@@ -21,7 +21,7 @@ const LoginContents = ({navigation}) => {
     // Method to change the button activation status andd input operation/redirection
     const formHandler = () => {
         setIsActive(true);
-        navigation.navigate("CompleteProfile");
+        navigation.navigate("");
         // FORM HANDLING SECTION GOES HERE ...
     }
     // Secure text entry state and its toggle method
@@ -45,7 +45,7 @@ const LoginContents = ({navigation}) => {
             placeholderTextColor='#adadad'
             selectionColor='gray'
             status='warning'
-            style={[tw.style('mx-auto bg-transparent'), styles.inputStyles]}
+            style={[tw.style('mx-auto'), styles.inputStyles]}
             label="Email"
             keyboardType='email-address'
             returnKeyType='next'
@@ -59,10 +59,10 @@ const LoginContents = ({navigation}) => {
             placeholderTextColor='#adadad'
             accessoryRight={renderIcons}
             secureTextEntry={secureTextEntry}
-            selectionColor='gray' 
+            selectionColor='gray'
             status='warning'
             returnKeyType='done'
-            style={[tw.style('mx-auto bg-transparent'), styles.inputStyles]}
+            style={[tw.style('mx-auto'), styles.inputStyles]}
             label="Password"
             ref={passwordRef}
             onFocus={() => toggleSecureEntry()}
