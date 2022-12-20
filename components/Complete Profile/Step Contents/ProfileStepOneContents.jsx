@@ -38,11 +38,10 @@ const genderData = [
     "LGBT"
 ];
 
-
 const ProfileStepOneContents = ({ navigation }) => {
     // Button activation state and its toggle method
     const [ isActive, setIsActive ] = useState(false);
-    // Method to change the button activation status andd input operation/redirection
+    // Method to change the button activation status and redirect user to next step
     const formHandler = () => {
         setIsActive(true);
         navigation.navigate("");
@@ -61,10 +60,8 @@ const ProfileStepOneContents = ({ navigation }) => {
     // Generate the string value of selected option/options
     const getSelectedValue = ( selectedIndexPaths, options ) => {
         if ( selectedIndexPaths.length ) {
-            // console.log(selectedIndexPaths.map((indexPath) => options[indexPath.row]));
             return selectedIndexPaths.map((indexPath) => options[indexPath.row]).join();
         } else {
-            // console.log(options[selectedIndexPaths.row]);
             return options[selectedIndexPaths.row];
         }
     };
@@ -78,6 +75,7 @@ const ProfileStepOneContents = ({ navigation }) => {
                 placeholder="mm/dd/yyyy"
                 style={[tw.style('mx-auto'), styles.doubeInputStyles]}
                 size="large"
+                selectionColor='gray'
                 onSubmitEditing={() => {
                     genderRef.current.focus();
                 }}
@@ -161,6 +159,7 @@ const ProfileStepOneContents = ({ navigation }) => {
                 size="large"
                 placeholderTextColor="#adadad"
                 returnKeyType='next'
+                selectionColor='gray'
                 ref={weightRef}
                 onSubmitEditing={() => {
                     heightRef.current.focus();
@@ -176,7 +175,7 @@ const ProfileStepOneContents = ({ navigation }) => {
                 ref={heightRef}
                 placeholderTextColor="#adadad"
                 returnKeyType='done'
-                cursorColor="#adadad"
+                selectionColor='gray'
                 onBlur={() => formHandler()}
                 keyboardType={Platform.OS == "android" ? "phone-pad" : "numbers-and-punctuation"}
                 status='warning' />
@@ -185,9 +184,18 @@ const ProfileStepOneContents = ({ navigation }) => {
         {
             !isActive
             ? (
-                <>
-                {/* ADD BUTTONS HERE */}
-                </>
+                <Layout style={[styles.doubleButtonContainer, tw.style('mx-auto')]}>
+                    <Button 
+                        size='large' 
+                        status='primary'
+                        onPress={() => formHandler()}
+                        style={[styles.buttonStyle, tw.style('mx-auto mt-4 rounded-lg')]}>Next</Button>
+                    <Button 
+                        size='large' 
+                        status='info'
+                        onPress={() => formHandler()}
+                        style={[styles.buttonStyle, tw.style('mx-auto mt-4 rounded-lg')]}>Skip now</Button>
+                </Layout>
             ) : (
                 <Button size='large' status='basic' style={[styles.buttonStyle, tw.style('mx-auto mt-4 rounded-lg')]} 
                         accessoryLeft={<ActivityIndicator size="small" color="#DB2C66" />} />
@@ -206,13 +214,17 @@ const styles = StyleSheet.create({
         width: '90%',
         flexDirection: 'row'
     },
+    doubleButtonContainer: {
+        width: '90%',
+        flexDirection: 'row'
+    },
     doubeInputStyles: {
         width: '48%',
         marginVertical: '2.5%',
     },
     buttonStyle: {
         width: width * 0.35,
-        height: height * 0.07
+        height: height * 0.07,
     },
 })
 

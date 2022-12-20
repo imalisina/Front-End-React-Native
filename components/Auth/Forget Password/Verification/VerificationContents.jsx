@@ -27,7 +27,7 @@ const VerificationContents = ({ navigation }) => {
             placeholderTextColor='#adadad'
             selectionColor='gray'
             status='warning'
-            style={[tw.style('mx-auto bg-transparent'), styles.inputStyles]}
+            style={[tw.style('mx-auto'), styles.inputStyles]}
             label="Verification code"
             returnKeyType='done'
             onBlur={() => formHandler()}

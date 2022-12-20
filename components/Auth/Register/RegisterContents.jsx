@@ -53,7 +53,7 @@ const RegisterContents = ({navigation}) => {
             placeholderTextColor='#adadad'
             selectionColor='gray' 
             status='warning'
-            style={[tw.style('mx-auto bg-transparent'), styles.inputStyles]}
+            style={[tw.style('mx-auto'), styles.inputStyles]}
             label="Name"
             returnKeyType='next'
             onSubmitEditing={() => {
@@ -66,7 +66,7 @@ const RegisterContents = ({navigation}) => {
             placeholderTextColor='#adadad'
             selectionColor='gray' 
             status='warning'
-            style={[tw.style('mx-auto bg-transparent'), styles.inputStyles]}
+            style={[tw.style('mx-auto'), styles.inputStyles]}
             label="Email"
             keyboardType='email-address'
             returnKeyType='next'
@@ -81,7 +81,7 @@ const RegisterContents = ({navigation}) => {
             placeholderTextColor='#adadad'
             selectionColor='gray' 
             status='warning'
-            style={[tw.style('mx-auto bg-transparent'), styles.inputStyles]}
+            style={[tw.style('mx-auto'), styles.inputStyles]}
             label={`Phone number - ${selectedCountryData.alpha2Code}`}
             keyboardType={Platform.OS == "android" ? "phone-pad" : "numbers-and-punctuation"}
             returnKeyType='next'
@@ -96,7 +96,7 @@ const RegisterContents = ({navigation}) => {
             placeholderTextColor='#adadad'
             selectionColor='gray' 
             status='warning'
-            style={[tw.style('mx-auto bg-transparent'), styles.inputStyles]}
+            style={[tw.style('mx-auto'), styles.inputStyles]}
             label="Password"
             ref={passwordRef}
             secureTextEntry={secureTextEntry}

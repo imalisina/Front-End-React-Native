@@ -29,7 +29,7 @@ const SecureCodeMethodContents = ({ navigation }) => {
             placeholderTextColor='#adadad'
             selectionColor='gray'
             status='warning'
-            style={[tw.style('mx-auto bg-transparent'), styles.inputStyles]}
+            style={[tw.style('mx-auto'), styles.inputStyles]}
             label="Email"
             keyboardType='email-address'
             onSubmitEditing={() => {
@@ -43,7 +43,7 @@ const SecureCodeMethodContents = ({ navigation }) => {
             placeholderTextColor='#adadad'
             selectionColor='gray'
             status='warning'
-            style={[tw.style('mx-auto bg-transparent'), styles.inputStyles]}
+            style={[tw.style('mx-auto'), styles.inputStyles]}
             label="Secure Code"
             ref={secureCodeRef}
             returnKeyType='done'

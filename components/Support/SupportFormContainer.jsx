@@ -18,7 +18,7 @@ const SupportFormContainer = ({ navigation }) => {
         <KeyboardAwareScrollView 
             enableOnAndroid={true}
             showsVerticalScrollIndicator={false}
-            extraHeight={100}>
+            extraHeight={140}>
         <Layout style={[tw.style('mx-auto'), styles.cardContainer]}>
             <Text style={[tw.style('mx-auto'), styles.cardHeader]}>Need Help ?</Text>
             <Text status='warning' style={[tw.style('mx-auto'), styles.cardSubHeader]}>
@@ -33,7 +33,7 @@ const SupportFormContainer = ({ navigation }) => {
 const styles = StyleSheet.create({
     cardContainer: {
         width: '90%',
-        height: height * 0.8,
+        height: height >= 600 ? height * 0.8 : height * 1.2,
         marginTop: '6%',
     },
     cardHeader: {

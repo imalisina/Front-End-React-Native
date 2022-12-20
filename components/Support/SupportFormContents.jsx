@@ -11,7 +11,7 @@ import { Input, Text as UIText, Button, Select, SelectItem } from '@ui-kitten/co
 const { fontScale, height, width } = Dimensions.get('window');
 
 
-const staticValues = [
+const topicListData = [
     'Question',
     'Account and passwords',
     'Technical issue',
@@ -25,29 +25,37 @@ const SupportFormContents = ({ navigation }) => {
     // Button activation state and its toggle method
     const [ isActive, setIsActive ] = useState(false);
     // State for select menu
-    const [ selectedIndex, setSelectedIndex ] = useState();
-    // Display value in select menu
+    const [ topicIndex, setTopicIndex ] = useState([]);
+    // Generate the string value of selected option/options
+    const getSelectedValue = ( selectedIndexPaths, options ) => {
+        if ( selectedIndexPaths.length ) {
+            return selectedIndexPaths.map((indexPath) => options[indexPath.row]).join();
+        } else {
+            return options[selectedIndexPaths.row];
+        }
+    };
+
     return (
         <>
         {/* Input section */}
         <Select 
             label="Subject / Reason"
             placeholder="- Select -"
-            selectedIndex={selectedIndex}
-            onSelect={(index) => setSelectedIndex(index)}
-            style={[tw.style('mx-auto bg-transparent'), styles.inputStyles]}
+            selectedIndex={topicIndex}
+            onSelect={setTopicIndex}
+            value={getSelectedValue(topicIndex, topicListData)}
+            style={[tw.style('mx-auto'), styles.inputStyles]}
             size="large"
-            value={selectedIndex ? staticValues[selectedIndex.row] : ''}
             placeholderTextColor='#adadad'
             onBlur={() => {
                 descriptionRef.current.focus();
             }}
             status='warning'>
-            <SelectItem title="Question" />
-            <SelectItem title="Account and passwords" />
-            <SelectItem title="Technical issue" />
-            <SelectItem title="Suggestion" />
-            <SelectItem title="Others" />
+            {
+                topicListData.map((data, index) => (
+                    <SelectItem title={data} key={index} />
+                ))
+            }
         </Select>
         <Input 
             label="Description"
@@ -55,6 +63,7 @@ const SupportFormContents = ({ navigation }) => {
             onBlur={() => setIsActive(true)}
             placeholder='Write your description . . .'
             multiline
+            selectionColor='gray'
             caption={
                 <UIText status='warning' style={styles.linkNoteStyle}>Maximum 400 characters</UIText>
             }
@@ -63,7 +72,7 @@ const SupportFormContents = ({ navigation }) => {
             scrollEnabled={true}
             placeholderTextColor='#adadad'
             status='warning'
-            style={[tw.style('mx-auto bg-transparent'), styles.inputStyles]}
+            style={[tw.style('mx-auto'), styles.inputStyles]}
         />
         {/* Button section */}
         {

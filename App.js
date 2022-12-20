@@ -48,51 +48,61 @@ const App = () => {
               name="Welcome" 
               component={WelcomeScreen}
               options={{ headerShown: false }} /> */}
+
             {/* Login screen route */}
             {/* <Stack.Screen 
               name="Login"
               component={LoginScreen}
               options={HeaderOptions} /> */}
+
             {/* Register screen route */}
             {/* <Stack.Screen 
               name="Register"
               component={RegisterScreen} 
               options={HeaderOptions} /> */}
+
             {/* Complete profile route */}
             <Stack.Screen 
               name="CompleteProfile" 
               component={CompleteProfileScreen}
               options={HeaderOptions} />
+
             {/* Forget passowrd route */}
             {/* <Stack.Screen 
               name="ForgetPassword"
               component={ForgetPasswordScreen}
               options={HeaderOptions} /> */}
+
             {/* Email method route */}
             {/* <Stack.Screen 
               name="EmailMethod"
               component={EmailMethodScreen}
               options={HeaderOptions} /> */}
+
             {/* SecureCode method route */}
             {/* <Stack.Screen 
               name="SecureCodeMethod"
               component={SecureCodeMethodScreen}
               options={HeaderOptions} /> */}
+
             {/* Verification route */}
             {/* <Stack.Screen 
               name="Verification"
               component={VerificationScreen}
               options={HeaderOptions} /> */}
+
             {/* Change password route */}
             {/* <Stack.Screen 
               name="ChangePassword"
               component={ChangePasswordScreen}
               options={HeaderOptions} /> */}
+
             {/* Success route */}
             {/* <Stack.Screen 
               name="Success"
               component={SuccessScreen}
               options={HeaderOptions} /> */}
+
             {/* Support route */}
             {/* <Stack.Screen 
               name="NeedHelp"

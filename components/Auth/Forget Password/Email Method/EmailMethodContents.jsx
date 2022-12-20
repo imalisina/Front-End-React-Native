@@ -27,7 +27,7 @@ const EmailMethodContents = ({ navigation }) => {
             placeholderTextColor='#adadad'
             selectionColor='gray'
             status='warning'
-            style={[tw.style('mx-auto bg-transparent'), styles.inputStyles]}
+            style={[tw.style('mx-auto'), styles.inputStyles]}
             label="Email"
             keyboardType='email-address'
             returnKeyType='done'
