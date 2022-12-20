@@ -38,13 +38,12 @@ const genderData = [
     "LGBT"
 ];
 
-const ProfileStepOneContents = ({ navigation }) => {
+const ProfileStepOneContents = () => {
     // Button activation state and its toggle method
     const [ isActive, setIsActive ] = useState(false);
     // Method to change the button activation status and redirect user to next step
     const formHandler = () => {
         setIsActive(true);
-        navigation.navigate("");
         // FORM HANDLING SECTION GOES HERE ...
     }
     // State for select menu

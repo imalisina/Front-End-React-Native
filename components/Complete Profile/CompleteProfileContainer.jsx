@@ -2,13 +2,16 @@ import { StyleSheet, Dimensions } from 'react-native';
 
 // UI
 import tw from 'twrnc';
-import { Layout, Text } from '@ui-kitten/components';
+import { Layout } from '@ui-kitten/components';
 
 // Other components
 import ProfileStepOneContents from './Step Contents/ProfileStepOneContents';
+import ProfileStepOneHeader from './Step Headers/ProfileStepOneHeader';
+import ProfileStepTwoContents from './Step Contents/ProfileStepTwoContents';
+import ProfileStepTwoHeader from './Step Headers/ProfileStepTwoHeader';
 
 // Get device dimension
-const { height, fontScale } = Dimensions.get("window");
+const { height } = Dimensions.get("window");
 
 // Keyboard Auto Scroll
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
@@ -20,9 +23,13 @@ const CompletetProfileContainer = ({ navigation }) => {
             showsVerticalScrollIndicator={false} 
             extraHeight={140}>
         <Layout style={[styles.cardContainer, tw.style('mx-auto')]}>
-            <Text style={[tw.style('mx-auto'), styles.cardHeader]}>Personal Details</Text>
-            <Text status='warning' style={[tw.style('mx-auto'), styles.cardSubHeader]}>Please complete your profile</Text>
-            <ProfileStepOneContents navigation={navigation}/>
+            {/* First step */}
+            {/* <ProfileStepOneHeader /> */}
+            {/* <ProfileStepOneContents /> */}
+
+            {/* Second step */}
+            <ProfileStepTwoHeader />
+            <ProfileStepTwoContents />
         </Layout>
         </KeyboardAwareScrollView>
     );
@@ -33,15 +40,6 @@ const styles = StyleSheet.create({
         width: '90%',
         height: height * 0.78,
         marginTop: '6%',
-    },
-    cardHeader: {
-        fontSize: height * 0.04 / fontScale,
-        marginBottom: "2%",
-        marginTop: "4%",
-    },
-    cardSubHeader: {
-        fontSize: 14 / fontScale,
-        marginBottom: "2%",
     },
 });
 
